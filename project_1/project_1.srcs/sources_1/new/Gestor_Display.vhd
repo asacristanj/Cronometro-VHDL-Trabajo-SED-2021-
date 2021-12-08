@@ -5,14 +5,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity Control_Anodo is
     port(
         CLK : in std_logic;
-        code1 : out std_logic_vector(3 downto 0);
-        code2 : out std_logic_vector(3 downto 0);
-        code3 : out std_logic_vector(3 downto 0);
-        code4 : out std_logic_vector(3 downto 0);
-        code5 : out std_logic_vector(3 downto 0);
-        code6 : out std_logic_vector(3 downto 0);
-        code7 : out std_logic_vector(3 downto 0);
-        code8 : out std_logic_vector(3 downto 0);
+        code1 : in std_logic_vector(3 downto 0);
+        code2 : in std_logic_vector(3 downto 0);
+        code3 : in std_logic_vector(3 downto 0);
+        code4 : in std_logic_vector(3 downto 0);
+        code5 : in std_logic_vector(3 downto 0);
+        code6 : in std_logic_vector(3 downto 0);
+        code7 : in std_logic_vector(3 downto 0);
+        code8 : in std_logic_vector(3 downto 0);
         refrescar_anodo : out std_logic_vector(7 downto 0); --vector que pone a 1 el ánodo correspondiente para actualizar
         salida_disp : out std_logic_vector(6 downto 0) --salida de los displays
     );
