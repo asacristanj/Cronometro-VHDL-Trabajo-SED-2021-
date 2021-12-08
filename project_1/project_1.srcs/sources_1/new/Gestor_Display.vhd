@@ -157,6 +157,7 @@ Inst_deco8: deco2 PORT MAP (
             end if;
             if flag=5 then
                 refrescar_anodo(4) <=  '1';
+                refrescar_anodo(3 downto 0) <=  "0000";
                 refrescar_anodo(7 downto 5) <=  "000";
                 salida_disp <= disp5;
                 flag<=6;
