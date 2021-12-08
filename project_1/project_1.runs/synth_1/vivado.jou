@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Oct 15 08:40:04 2021
+# Process ID: 15464
+# Current directory: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log demo_entity.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source demo_entity.tcl
+# Log file: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.runs/synth_1/demo_entity.vds
+# Journal file: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source demo_entity.tcl -notrace

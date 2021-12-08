@@ -1,0 +1,142 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Oct 15 08:36:04 2021
+# Process ID: 14752
+# Current directory: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26500 D:\UNIVERSIDAD\CUARTO\SISTEMAS ELECTRNICOS DIGITALES\project_1\project_1.xpr
+# Log file: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/vivado.log
+# Journal file: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.xpr}
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 1485.020 ; gain = 0.000
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.runs/synth_1
+
+launch_runs synth_1 -jobs 6
+[Fri Oct 15 08:40:01 2021] Launched synth_1...
+Run output will be captured here: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 6
+[Fri Oct 15 08:40:45 2021] Launched impl_1...
+Run output will be captured here: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1485.020 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1485.020 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:07 . Memory (MB): peak = 1489.457 ; gain = 4.438
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1974.883 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2169.598 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2169.598 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2169.598 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'open_run' was cancelled
+set_property OFFCHIP_TERM NONE [get_ports [list {sw[6]}]]
+save_constraints -force
+INFO: [Project 1-96] Target constrs file set to 'D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc' for the 'constrs_1' constraints set.
+reset_run impl_1
+launch_runs impl_1 -jobs 6
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Fri Oct 15 08:47:30 2021] Launched impl_1...
+Run output will be captured here: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.runs/impl_1/runme.log
+refresh_design
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2291.168 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2291.168 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 2291.168 ; gain = 0.000
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 2291.168 ; gain = 8.578
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+open_hw_manager
+close_hw_manager
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Oct 15 08:54:01 2021...

@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Oct 15 08:36:04 2021
+# Process ID: 14752
+# Current directory: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent26500 D:\UNIVERSIDAD\CUARTO\SISTEMAS ELECTRNICOS DIGITALES\project_1\project_1.xpr
+# Log file: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/vivado.log
+# Journal file: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.xpr}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+wait_on_run synth_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+open_run impl_1
+set_property OFFCHIP_TERM NONE [get_ports [list {sw[6]}]]
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -jobs 6
+wait_on_run impl_1
+refresh_design
+open_hw_manager
+close_hw_manager
