@@ -10,11 +10,11 @@ end clk10kHz;
  
 architecture Behavioral of clk10kHz is
     signal temporal: STD_LOGIC;
-    signal contador: integer range 0 to 49999999 := 0;
+    signal contador: integer range 0 to 4999 := 0;
 begin
     divisor_frecuencia: process (CLK) begin        
         if rising_edge(CLK) then
-            if (contador = 49999999) then
+            if (contador = 4999) then
                 temporal <= NOT(temporal);
                 contador <= 0;
             else

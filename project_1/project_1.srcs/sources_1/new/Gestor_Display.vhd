@@ -48,55 +48,6 @@ architecture Behavioral of Control_Anodo is
        );
    END COMPONENT;
    
-   COMPONENT deco2
-       PORT (
-              code : IN std_logic_vector(3 DOWNTO 0);
-              led : OUT std_logic_vector(6 DOWNTO 0)
-       );
-   END COMPONENT;
-   
-   COMPONENT deco3
-       PORT (
-              code : IN std_logic_vector(3 DOWNTO 0);
-              led : OUT std_logic_vector(6 DOWNTO 0)
-       );
-   END COMPONENT;
-   
-   COMPONENT deco4
-       PORT (
-              code : IN std_logic_vector(3 DOWNTO 0);
-              led : OUT std_logic_vector(6 DOWNTO 0)
-       );
-   END COMPONENT;
-   
-   COMPONENT deco5
-       PORT (
-              code : IN std_logic_vector(3 DOWNTO 0);
-              led : OUT std_logic_vector(6 DOWNTO 0)
-       );
-   END COMPONENT;
-   
-   COMPONENT deco6
-       PORT (
-              code : IN std_logic_vector(3 DOWNTO 0);
-              led : OUT std_logic_vector(6 DOWNTO 0)
-       );
-   END COMPONENT;
-   
-   COMPONENT deco7
-       PORT (
-              code : IN std_logic_vector(3 DOWNTO 0);
-              led : OUT std_logic_vector(6 DOWNTO 0)
-       );
-   END COMPONENT;
-   
-   COMPONENT deco8
-       PORT (
-              code : IN std_logic_vector(3 DOWNTO 0);
-              led : OUT std_logic_vector(6 DOWNTO 0)
-       );
-   END COMPONENT;
-   
 begin
 
 Inst_clk10khz: clk10khz 
@@ -109,31 +60,31 @@ Inst_deco1: deco1 PORT MAP (
         code => code1,
         led => disp1
 );
-Inst_deco2: deco2 PORT MAP (
+Inst_deco2: deco1 PORT MAP (
         code => code2,
         led => disp2
 );
-Inst_deco3: deco2 PORT MAP (
+Inst_deco3: deco1 PORT MAP (
         code => code3,
         led => disp3
 );
-Inst_deco4: deco2 PORT MAP (
+Inst_deco4: deco1 PORT MAP (
         code => code4,
         led => disp4
 );
-Inst_deco5: deco2 PORT MAP (
+Inst_deco5: deco1 PORT MAP (
         code => code5,
         led => disp5
 );
-Inst_deco6: deco2 PORT MAP (
+Inst_deco6: deco1 PORT MAP (
         code => code6,
         led => disp6
 );
-Inst_deco7: deco2 PORT MAP (
+Inst_deco7: deco1 PORT MAP (
         code => code7,
         led => disp7
 );
-Inst_deco8: deco2 PORT MAP (
+Inst_deco8: deco1 PORT MAP (
         code => code8,
         led => disp8
 );
