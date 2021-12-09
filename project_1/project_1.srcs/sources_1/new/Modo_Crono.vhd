@@ -14,7 +14,9 @@ entity Modo_Crono is
         code7 : out std_logic_vector(3 downto 0);
         code8 : out std_logic_vector(3 downto 0);
         Enable_A : in std_logic;
-        Buttons : in std_logic_vector(3 downto 0)
+        Start : in std_logic;
+        Pause : in std_logic;
+        Reset : in std_logic
      );
 end Modo_Crono;
 
@@ -23,6 +25,8 @@ architecture Behavioral of Modo_Crono is
     --signal dec_sec : std_logic_vector(3 downto 0);
     --signal unit_min : std_logic_vector(3 downto 0);
     --signal dec_min : std_logic_vector(3 downto 0);
+    
+    signal Start_s : std_logic;
     
     signal clk_1hz : std_logic;
     
@@ -39,32 +43,70 @@ begin
         CLK_1hz => clk_1hz
     );
     
-    process (clk_1hz)
+    inicio_cuenta : process (Enable_A,Start)
+    begin
+        if Enable_A = '1' and Start = '1' then
+            Start_s<='1';
+        end if;
+    end process;
+    
+    pausa : process (Pause)
+    begin
+        if Pause ='1' then
+            Start_s<='0';
+        end if;
+    end process;
+    
+    
+    process (clk_1hz, Start_s, Reset)
     subtype V is integer range 0 to 15;
     variable unit_sec : V :=0;
     variable unit_min : V :=0;
     variable dec_sec : V :=0;
     variable dec_min : V :=0;
     begin
-        if rising_edge(clk_1hz) then
+        if Reset='1' then
+            Start_s<='0';
+            code1 <= "0000";
+            code2 <= "0000";
+            code3 <= "0000";
+            code4 <= "0000";
+        end if;
+        
+        if rising_edge(clk_1hz) and Start_s='1' then
             unit_sec:=unit_sec+1;
             if unit_sec=10 then
             unit_sec:=0;
+            dec_sec:=dec_sec+1;
+                if dec_sec=6 then
+                    dec_sec:=0;
+                    unit_min:=unit_min+1;
+                    if unit_min=10 then
+                        unit_min:=0;
+                        dec_min:=dec_min+1;
+                        if dec_min=9 then
+                            dec_min:=0;
+                            unit_min:=0;
+                            dec_sec:=0;
+                            unit_sec:=0;
+                        end if;
+                    end if;
+                end if;
             end if;
             
         end if;
-        code8 <= std_logic_vector(to_unsigned(unit_sec,code8'length));
-        code7 <= std_logic_vector(to_unsigned(dec_sec,code7'length));
-        code6 <= std_logic_vector(to_unsigned(unit_min,code6'length));
-        code5 <= std_logic_vector(to_unsigned(dec_sec,code5'length));
+        code1 <= std_logic_vector(to_unsigned(unit_sec,code8'length));
+        code2 <= std_logic_vector(to_unsigned(dec_sec,code7'length));
+        code3 <= std_logic_vector(to_unsigned(unit_min,code6'length));
+        code4 <= std_logic_vector(to_unsigned(dec_sec,code5'length));
     end process;
     
-    process 
+    Marca_cron : process 
     begin
-    code1<="1001";
-    code2<="1001";
-    code3<="1111";
-    code4<="1111";
+    code8<="1001";
+    code7<="1001";
+    code6<="1111";
+    code5<="1111";
     end process;
     
     
