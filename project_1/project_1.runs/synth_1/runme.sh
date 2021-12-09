@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.runs/synth_1'
+HD_PWD='C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log demo_entity.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source demo_entity.tcl
+EAStep vivado -log TOP.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl

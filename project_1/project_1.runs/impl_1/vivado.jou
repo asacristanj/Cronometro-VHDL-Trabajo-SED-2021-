@@ -2,11 +2,11 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Fri Oct 15 08:47:38 2021
-# Process ID: 7912
-# Current directory: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.runs/impl_1
-# Command line: vivado.exe -log demo_entity.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source demo_entity.tcl -notrace
-# Log file: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.runs/impl_1/demo_entity.vdi
-# Journal file: D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.runs/impl_1\vivado.jou
+# Start of session at: Thu Dec  9 23:20:50 2021
+# Process ID: 20736
+# Current directory: C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/impl_1
+# Command line: vivado.exe -log TOP.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source TOP.tcl -notrace
+# Log file: C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/impl_1/TOP.vdi
+# Journal file: C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
-source demo_entity.tcl -notrace
+source TOP.tcl -notrace

@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log demo_entity.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source demo_entity.tcl
+    with args -log TOP.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
 
 
 
@@ -9,117 +9,145 @@
   **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
-source demo_entity.tcl -notrace
-Command: synth_design -top demo_entity -part xc7a100tcsg324-1
+source TOP.tcl -notrace
+Command: synth_design -top TOP -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 11928
+INFO: [Synth 8-7075] Helper process launched with PID 24528
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'demo_entity' [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.srcs/sources_1/new/p0.vhd:9]
-INFO: [Synth 8-256] done synthesizing module 'demo_entity' (1#1) [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.srcs/sources_1/new/p0.vhd:9]
+WARNING: [Synth 8-2551] possible infinite loop; process does not have a wait statement [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:101]
+INFO: [Synth 8-638] synthesizing module 'TOP' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:17]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador' of component 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (1#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:12]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:4' bound to instance 'DetectorFlanco' of component 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'EDGEDTCTR' (2#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:12]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador2' of component 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:103]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:4' bound to instance 'DetectorFlanco2' of component 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:109]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador3' of component 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:115]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:4' bound to instance 'DetectorFlanco3' of component 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:121]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador4' of component 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:127]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:4' bound to instance 'DetectorFlanco4' of component 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:133]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador5' of component 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:139]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:4' bound to instance 'DetectorFlanco5' of component 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:145]
+INFO: [Synth 8-3491] module 'Modo_Crono' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:5' bound to instance 'Modo_Crono1' of component 'Modo_Crono' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'Modo_Crono' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:23]
+INFO: [Synth 8-3491] module 'clk1Hz' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:4' bound to instance 'Inst_clk1hz' of component 'clk1hz' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'clk1Hz' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'clk1Hz' (3#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:11]
+WARNING: [Synth 8-614] signal 'Pause' is read in the process but is not in the sensitivity list [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'Modo_Crono' (4#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:23]
+INFO: [Synth 8-3491] module 'Control_Anodo' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:5' bound to instance 'Control_Anodo1' of component 'Control_anodo' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:168]
+INFO: [Synth 8-638] synthesizing module 'Control_Anodo' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:21]
+INFO: [Synth 8-3491] module 'clk10kHz' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:4' bound to instance 'Inst_clk10khz' of component 'clk10khz' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'clk10kHz' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'clk10kHz' (5#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:11]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco1' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'deco1' (6#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:13]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco2' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:63]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco3' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:67]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco4' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:71]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco5' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:75]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco6' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:79]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco7' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:83]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco8' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:87]
+INFO: [Synth 8-256] done synthesizing module 'Control_Anodo' (7#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'TOP' (8#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:17]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1153.293 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc]
-WARNING: [Vivado 12-584] No ports matched 'SW[0]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:13]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:13]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW[1]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:14]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:14]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW[2]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:15]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:15]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW[3]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:16]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:16]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW[4]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:17]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:17]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW[5]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:18]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:18]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW[6]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:19]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:19]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'SW[7]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:20]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:20]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[0]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:33]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:33]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[1]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:34]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:34]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[2]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:35]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:35]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[3]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:36]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:36]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[4]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:37]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:37]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[5]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:38]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:38]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[6]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:39]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:39]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'LED[7]'. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:40]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc:40]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-Finished Parsing XDC File [D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRÓNICOS DIGITALES/LABORATORIOS/digilent-xdc-master/Nexys-4-DDR-Master.xdc]
+Parsing XDC File [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1153.293 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'flag_reg' in module 'Control_Anodo'
+WARNING: [Synth 8-327] inferring latch for variable 'Start_s_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:66]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 | 00000000000000000000000000000001
+*
+                 iSTATE6 |                              001 | 00000000000000000000000000000010
+                 iSTATE5 |                              010 | 00000000000000000000000000000011
+                 iSTATE4 |                              011 | 00000000000000000000000000000100
+                 iSTATE3 |                              100 | 00000000000000000000000000000101
+                 iSTATE2 |                              101 | 00000000000000000000000000000110
+                 iSTATE1 |                              110 | 00000000000000000000000000000111
+                 iSTATE0 |                              111 | 00000000000000000000000000001000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'flag_reg' using encoding 'sequential' in module 'Control_Anodo'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   26 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 6     
++---Registers : 
+	               26 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input   26 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	   8 Input    7 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -136,25 +164,28 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin \Modo_Crono1/Start_s  with 1st driver pin 'Modo_Crono1/Start_s0/O' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:48]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin \Modo_Crono1/Start_s  with 2nd driver pin 'GND' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:48]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net \Modo_Crono1/Start_s  is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:48]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -172,37 +203,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -215,35 +246,44 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |LUT1 |     1|
-|2     |LUT2 |     2|
-|3     |LUT3 |     1|
-|4     |IBUF |     8|
-|5     |OBUF |    16|
-+------+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     3|
+|3     |LUT1   |     4|
+|4     |LUT2   |     9|
+|5     |LUT3   |     1|
+|6     |LUT4   |     1|
+|7     |LUT5   |     1|
+|8     |LUT6   |     2|
+|9     |FDRE   |    20|
+|10    |FDSE   |     8|
+|11    |IBUF   |     1|
+|12    |OBUF   |    15|
++------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1153.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1157.812 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Synthesis finished with 0 errors, 3 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 1153.293 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1153.293 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1153.293 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1157.812 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1153.293 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 41d97195
+Synth Design complete, checksum: f70ea229
 INFO: [Common 17-83] Releasing license: Synthesis
-14 Infos, 16 Warnings, 16 Critical Warnings and 0 Errors encountered.
+55 Infos, 3 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1157.812 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1153.293 ; gain = 0.000
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'D:/UNIVERSIDAD/CUARTO/SISTEMAS ELECTRNICOS DIGITALES/project_1/project_1.runs/synth_1/demo_entity.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file demo_entity_utilization_synth.rpt -pb demo_entity_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Oct 15 08:40:32 2021...
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/synth_1/TOP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Dec  9 23:20:43 2021...

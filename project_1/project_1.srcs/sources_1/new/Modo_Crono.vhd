@@ -45,17 +45,14 @@ begin
     
     inicio_cuenta : process (Enable_A,Start)
     begin
-        if Enable_A = '1' and Start = '1' then
+        if Enable_A = '1' and Start = '1' and Pause = '0'then
             Start_s<='1';
-        end if;
-    end process;
-    
-    pausa : process (Pause)
-    begin
-        if Pause ='1' then
+         else 
             Start_s<='0';
         end if;
     end process;
+    
+    
     
     
     process (clk_1hz, Start_s, Reset)
