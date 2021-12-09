@@ -32,6 +32,15 @@ architecture Behavioral of Control_Anodo is
     
     signal flag : integer := 1;
     
+    signal clk_10khz : std_logic;
+    
+    COMPONENT clk10khz
+       PORT (
+              CLK: in  STD_LOGIC;
+              clk_1hz : out STD_LOGIC
+            );
+     END COMPONENT;
+    
     COMPONENT deco1
        PORT (
               code : IN std_logic_vector(3 DOWNTO 0);
@@ -90,6 +99,11 @@ architecture Behavioral of Control_Anodo is
    
 begin
 
+Inst_clk10khz: clk10khz 
+    PORT MAP (
+        CLK => CLK,
+        CLK_1hz => clk_10khz
+    );
 
 Inst_deco1: deco1 PORT MAP (
         code => code1,
@@ -125,60 +139,60 @@ Inst_deco8: deco2 PORT MAP (
 );
 
 
-    process (CLK)
+    process (clk_10khz)
     begin
-        if rising_edge(CLK) then
+        if rising_edge(clk_10khz) then
             if flag=1 then
-                refrescar_anodo(0) <=  '1';
-                refrescar_anodo(7 downto 1) <=  "0000000";
+                refrescar_anodo(0) <=  '0';
+                refrescar_anodo(7 downto 1) <=  "1111111";
                 salida_disp <= disp1;
                 flag<=2;
             end if;
             if flag=2 then
-                refrescar_anodo(1) <=  '1';
-                refrescar_anodo(0) <=  '0';
-                refrescar_anodo(7 downto 2) <=  "000000";
+                refrescar_anodo(1) <=  '0';
+                refrescar_anodo(0) <=  '1';
+                refrescar_anodo(7 downto 2) <=  "111111";
                 salida_disp <= disp2;
                 flag<=3;
             end if;
             if flag=3 then
-                refrescar_anodo(2) <=  '1';
-                refrescar_anodo(1 downto 0) <=  "00";
-                refrescar_anodo(7 downto 3) <=  "00000";
+                refrescar_anodo(2) <=  '0';
+                refrescar_anodo(1 downto 0) <=  "11";
+                refrescar_anodo(7 downto 3) <=  "11111";
                 salida_disp <= disp3;
                 flag<=4;
             end if;
             if flag=4 then
-                refrescar_anodo(3) <=  '1';
-                refrescar_anodo(2 downto 0) <=  "000";
-                refrescar_anodo(7 downto 4) <=  "0000";
+                refrescar_anodo(3) <=  '0';
+                refrescar_anodo(2 downto 0) <=  "111";
+                refrescar_anodo(7 downto 4) <=  "1111";
                 salida_disp <= disp4;
                 flag<=5;
             end if;
             if flag=5 then
-                refrescar_anodo(4) <=  '1';
-                refrescar_anodo(3 downto 0) <=  "0000";
-                refrescar_anodo(7 downto 5) <=  "000";
+                refrescar_anodo(4) <=  '0';
+                refrescar_anodo(3 downto 0) <=  "1111";
+                refrescar_anodo(7 downto 5) <=  "111";
                 salida_disp <= disp5;
                 flag<=6;
             end if;
             if flag=6 then
-                refrescar_anodo(5) <=  '1';
-                refrescar_anodo(4 downto 0) <=  "00000";
-                refrescar_anodo(7 downto 6) <=  "00";
+                refrescar_anodo(5) <=  '0';
+                refrescar_anodo(4 downto 0) <=  "11111";
+                refrescar_anodo(7 downto 6) <=  "11";
                 salida_disp <= disp6;
                 flag<=7;
             end if;
             if flag=7 then
-                refrescar_anodo(6) <=  '1';
-                refrescar_anodo(5 downto 0) <=  "000000";
-                refrescar_anodo(7) <=  '0';
+                refrescar_anodo(6) <=  '0';
+                refrescar_anodo(5 downto 0) <=  "111111";
+                refrescar_anodo(7) <=  '1';
                 salida_disp <= disp7;
                 flag<=8;
             end if;
             if flag=8 then
-                refrescar_anodo(7) <=  '1';
-                refrescar_anodo(6 downto 0) <=  "0000000";
+                refrescar_anodo(7) <=  '0';
+                refrescar_anodo(6 downto 0) <=  "1111111";
                 salida_disp <= disp8;
                 flag<=1;
             end if;
