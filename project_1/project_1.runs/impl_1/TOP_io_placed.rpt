@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date                      : Thu Dec  9 23:21:14 2021
-| Host                      : DESKTOP-RMESIQC running 64-bit major release  (build 9200)
+| Date                      : Fri Dec 10 13:44:13 2021
+| Host                      : Supersacris running 64-bit major release  (build 9200)
 | Command                   : report_io -file TOP_io_placed.rpt
 | Design                    : TOP
 | Device                    : xc7a100t
