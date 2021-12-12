@@ -55,6 +55,9 @@ begin
         elsif Reset = '1'then
             Reset_s<='1';
         end if;
+        if rising_edge(clk_1hz) then
+            Start_s<='0';
+        end if
     end process;
     
     
