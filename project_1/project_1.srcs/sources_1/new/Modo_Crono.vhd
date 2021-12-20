@@ -21,10 +21,6 @@ entity Modo_Crono is
 end Modo_Crono;
 
 architecture Behavioral of Modo_Crono is
-    --signal unit_sec : std_logic_vector(3 downto 0);
-    --signal dec_sec : std_logic_vector(3 downto 0);
-    --signal unit_min : std_logic_vector(3 downto 0);
-    --signal dec_min : std_logic_vector(3 downto 0);
     
     signal Start_s : std_logic :='0';
     signal Reset_s : std_logic :='0';
@@ -44,7 +40,7 @@ begin
         CLK_1hz => clk_1hz
     );
     
-    inicio_cuenta : process (Enable_A,Start,Pause,Reset)
+    maquinaestados : process (Enable_A,Start,Pause,Reset)
     begin
         if Enable_A = '1' and Start = '1' and Pause = '0'then
             Start_s<='1';
@@ -55,9 +51,6 @@ begin
         elsif Reset = '1'then
             Reset_s<='1';
         end if;
-        if rising_edge(clk_1hz) then
-            Start_s<='0';
-        end if
     end process;
     
     
@@ -71,8 +64,12 @@ begin
     variable dec_min : V :=0;
     begin
         
-        
-        if rising_edge(clk_1hz) and Start_s='1' then
+        if Reset_s='1' then
+                unit_sec:=0;
+                dec_sec:=0;
+                unit_min:=0;
+                dec_min:=0;
+        elsif rising_edge(clk_1hz) and Start_s='1' then
             unit_sec:=unit_sec+1;
             if unit_sec=10 then
             unit_sec:=0;
@@ -95,12 +92,7 @@ begin
             end if;
             
         end if;
-        if Reset_s='1' then
-                unit_sec:=0;
-                dec_sec:=0;
-                unit_min:=0;
-                dec_min:=0;
-        end if;
+        
         code1 <= std_logic_vector(to_unsigned(unit_sec,code8'length));
         code2 <= std_logic_vector(to_unsigned(dec_sec,code7'length));
         code3 <= std_logic_vector(to_unsigned(unit_min,code6'length));

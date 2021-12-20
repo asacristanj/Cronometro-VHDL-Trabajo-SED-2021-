@@ -9,6 +9,7 @@ entity TOP is
         B_U : in std_logic;
         B_D : in std_logic;
         B_C : in std_logic;
+        reset : in std_logic;
         refrescar_anodo : out std_logic_vector(7 downto 0); --vector que pone a 1 el ánodo correspondiente para actualizar
         salida_disp : out std_logic_vector(6 downto 0) --salida de los displays
     );

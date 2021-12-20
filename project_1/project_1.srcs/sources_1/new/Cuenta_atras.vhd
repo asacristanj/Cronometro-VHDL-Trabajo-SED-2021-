@@ -1,26 +1,30 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
 
 entity Cuenta_atras is
     Port (
         CLK : in std_logic;
         Enable_count : in std_logic;
-        Pause : in std_logic;
-        code1_in : in std_logic_vector(3 downto 0);
-        code2_in : in std_logic_vector(3 downto 0);
-        code3_in : in std_logic_vector(3 downto 0);
-        code4_in : in std_logic_vector(3 downto 0);
-        code1_out : out std_logic_vector(3 downto 0);
-        code2_out : out std_logic_vector(3 downto 0);
-        code3_out : out std_logic_vector(3 downto 0);
-        code4_out : out std_logic_vector(3 downto 0);
+        Reset : in std_logic;
+        code1_in : in integer;
+        code2_in : in integer;
+        code3_in : in integer;
+        code4_in : in integer;
+        code1_out : out std_logic_vector(3 downto 0);--unidades de segundo
+        code2_out : out std_logic_vector(3 downto 0);--decenas de segundo
+        code3_out : out std_logic_vector(3 downto 0);--unidades de minuto
+        code4_out : out std_logic_vector(3 downto 0);--decenas de minuto
         led : out std_logic
-        
      );
 end Cuenta_atras;
 
 architecture Behavioral of Cuenta_atras is
-
+    
+    signal Start_s : std_logic :='0';
+    signal Reset_s : std_logic :='1';
+    signal Set : std_logic :='1';
+    
     signal clk_1hz : std_logic;
 
     COMPONENT clk1hz
@@ -37,6 +41,67 @@ begin
         CLK_1hz => clk_1hz
     );
     
+    
+    maquinaestados : process (Enable_count,Pause,Reset)
+    begin
+        if Enable_count = '1' then --Si está activa la habilitación y Pulsamos botón Start
+            Start_s<='1'; --Activamos la señal que habilita en el segundo process la cuenta por cada segundo
+            Reset_s<='0'; --Desactivamos la señal que resetea el contador al valor inicial
+        elsif Enable_count='0' then 
+            Start_s<='0';
+            Reset_s<='0';
+        elsif Reset = '1'then
+            Reset_s<='1';
+        end if;
+    end process;
+    
+    
+    process (clk_1hz, Start_s, Reset_s, Enable_count)
+    
+    subtype V is integer range 0 to 15;
+    variable unit_sec : V :=0;
+    variable unit_min : V :=0;
+    variable dec_sec : V :=0;
+    variable dec_min : V :=0;
+    begin
+        
+        if Reset_s='1' then --Reset prioritario
+            unit_sec:=code1_in;
+            dec_sec:=code2_in;
+            unit_min:=code3_in;
+            dec_min:=code4_in;
+            led<='0';
+        elsif rising_edge(clk_1hz) and Start_s='1' then
+            if unit_sec=0 and dec_sec=0 and unit_min=0 and dec_min=0 then
+                led<='1';
+            elsif unit_sec=0 then
+                unit_sec:=9;
+                if dec_sec=0 then
+                    dec_sec:=5;
+                    if unit_min=0 then
+                        unit_min:=9;
+                        if dec_min=0 then 
+                            dec_min:=0;
+                        else
+                            dec_min:=dec_min-1;
+                        end if;
+                    else
+                        unit_min:=unit_min-1;
+                    end if;
+                else
+                    dec_sec:=dec_sec-1;
+                end if;
+            else 
+                unit_sec:=unit_sec-1;
+            end if;
+            
+        end if;
+        
+        code1_out <= std_logic_vector(to_unsigned(unit_sec,code1_out'length));
+        code2_out <= std_logic_vector(to_unsigned(dec_sec,code2_out'length));
+        code3_out <= std_logic_vector(to_unsigned(unit_min,code3_out'length));
+        code4_out <= std_logic_vector(to_unsigned(dec_min,code4_out'length));
+    end process;
     
     
     
