@@ -101,10 +101,12 @@ begin
     
     Marca_cron : process 
     begin
-    code8<="1010";
-    code7<="1011";
-    code6<="1111";
-    code5<="1111";
+    if Enable_A='1' then
+        code8<="1010";
+        code7<="1011";
+        code6<="1111";
+        code5<="1111";
+    end if;
     end process;
     
     

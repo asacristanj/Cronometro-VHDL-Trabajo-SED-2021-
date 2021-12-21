@@ -42,7 +42,7 @@ begin
     );
     
     
-    maquinaestados : process (Enable_count,Pause,Reset)
+    maquinaestados : process (Enable_count,Reset)
     begin
         if Enable_count = '1' then --Si está activa la habilitación y Pulsamos botón Start
             Start_s<='1'; --Activamos la señal que habilita en el segundo process la cuenta por cada segundo

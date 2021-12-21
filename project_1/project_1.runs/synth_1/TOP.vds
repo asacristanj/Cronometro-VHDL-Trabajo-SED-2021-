@@ -1,0 +1,557 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Dec 21 12:44:45 2021
+# Process ID: 12652
+# Current directory: C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
+# Log file: C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/synth_1/TOP.vds
+# Journal file: C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source TOP.tcl -notrace
+Command: synth_design -top TOP -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1272
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-2551] possible infinite loop; process does not have a wait statement [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:102]
+WARNING: [Synth 8-2551] possible infinite loop; process does not have a wait statement [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'TOP' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:19]
+INFO: [Synth 8-3491] module 'GestorEntradas' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:4' bound to instance 'GestorEntradas1' of component 'GestorEntradas' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:166]
+INFO: [Synth 8-638] synthesizing module 'GestorEntradas' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:22]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador' of component 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:49]
+INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (1#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:12]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:4' bound to instance 'DetectorFlanco' of component 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:55]
+INFO: [Synth 8-638] synthesizing module 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'EDGEDTCTR' (2#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:12]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador2' of component 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:61]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:4' bound to instance 'DetectorFlanco2' of component 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:67]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador3' of component 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:73]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:4' bound to instance 'DetectorFlanco3' of component 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:79]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador4' of component 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:85]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:4' bound to instance 'DetectorFlanco4' of component 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:91]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador5' of component 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:97]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:4' bound to instance 'DetectorFlanco5' of component 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:103]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador6' of component 'SYNCHRNZR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:109]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:4' bound to instance 'DetectorFlanco6' of component 'EDGEDTCTR' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:115]
+INFO: [Synth 8-256] done synthesizing module 'GestorEntradas' (3#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:22]
+INFO: [Synth 8-3491] module 'MaquinaEstados' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:4' bound to instance 'MaquinaEstados1' of component 'MaquinaEstados' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:182]
+INFO: [Synth 8-638] synthesizing module 'MaquinaEstados' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:26]
+WARNING: [Synth 8-614] signal 'Sel_modo' is read in the process but is not in the sensitivity list [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'MaquinaEstados' (4#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:26]
+INFO: [Synth 8-3491] module 'Modo_Crono' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:5' bound to instance 'Modo_Crono1' of component 'Modo_Crono' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:202]
+INFO: [Synth 8-638] synthesizing module 'Modo_Crono' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:23]
+INFO: [Synth 8-3491] module 'clk1Hz' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:4' bound to instance 'Inst_clk1hz' of component 'clk1hz' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'clk1Hz' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'clk1Hz' (5#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'Modo_Crono' (6#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:23]
+INFO: [Synth 8-3491] module 'Modo_Temp' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:5' bound to instance 'Modo_Temp1' of component 'Modo_Temp' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:218]
+INFO: [Synth 8-638] synthesizing module 'Modo_Temp' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:26]
+INFO: [Synth 8-3491] module 'Sel_Cuenta' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:4' bound to instance 'Sel_Cuenta1' of component 'Sel_Cuenta' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:69]
+INFO: [Synth 8-638] synthesizing module 'Sel_Cuenta' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'Sel_Cuenta' (7#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:20]
+INFO: [Synth 8-3491] module 'Cuenta_atras' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:5' bound to instance 'Cuenta_atras1' of component 'Cuenta_atras' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:82]
+INFO: [Synth 8-638] synthesizing module 'Cuenta_atras' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:22]
+INFO: [Synth 8-3491] module 'clk1Hz' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:4' bound to instance 'Inst_clk1hz' of component 'clk1hz' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:38]
+WARNING: [Synth 8-614] signal 'code1_in' is read in the process but is not in the sensitivity list [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:59]
+WARNING: [Synth 8-614] signal 'code2_in' is read in the process but is not in the sensitivity list [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:59]
+WARNING: [Synth 8-614] signal 'code3_in' is read in the process but is not in the sensitivity list [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:59]
+WARNING: [Synth 8-614] signal 'code4_in' is read in the process but is not in the sensitivity list [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'Cuenta_atras' (8#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:22]
+WARNING: [Synth 8-614] signal 'unit_sec_aux' is read in the process but is not in the sensitivity list [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:105]
+WARNING: [Synth 8-614] signal 'dec_sec_aux' is read in the process but is not in the sensitivity list [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:105]
+WARNING: [Synth 8-614] signal 'unit_min_aux' is read in the process but is not in the sensitivity list [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:105]
+WARNING: [Synth 8-614] signal 'dec_min_aux' is read in the process but is not in the sensitivity list [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:105]
+WARNING: [Synth 8-614] signal 'Enable_sel' is read in the process but is not in the sensitivity list [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:115]
+WARNING: [Synth 8-614] signal 'Enable_count' is read in the process but is not in the sensitivity list [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:115]
+INFO: [Synth 8-256] done synthesizing module 'Modo_Temp' (9#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:26]
+INFO: [Synth 8-3491] module 'Ajedrez' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:5' bound to instance 'Ajedrez1' of component 'Ajedrez' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:237]
+INFO: [Synth 8-638] synthesizing module 'Ajedrez' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:26]
+INFO: [Synth 8-3491] module 'Cuenta_atras' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:5' bound to instance 'JugadorA' of component 'Cuenta_atras' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:58]
+INFO: [Synth 8-3491] module 'Cuenta_atras' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:5' bound to instance 'JugadorB' of component 'Cuenta_atras' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'Ajedrez' (10#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:26]
+INFO: [Synth 8-3491] module 'Control_Anodo' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:5' bound to instance 'Control_Anodo1' of component 'Control_anodo' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:257]
+INFO: [Synth 8-638] synthesizing module 'Control_Anodo' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:21]
+INFO: [Synth 8-3491] module 'clk10kHz' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:4' bound to instance 'Inst_clk10khz' of component 'clk10khz' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'clk10kHz' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'clk10kHz' (11#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:11]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco1' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:59]
+INFO: [Synth 8-638] synthesizing module 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'deco1' (12#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:13]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco2' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:63]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco3' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:67]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco4' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:71]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco5' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:75]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco6' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:79]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco7' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:83]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco8' of component 'deco1' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:87]
+INFO: [Synth 8-256] done synthesizing module 'Control_Anodo' (13#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:21]
+INFO: [Synth 8-256] done synthesizing module 'TOP' (14#1) [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:19]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1153.035 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1153.035 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'flag_reg' in module 'Control_Anodo'
+WARNING: [Synth 8-327] inferring latch for variable 'code1_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+WARNING: [Synth 8-327] inferring latch for variable 'code7_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+WARNING: [Synth 8-327] inferring latch for variable 'code8_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+WARNING: [Synth 8-327] inferring latch for variable 'Enable_A_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:63]
+WARNING: [Synth 8-327] inferring latch for variable 'Enable_B_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:64]
+WARNING: [Synth 8-327] inferring latch for variable 'Enable_C_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:65]
+WARNING: [Synth 8-327] inferring latch for variable 'Sel_modo_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:62]
+WARNING: [Synth 8-327] inferring latch for variable 'submaquina1.Modo_aux_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:39]
+WARNING: [Synth 8-327] inferring latch for variable 'Start_s_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:46]
+WARNING: [Synth 8-327] inferring latch for variable 'Reset_s_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'code6_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+WARNING: [Synth 8-327] inferring latch for variable 'code7_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+WARNING: [Synth 8-327] inferring latch for variable 'code8_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+WARNING: [Synth 8-327] inferring latch for variable 'unit_sec_aux_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:34]
+WARNING: [Synth 8-327] inferring latch for variable 'dec_sec_aux_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:36]
+WARNING: [Synth 8-327] inferring latch for variable 'unit_min_aux_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:35]
+WARNING: [Synth 8-327] inferring latch for variable 'dec_min_aux_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:37]
+WARNING: [Synth 8-327] inferring latch for variable 'code1_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:90]
+WARNING: [Synth 8-327] inferring latch for variable 'code2_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:91]
+WARNING: [Synth 8-327] inferring latch for variable 'code3_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:92]
+WARNING: [Synth 8-327] inferring latch for variable 'code4_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:93]
+WARNING: [Synth 8-327] inferring latch for variable 'Enable_sel_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:119]
+WARNING: [Synth 8-327] inferring latch for variable 'Enable_count_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:84]
+WARNING: [Synth 8-327] inferring latch for variable 'Reset_aux_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:85]
+WARNING: [Synth 8-327] inferring latch for variable 'Enable_count_A_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:60]
+WARNING: [Synth 8-327] inferring latch for variable 'Reset_aux_A_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:61]
+WARNING: [Synth 8-327] inferring latch for variable 'Enable_count_B_reg' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:75]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              000 | 00000000000000000000000000000001
+*
+                 iSTATE6 |                              001 | 00000000000000000000000000000010
+                 iSTATE5 |                              010 | 00000000000000000000000000000011
+                 iSTATE4 |                              011 | 00000000000000000000000000000100
+                 iSTATE3 |                              100 | 00000000000000000000000000000101
+                 iSTATE2 |                              101 | 00000000000000000000000000000110
+                 iSTATE1 |                              110 | 00000000000000000000000000000111
+                 iSTATE0 |                              111 | 00000000000000000000000000001000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'flag_reg' using encoding 'sequential' in module 'Control_Anodo'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'GestorEntradas1/DetectorFlanco5' (EDGEDTCTR) to 'GestorEntradas1/DetectorFlanco6'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input   26 Bit       Adders := 4     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 24    
++---Registers : 
+	               26 Bit    Registers := 4     
+	               13 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 16    
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   26 Bit        Muxes := 4     
+	   2 Input   13 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	   8 Input    7 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 20    
+	   2 Input    3 Bit        Muxes := 1     
+	   8 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 31    
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MaquinaEstados1/code1_reg[3]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MaquinaEstados1/code1_reg[2]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MaquinaEstados1/code1_reg[1]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MaquinaEstados1/code1_reg[0]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MaquinaEstados1/code7_reg[3]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MaquinaEstados1/code7_reg[2]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MaquinaEstados1/code7_reg[1]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MaquinaEstados1/code7_reg[0]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:94]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MaquinaEstados1/code8_reg[3]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MaquinaEstados1/code8_reg[2]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MaquinaEstados1/code8_reg[1]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'MaquinaEstados1/code8_reg[0]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:95]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/code6_reg[3]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/code6_reg[2]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/code6_reg[1]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/code6_reg[0]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/code7_reg[3]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/code7_reg[2]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/code7_reg[1]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/code7_reg[0]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/code8_reg[3]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/code8_reg[2]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/code8_reg[1]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/code8_reg[0]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/unit_sec_inferred/out[3]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:68]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/unit_sec_inferred/out[2]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:68]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/unit_sec_inferred/out[1]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:68]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/unit_sec_inferred/out[0]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:68]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/dec_sec_inferred/out[3]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/dec_sec_inferred/out[2]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/dec_sec_inferred/out[1]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/dec_sec_inferred/out[0]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:69]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/unit_min_inferred/out[3]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/unit_min_inferred/out[2]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/unit_min_inferred/out[1]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/unit_min_inferred/out[0]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/dec_min_inferred/out[3]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/dec_min_inferred/out[2]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/dec_min_inferred/out[1]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Crono1/dec_min_inferred/out[0]' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Temp1/Cuenta_atras1/unit_min_reg[3]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Temp1/Cuenta_atras1/unit_min_reg[2]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Temp1/Cuenta_atras1/unit_min_reg[1]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Temp1/Cuenta_atras1/unit_min_reg[0]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Temp1/Cuenta_atras1/dec_min_reg[3]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'Modo_Temp1/Cuenta_atras1/dec_min_reg[2]/Q' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:72]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:72]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:90]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:90]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:90]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:90]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:91]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:91]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:91]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:91]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:92]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:92]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:92]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:92]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:93]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:93]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:93]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:93]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:72]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:69]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:70]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:71]
+INFO: [Common 17-14] Message 'Synth 8-6858' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     3|
+|3     |LUT1   |     3|
+|4     |LUT2   |     6|
+|5     |LUT3   |     6|
+|6     |LUT4   |     1|
+|7     |LUT5   |     1|
+|8     |LUT6   |     2|
+|9     |FDRE   |    23|
+|10    |FDSE   |     5|
+|11    |IBUF   |     1|
+|12    |OBUF   |    16|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1153.035 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 312 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1153.035 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1153.035 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1153.035 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 3 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1153.035 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 2ac0ef80
+INFO: [Common 17-83] Releasing license: Synthesis
+81 Infos, 40 Warnings, 200 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1153.035 ; gain = 0.000
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/synth_1/TOP.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 21 12:45:15 2021...

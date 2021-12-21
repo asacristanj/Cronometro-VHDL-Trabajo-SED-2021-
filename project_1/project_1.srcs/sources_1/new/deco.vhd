@@ -27,6 +27,7 @@ ARCHITECTURE dataflow OF deco1 IS
                 "1111010" WHEN "1011",--r
                 "1110000" WHEN "1100",--t
                 "0000100" WHEN "1101",--E
+                "0001000" WHEN "1110",--A
                 "1111110" WHEN others;-- '-'
 
 END ARCHITECTURE dataflow;

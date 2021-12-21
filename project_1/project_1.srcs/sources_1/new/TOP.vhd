@@ -11,7 +11,8 @@ entity TOP is
         B_C : in std_logic;
         reset : in std_logic;
         refrescar_anodo : out std_logic_vector(7 downto 0); --vector que pone a 1 el ánodo correspondiente para actualizar
-        salida_disp : out std_logic_vector(6 downto 0) --salida de los displays
+        salida_disp : out std_logic_vector(6 downto 0); --salida de los displays
+        led : out std_logic
     );
 end TOP;
 
@@ -28,6 +29,11 @@ architecture Behavioral of TOP is
     signal B_U_aux: std_logic;
     signal B_D_aux: std_logic;
     signal B_C_aux: std_logic;
+    signal Reset_aux: std_logic;
+    
+    signal Enable_A: std_logic;
+    signal Enable_B: std_logic;
+    signal Enable_C: std_logic;
 
     signal code1 : std_logic_vector(3 downto 0);
     signal code2 : std_logic_vector(3 downto 0);
@@ -38,23 +44,47 @@ architecture Behavioral of TOP is
     signal code7 : std_logic_vector(3 downto 0);
     signal code8 : std_logic_vector(3 downto 0);
 
-COMPONENT SYNCHRNZR
+    COMPONENT GestorEntradas
        PORT (
-              async_in : IN std_logic;
-              clk: IN std_logic;
-              sync_out : OUT std_logic
+            CLK : in std_logic;
+            B_L : in std_logic;
+            B_R : in std_logic;
+            B_U : in std_logic;
+            B_D : in std_logic;
+            B_C : in std_logic;
+            reset : in std_logic;
+            B_L_out : out std_logic;
+            B_R_out : out std_logic;
+            B_U_out : out std_logic;
+            B_D_out : out std_logic;
+            B_C_out : out std_logic;
+            reset_out : out std_logic
        );
-END COMPONENT;
-
-COMPONENT EDGEDTCTR
+    END COMPONENT;
+    
+    COMPONENT MaquinaEstados
        PORT (
-              sync_in : IN std_logic;
-              clk: IN std_logic;
-              edge : OUT std_logic
+            B1 : in std_logic;
+            B2 : in std_logic;
+            B3 : in std_logic;
+            B4 : in std_logic;
+            B5 : in std_logic;
+            code1 : out std_logic_vector(3 downto 0);
+            code2 : out std_logic_vector(3 downto 0);
+            code3 : out std_logic_vector(3 downto 0);
+            code4 : out std_logic_vector(3 downto 0);
+            code5 : out std_logic_vector(3 downto 0);
+            code6 : out std_logic_vector(3 downto 0);
+            code7 : out std_logic_vector(3 downto 0);
+            code8 : out std_logic_vector(3 downto 0);
+            Reset : in std_logic;
+            Enable_A : out std_logic :='0';
+            Enable_B : out std_logic :='0';
+            Enable_C : out std_logic :='0'
        );
-END COMPONENT;
+    END COMPONENT;
 
-COMPONENT Modo_Crono
+    COMPONENT Modo_Crono
        PORT (
             CLK : in std_logic;
             code1 : out std_logic_vector(3 downto 0);
@@ -70,9 +100,52 @@ COMPONENT Modo_Crono
             Pause : in std_logic;
             Reset : in std_logic
        );
-END COMPONENT;
+    END COMPONENT;
+    
+    COMPONENT Modo_Temp
+       PORT (
+            CLK : in std_logic;
+            B1 : in std_logic;
+            B2 : in std_logic;
+            B3 : in std_logic;
+            B4 : in std_logic;
+            B5 : in std_logic;
+            code1 : out std_logic_vector(3 downto 0);
+            code2 : out std_logic_vector(3 downto 0);
+            code3 : out std_logic_vector(3 downto 0);
+            code4 : out std_logic_vector(3 downto 0);
+            code5 : out std_logic_vector(3 downto 0);
+            code6 : out std_logic_vector(3 downto 0);
+            code7 : out std_logic_vector(3 downto 0);
+            code8 : out std_logic_vector(3 downto 0);
+            Enable_B : in std_logic;
+            led : out std_logic
+       );
+    END COMPONENT;
+    
+    COMPONENT Ajedrez
+       PORT (
+            CLK : in std_logic;
+            B1 : in std_logic;
+            B2 : in std_logic;
+            B3 : in std_logic;
+            B4 : in std_logic;
+            B5 : in std_logic;
+            code1 : out std_logic_vector(3 downto 0);
+            code2 : out std_logic_vector(3 downto 0);
+            code3 : out std_logic_vector(3 downto 0);
+            code4 : out std_logic_vector(3 downto 0);
+            code5 : out std_logic_vector(3 downto 0);
+            code6 : out std_logic_vector(3 downto 0);
+            code7 : out std_logic_vector(3 downto 0);
+            code8 : out std_logic_vector(3 downto 0);
+            Enable_C : in std_logic;
+            led : out std_logic
+       );
+    END COMPONENT;
+    
 
-COMPONENT Control_anodo
+    COMPONENT Control_anodo
        PORT (
         CLK : in std_logic;
         code1 : in std_logic_vector(3 downto 0);
@@ -86,99 +159,114 @@ COMPONENT Control_anodo
         refrescar_anodo : out std_logic_vector(7 downto 0);
         salida_disp : out std_logic_vector(6 downto 0)
        );
-END COMPONENT;      
+    END COMPONENT;      
        
 begin
-Sincronizador: SYNCHRNZR PORT MAP(
-ASYNC_IN=>B_L,
-CLK=>clk,
-SYNC_OUT=>sync_auxL
-);
 
-DetectorFlanco: EDGEDTCTR PORT MAP(
-clk=>clk,
-SYNC_IN=>sync_auxL,
-EDGE=>B_L_aux
-);
-
-Sincronizador2: SYNCHRNZR PORT MAP(
-ASYNC_IN=>B_R,
-CLK=>clk,
-SYNC_OUT=>sync_auxR
-);
-
-DetectorFlanco2: EDGEDTCTR PORT MAP(
-clk=>clk,
-SYNC_IN=>sync_auxR,
-EDGE=>B_R_aux
-);
-
-Sincronizador3: SYNCHRNZR PORT MAP(
-ASYNC_IN=>B_U,
-CLK=>clk,
-SYNC_OUT=>sync_auxU
-);
-
-DetectorFlanco3: EDGEDTCTR PORT MAP(
-clk=>clk,
-SYNC_IN=>sync_auxU,
-EDGE=>B_U_aux
-);
-
-Sincronizador4: SYNCHRNZR PORT MAP(
-ASYNC_IN=>B_D,
-CLK=>clk,
-SYNC_OUT=>sync_auxD
-);
-
-DetectorFlanco4: EDGEDTCTR PORT MAP(
-clk=>clk,
-SYNC_IN=>sync_auxD,
-EDGE=>B_D_aux
-);
-
-Sincronizador5: SYNCHRNZR PORT MAP(
-ASYNC_IN=>B_C,
-CLK=>clk,
-SYNC_OUT=>sync_auxC
-);
-
-DetectorFlanco5: EDGEDTCTR PORT MAP(
-clk=>clk,
-SYNC_IN=>sync_auxC,
-EDGE=>B_C_aux
-);
-
-
-Modo_Crono1 : Modo_Crono PORT MAP(
-CLK=>clk,
-code1=>code1,
-code2=>code2,
-code3=>code3,
-code4=>code4,
-code5=>code5,
-code6=>code6,
-code7=>code7,
-code8=>code8,
-Enable_A=>'1',
-Start=>B_C_aux,
-Pause=>B_D_aux,
-Reset=>B_L_aux
-);
-
-Control_Anodo1 : Control_anodo PORT MAP(
-CLK=>clk,
-code1=>code1,
-code2=>code2,
-code3=>code3,
-code4=>code4,
-code5=>code5,
-code6=>code6,
-code7=>code7,
-code8=>code8,
-refrescar_anodo=>refrescar_anodo,
-salida_disp=>salida_disp
-);
+    GestorEntradas1 : GestorEntradas PORT MAP(
+        CLK => CLK,
+        B_L => B_L,
+        B_R => B_R,
+        B_U => B_U,
+        B_D => B_D,
+        B_C => B_C,
+        reset => reset,
+        B_L_out => B_L_aux,
+        B_R_out => B_R_aux,
+        B_U_out => B_U_aux,
+        B_D_out => B_D_aux,
+        B_C_out => B_C_aux,
+        reset_out => Reset_aux
+    );
+    
+    MaquinaEstados1 : MaquinaEstados PORT MAP(
+        B1=>B_U_aux,
+        B2=>B_D_aux,
+        B3=>B_R_aux,
+        B4=>B_L_aux,
+        B5=>B_C_aux,
+        code1=>code1,
+        code2=>code2,
+        code3=>code3,
+        code4=>code4,
+        code5=>code5,
+        code6=>code6,
+        code7=>code7,
+        code8=>code8,
+        Reset=>Reset,
+        Enable_A=>Enable_A,
+        Enable_B=>Enable_B,
+        Enable_C=>Enable_C
+    );
+    
+    Modo_Crono1 : Modo_Crono PORT MAP(
+        CLK=>clk,
+        code1=>code1,
+        code2=>code2,
+        code3=>code3,
+        code4=>code4,
+        code5=>code5,
+        code6=>code6,
+        code7=>code7,
+        code8=>code8,
+        Enable_A=>Enable_A,
+        Start=>B_C_aux,
+        Pause=>B_D_aux,
+        Reset=>B_L_aux
+    );
+    
+    Modo_Temp1 : Modo_Temp PORT MAP(
+        CLK=>clk,
+        code1=>code1,
+        code2=>code2,
+        code3=>code3,
+        code4=>code4,
+        code5=>code5,
+        code6=>code6,
+        code7=>code7,
+        code8=>code8,
+        Enable_B=>Enable_B,
+        led=>led,
+        B1=>B_U_aux,
+        B2=>B_D_aux,
+        B3=>B_R_aux,
+        B4=>B_L_aux,
+        B5=>B_C_aux
+    );
+    
+    Ajedrez1 : Ajedrez PORT MAP(
+        CLK=>clk,
+        code1=>code1,
+        code2=>code2,
+        code3=>code3,
+        code4=>code4,
+        code5=>code5,
+        code6=>code6,
+        code7=>code7,
+        code8=>code8,
+        Enable_C=>Enable_C,
+        led=>led,
+        B1=>B_U_aux,
+        B2=>B_D_aux,
+        B3=>B_R_aux,
+        B4=>B_L_aux,
+        B5=>B_C_aux
+    );
+    
+    
+    Control_Anodo1 : Control_anodo PORT MAP(
+        CLK=>clk,
+        code1=>code1,
+        code2=>code2,
+        code3=>code3,
+        code4=>code4,
+        code5=>code5,
+        code6=>code6,
+        code7=>code7,
+        code8=>code8,
+        refrescar_anodo=>refrescar_anodo,
+        salida_disp=>salida_disp
+     );
 
 
 

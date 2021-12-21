@@ -112,24 +112,24 @@ begin
     end if;
 end process;
 
-maquinaestados : process (B5, Enable_B, B2, B4)
+maquinaestados : process (B5, Enable_B, B2, B4) --Cambia  entre el modo seleccionar cuenta y el de contar 
 begin
-    if Enable_B='0' then
+    if Enable_B='0' then --modo temporizador desconectado
         Reset_aux<='1';
         Enable_sel<='0';
         Enable_count<='0';
-    else
-        if rising_edge(Enable_B) then
+    else --modo temporizador conectado
+        if Enable_B='1' and Enable_sel='0' and Enable_count='0' then --Si no está ni modosel ni modo cuenta, y si está activdo el modotemp, entra en modo sel
             Enable_sel<='1';
         end if;
-        if Enable_B='1' and Enable_sel='1' and B5='1' then
-            Enable_sel<='0';
+        if Enable_B='1' and Enable_sel='1' and B5='1' then--si está en modo sel y se pulsa el start(b5) esq ya se ha seleccioando y se desea contar
+            Enable_sel<='0';                              --por lo q se desactiva modo sel y se activa el count para empezar a contar
             Enable_count<='1';
             Reset_aux<='0';
-        elsif Enable_B='1' and Enable_sel='0' and B2='1' then
+        elsif Enable_B='1' and Enable_sel='0' and Enable_count='1' and B2='1' then--si está contando y nop está en modo sel y se pulsa pausa(B2) se para
             Enable_count<='0';
             Reset_aux<='0';
-        elsif Enable_B='1' and Enable_sel='0'and B5='1' then
+        elsif Enable_B='1' and Enable_sel='0'and B5='1' then --se retoma la cuenta en cso de q estuviera pusado
             Enable_count<='1';
             Reset_aux<='0';
         elsif Enable_B='1' and Enable_sel='0' and B4='1' then
