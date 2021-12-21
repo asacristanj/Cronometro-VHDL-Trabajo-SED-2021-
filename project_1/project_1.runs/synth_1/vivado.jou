@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Tue Dec 21 12:44:45 2021
-# Process ID: 12652
+# Start of session at: Tue Dec 21 17:05:33 2021
+# Process ID: 11372
 # Current directory: C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/synth_1
 # Command line: vivado.exe -log TOP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
 # Log file: C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/synth_1/TOP.vds

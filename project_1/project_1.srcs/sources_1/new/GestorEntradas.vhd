@@ -109,12 +109,12 @@ begin
     Sincronizador6: SYNCHRNZR PORT MAP(
         ASYNC_IN=>reset,
         CLK=>clk,
-        SYNC_OUT=>sync_auxC
+        SYNC_OUT=>sync_auxReset
     );
 
     DetectorFlanco6: EDGEDTCTR PORT MAP(
         clk=>clk,
-        SYNC_IN=>sync_auxC,
+        SYNC_IN=>sync_auxReset,
         EDGE=>reset_out
     );
     

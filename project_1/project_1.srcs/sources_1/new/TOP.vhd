@@ -34,15 +34,54 @@ architecture Behavioral of TOP is
     signal Enable_A: std_logic;
     signal Enable_B: std_logic;
     signal Enable_C: std_logic;
+    signal Enable_S: std_logic;
 
-    signal code1 : std_logic_vector(3 downto 0);
-    signal code2 : std_logic_vector(3 downto 0);
-    signal code3 : std_logic_vector(3 downto 0);
-    signal code4 : std_logic_vector(3 downto 0);
-    signal code5 : std_logic_vector(3 downto 0);
-    signal code6 : std_logic_vector(3 downto 0);
-    signal code7 : std_logic_vector(3 downto 0);
-    signal code8 : std_logic_vector(3 downto 0);
+    signal code1_ME : std_logic_vector(3 downto 0);
+    signal code2_ME : std_logic_vector(3 downto 0);
+    signal code3_ME : std_logic_vector(3 downto 0);
+    signal code4_ME : std_logic_vector(3 downto 0);
+    signal code5_ME : std_logic_vector(3 downto 0);
+    signal code6_ME : std_logic_vector(3 downto 0);
+    signal code7_ME : std_logic_vector(3 downto 0);
+    signal code8_ME : std_logic_vector(3 downto 0);
+    
+    signal code1_A : std_logic_vector(3 downto 0);
+    signal code2_A : std_logic_vector(3 downto 0);
+    signal code3_A : std_logic_vector(3 downto 0);
+    signal code4_A : std_logic_vector(3 downto 0);
+    signal code5_A : std_logic_vector(3 downto 0);
+    signal code6_A : std_logic_vector(3 downto 0);
+    signal code7_A : std_logic_vector(3 downto 0);
+    signal code8_A : std_logic_vector(3 downto 0);
+    
+    signal code1_B : std_logic_vector(3 downto 0);
+    signal code2_B : std_logic_vector(3 downto 0);
+    signal code3_B : std_logic_vector(3 downto 0);
+    signal code4_B : std_logic_vector(3 downto 0);
+    signal code5_B : std_logic_vector(3 downto 0);
+    signal code6_B : std_logic_vector(3 downto 0);
+    signal code7_B : std_logic_vector(3 downto 0);
+    signal code8_B : std_logic_vector(3 downto 0);
+    
+    signal code1_C : std_logic_vector(3 downto 0);
+    signal code2_C : std_logic_vector(3 downto 0);
+    signal code3_C : std_logic_vector(3 downto 0);
+    signal code4_C : std_logic_vector(3 downto 0);
+    signal code5_C : std_logic_vector(3 downto 0);
+    signal code6_C : std_logic_vector(3 downto 0);
+    signal code7_C : std_logic_vector(3 downto 0);
+    signal code8_C : std_logic_vector(3 downto 0);
+    
+    signal code1_aux : std_logic_vector(3 downto 0);
+    signal code2_aux : std_logic_vector(3 downto 0);
+    signal code3_aux : std_logic_vector(3 downto 0);
+    signal code4_aux : std_logic_vector(3 downto 0);
+    signal code5_aux : std_logic_vector(3 downto 0);
+    signal code6_aux : std_logic_vector(3 downto 0);
+    signal code7_aux : std_logic_vector(3 downto 0);
+    signal code8_aux : std_logic_vector(3 downto 0);
+    
+    
 
     COMPONENT GestorEntradas
        PORT (
@@ -80,7 +119,8 @@ architecture Behavioral of TOP is
             Reset : in std_logic;
             Enable_A : out std_logic :='0';
             Enable_B : out std_logic :='0';
-            Enable_C : out std_logic :='0'
+            Enable_C : out std_logic :='0';
+            Enable_S : out std_logic :='1'
        );
     END COMPONENT;
 
@@ -144,6 +184,60 @@ architecture Behavioral of TOP is
        );
     END COMPONENT;
     
+    COMPONENT SuperMux 
+    PORT (
+        Enable_A : in std_logic;
+        Enable_B : in std_logic;
+        Enable_C : in std_logic;
+        Enable_S : in std_logic;
+        
+        code1_ME : in std_logic_vector(3 downto 0);
+        code2_ME : in std_logic_vector(3 downto 0);
+        code3_ME : in std_logic_vector(3 downto 0);
+        code4_ME : in std_logic_vector(3 downto 0);
+        code5_ME : in std_logic_vector(3 downto 0);
+        code6_ME : in std_logic_vector(3 downto 0);
+        code7_ME : in std_logic_vector(3 downto 0);
+        code8_ME : in std_logic_vector(3 downto 0);
+    
+        code1_A : in std_logic_vector(3 downto 0);
+        code2_A : in std_logic_vector(3 downto 0);
+        code3_A : in std_logic_vector(3 downto 0);
+        code4_A : in std_logic_vector(3 downto 0);
+        code5_A : in std_logic_vector(3 downto 0);
+        code6_A : in std_logic_vector(3 downto 0);
+        code7_A : in std_logic_vector(3 downto 0);
+        code8_A : in std_logic_vector(3 downto 0);
+    
+        code1_B : in std_logic_vector(3 downto 0);
+        code2_B : in std_logic_vector(3 downto 0);
+        code3_B : in std_logic_vector(3 downto 0);
+        code4_B : in std_logic_vector(3 downto 0);
+        code5_B : in std_logic_vector(3 downto 0);
+        code6_B : in std_logic_vector(3 downto 0);
+        code7_B : in std_logic_vector(3 downto 0);
+        code8_B : in std_logic_vector(3 downto 0);
+    
+        code1_C : in std_logic_vector(3 downto 0);
+        code2_C : in std_logic_vector(3 downto 0);
+        code3_C : in std_logic_vector(3 downto 0);
+        code4_C : in std_logic_vector(3 downto 0);
+        code5_C : in std_logic_vector(3 downto 0);
+        code6_C : in std_logic_vector(3 downto 0);
+        code7_C : in std_logic_vector(3 downto 0);
+        code8_C : in std_logic_vector(3 downto 0);
+        
+        code1 : out std_logic_vector(3 downto 0);
+        code2 : out std_logic_vector(3 downto 0);
+        code3 : out std_logic_vector(3 downto 0);
+        code4 : out std_logic_vector(3 downto 0);
+        code5 : out std_logic_vector(3 downto 0);
+        code6 : out std_logic_vector(3 downto 0);
+        code7 : out std_logic_vector(3 downto 0);
+        code8 : out std_logic_vector(3 downto 0)
+    );
+    END COMPONENT;
+    
 
     COMPONENT Control_anodo
        PORT (
@@ -185,30 +279,31 @@ begin
         B3=>B_R_aux,
         B4=>B_L_aux,
         B5=>B_C_aux,
-        code1=>code1,
-        code2=>code2,
-        code3=>code3,
-        code4=>code4,
-        code5=>code5,
-        code6=>code6,
-        code7=>code7,
-        code8=>code8,
+        code1=>code1_ME,
+        code2=>code2_ME,
+        code3=>code3_ME,
+        code4=>code4_ME,
+        code5=>code5_ME,
+        code6=>code6_ME,
+        code7=>code7_ME,
+        code8=>code8_ME,
         Reset=>Reset,
         Enable_A=>Enable_A,
         Enable_B=>Enable_B,
-        Enable_C=>Enable_C
+        Enable_C=>Enable_C,
+        Enable_S=>Enable_S
     );
     
     Modo_Crono1 : Modo_Crono PORT MAP(
         CLK=>clk,
-        code1=>code1,
-        code2=>code2,
-        code3=>code3,
-        code4=>code4,
-        code5=>code5,
-        code6=>code6,
-        code7=>code7,
-        code8=>code8,
+        code1=>code1_A,
+        code2=>code2_A,
+        code3=>code3_A,
+        code4=>code4_A,
+        code5=>code5_A,
+        code6=>code6_A,
+        code7=>code7_A,
+        code8=>code8_A,
         Enable_A=>Enable_A,
         Start=>B_C_aux,
         Pause=>B_D_aux,
@@ -217,14 +312,14 @@ begin
     
     Modo_Temp1 : Modo_Temp PORT MAP(
         CLK=>clk,
-        code1=>code1,
-        code2=>code2,
-        code3=>code3,
-        code4=>code4,
-        code5=>code5,
-        code6=>code6,
-        code7=>code7,
-        code8=>code8,
+        code1=>code1_B,
+        code2=>code2_B,
+        code3=>code3_B,
+        code4=>code4_B,
+        code5=>code5_B,
+        code6=>code6_B,
+        code7=>code7_B,
+        code8=>code8_B,
         Enable_B=>Enable_B,
         led=>led,
         B1=>B_U_aux,
@@ -236,14 +331,14 @@ begin
     
     Ajedrez1 : Ajedrez PORT MAP(
         CLK=>clk,
-        code1=>code1,
-        code2=>code2,
-        code3=>code3,
-        code4=>code4,
-        code5=>code5,
-        code6=>code6,
-        code7=>code7,
-        code8=>code8,
+        code1=>code1_C,
+        code2=>code2_C,
+        code3=>code3_C,
+        code4=>code4_C,
+        code5=>code5_C,
+        code6=>code6_C,
+        code7=>code7_C,
+        code8=>code8_C,
         Enable_C=>Enable_C,
         led=>led,
         B1=>B_U_aux,
@@ -253,17 +348,60 @@ begin
         B5=>B_C_aux
     );
     
+    SuperMux1 : SuperMux PORT MAP(
+        Enable_A=>Enable_A,
+        Enable_B=>Enable_B,
+        Enable_C=>Enable_C,
+        Enable_S=>Enable_S,
+        
+        code1_A=>code1_A,
+        code2_A=>code2_A,
+        code3_A=>code3_A,
+        code4_A=>code4_A,
+        code5_A=>code5_A,
+        code6_A=>code6_A,
+        code7_A=>code7_A,
+        code8_A=>code8_A,
+        
+        code1_B=>code1_B,
+        code2_B=>code2_B,
+        code3_B=>code3_B,
+        code4_B=>code4_B,
+        code5_B=>code5_B,
+        code6_B=>code6_B,
+        code7_B=>code7_B,
+        code8_B=>code8_B,
+        
+        code1_C=>code1_C,
+        code2_C=>code2_C,
+        code3_C=>code3_C,
+        code4_C=>code4_C,
+        code5_C=>code5_C,
+        code6_C=>code6_C,
+        code7_C=>code7_C,
+        code8_C=>code8_C,
+        
+        code1=>code1_aux,
+        code2=>code2_aux,
+        code3=>code3_aux,
+        code4=>code4_aux,
+        code5=>code5_aux,
+        code6=>code6_aux,
+        code7=>code7_aux,
+        code8=>code8_aux
+    );
+    
     
     Control_Anodo1 : Control_anodo PORT MAP(
         CLK=>clk,
-        code1=>code1,
-        code2=>code2,
-        code3=>code3,
-        code4=>code4,
-        code5=>code5,
-        code6=>code6,
-        code7=>code7,
-        code8=>code8,
+        code1=>code1_aux,
+        code2=>code2_aux,
+        code3=>code3_aux,
+        code4=>code4_aux,
+        code5=>code5_aux,
+        code6=>code6_aux,
+        code7=>code7_aux,
+        code8=>code8_aux,
         refrescar_anodo=>refrescar_anodo,
         salida_disp=>salida_disp
      );

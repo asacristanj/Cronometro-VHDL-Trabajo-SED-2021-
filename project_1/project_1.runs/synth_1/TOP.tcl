@@ -98,6 +98,7 @@ read_vhdl -library xil_defaultlib {
   C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd
   C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd
   C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd
+  C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd
   C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd
   C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd
   C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd

@@ -26,7 +26,7 @@ architecture Behavioral of Cuenta_atras is
     signal Set : std_logic :='1';
     
     signal clk_1hz : std_logic;
-
+    
     COMPONENT clk1hz
        PORT (
               CLK: in  STD_LOGIC;

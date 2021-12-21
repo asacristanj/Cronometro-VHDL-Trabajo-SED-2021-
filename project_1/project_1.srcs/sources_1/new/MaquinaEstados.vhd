@@ -19,7 +19,8 @@ entity MaquinaEstados is
         Reset : in std_logic;
         Enable_A : out std_logic :='0';
         Enable_B : out std_logic :='0';
-        Enable_C : out std_logic :='0'
+        Enable_C : out std_logic :='0';
+        Enable_S : out std_logic :='1'
     );
 end MaquinaEstados;
 
@@ -63,21 +64,25 @@ begin
             Enable_A<='0';
             Enable_B<='0';
             Enable_C<='0';
+            Enable_S<='1';
         elsif Sel_modo='1' and B5='1' and Modo=1 then
             Sel_modo<='0';
             Enable_A<='1';
             Enable_B<='0';
             Enable_C<='0';
+            Enable_S<='0';
         elsif Sel_modo='1' and B5='1' and Modo=2 then
             Sel_modo<='0';
             Enable_A<='0';
             Enable_B<='1';
             Enable_C<='0';
+            Enable_S<='0';
         elsif Sel_modo='1' and B5='1' and Modo=3 then
             Sel_modo<='0';
             Enable_A<='0';
             Enable_B<='0';
             Enable_C<='1';
+            Enable_S<='0';
         end if;
     end process;
     
