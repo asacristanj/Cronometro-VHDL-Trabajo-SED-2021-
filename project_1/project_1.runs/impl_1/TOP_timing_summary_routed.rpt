@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Dec 22 10:59:09 2021
+| Date         : Wed Dec 22 11:43:35 2021
 | Host         : Supersacris running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file TOP_timing_summary_routed.rpt -pb TOP_timing_summary_routed.pb -rpx TOP_timing_summary_routed.rpx -warn_on_violation
 | Design       : TOP
@@ -41,9 +41,9 @@ Timing Summary Report
 
 Rule       Severity          Description                   Violations  
 ---------  ----------------  ----------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell   176         
-LUTAR-1    Warning           LUT drives async reset alert  12          
-TIMING-20  Warning           Non-clocked latch             113         
+TIMING-17  Critical Warning  Non-clocked sequential cell   252         
+LUTAR-1    Warning           LUT drives async reset alert  10          
+TIMING-20  Warning           Non-clocked latch             64          
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
 
@@ -53,10 +53,10 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (871)
+1. checking no_clock (694)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (485)
+4. checking unconstrained_internal_endpoints (553)
 5. checking no_input_delay (6)
 6. checking no_output_delay (15)
 7. checking multiple_clock (0)
@@ -64,11 +64,11 @@ Table of Contents
 9. checking loops (0)
 10. checking partial_input_delay (0)
 11. checking partial_output_delay (0)
-12. checking latch_loops (49)
+12. checking latch_loops (2)
 
-1. checking no_clock (871)
+1. checking no_clock (694)
 --------------------------
- There are 120 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
+ There are 148 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
 
  There are 2 register/latch pins with no clock driven by root clock pin: reset (HIGH)
 
@@ -78,35 +78,35 @@ Table of Contents
 
  There are 18 register/latch pins with no clock driven by root clock pin: Control_Anodo1/Inst_clk10khz/temporal_reg/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco/sreg_reg[0]/Q (HIGH)
+ There are 2 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco/sreg_reg[0]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco/sreg_reg[1]/Q (HIGH)
+ There are 2 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco/sreg_reg[1]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco/sreg_reg[2]/Q (HIGH)
+ There are 2 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco/sreg_reg[2]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco2/sreg_reg[0]/Q (HIGH)
+ There are 2 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco2/sreg_reg[0]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco2/sreg_reg[1]/Q (HIGH)
+ There are 2 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco2/sreg_reg[1]/Q (HIGH)
 
- There are 6 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco2/sreg_reg[2]/Q (HIGH)
+ There are 2 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco2/sreg_reg[2]/Q (HIGH)
 
- There are 36 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco3/sreg_reg[0]/Q (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco3/sreg_reg[0]/Q (HIGH)
 
- There are 36 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco3/sreg_reg[1]/Q (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco3/sreg_reg[1]/Q (HIGH)
 
- There are 36 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco3/sreg_reg[2]/Q (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco3/sreg_reg[2]/Q (HIGH)
 
- There are 37 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco4/sreg_reg[0]/Q (HIGH)
+ There are 2 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco4/sreg_reg[0]/Q (HIGH)
 
- There are 37 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco4/sreg_reg[1]/Q (HIGH)
+ There are 2 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco4/sreg_reg[1]/Q (HIGH)
 
- There are 37 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco4/sreg_reg[2]/Q (HIGH)
+ There are 2 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco4/sreg_reg[2]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco5/sreg_reg[0]/Q (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco5/sreg_reg[0]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco5/sreg_reg[1]/Q (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco5/sreg_reg[1]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco5/sreg_reg[2]/Q (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: GestorEntradas1/DetectorFlanco5/sreg_reg[2]/Q (HIGH)
 
  There are 33 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/Enable_A_reg/Q (HIGH)
 
@@ -114,9 +114,11 @@ Table of Contents
 
  There are 33 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/Enable_C_reg/Q (HIGH)
 
+ There are 32 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/Inst_clk10khz/temporal_reg/Q (HIGH)
+
  There are 38 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/Sel_modo_reg/L7/Q (HIGH)
 
- There are 39 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[0]/L7/Q (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[0]/Q (HIGH)
 
  There are 8 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[10]/Q (HIGH)
 
@@ -148,17 +150,17 @@ Table of Contents
 
  There are 8 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[23]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[24]/Q (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[24]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[25]/Q (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[25]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[26]/Q (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[26]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[27]/Q (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[27]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[28]/Q (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[28]/Q (HIGH)
 
- There are 5 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[29]/Q (HIGH)
+ There are 8 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[29]/Q (HIGH)
 
  There are 8 register/latch pins with no clock driven by root clock pin: MaquinaEstados1/submaquina1.Modo_aux_reg[2]/Q (HIGH)
 
@@ -186,6 +188,8 @@ Table of Contents
 
  There are 16 register/latch pins with no clock driven by root clock pin: Modo_Temp1/Enable_sel_reg/Q (HIGH)
 
+ There are 16 register/latch pins with no clock driven by root clock pin: Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/temporal_reg/Q (HIGH)
+
 
 2. checking constant_clock (0)
 ------------------------------
@@ -197,9 +201,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (485)
+4. checking unconstrained_internal_endpoints (553)
 --------------------------------------------------
- There are 485 pins that are not constrained for maximum delay. (HIGH)
+ There are 553 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -245,9 +249,9 @@ Table of Contents
  There are 0 ports with partial output delay specified.
 
 
-12. checking latch_loops (49)
------------------------------
- There are 49 combinational latch loops in the design through latch input (HIGH)
+12. checking latch_loops (2)
+----------------------------
+ There are 2 combinational latch loops in the design through latch input (HIGH)
 
 
 

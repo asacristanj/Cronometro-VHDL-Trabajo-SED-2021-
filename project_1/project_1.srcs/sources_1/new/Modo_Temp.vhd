@@ -45,6 +45,7 @@ architecture Behavioral of Modo_Temp is
 
     COMPONENT Sel_Cuenta
        PORT (
+        clk : in std_logic;
         B1 : in std_logic;
         B2 : in std_logic;
         B3 : in std_logic;
@@ -95,6 +96,7 @@ architecture Behavioral of Modo_Temp is
 begin
 
     Sel_Cuenta1: Sel_Cuenta PORT MAP(
+        clk=>CLK,
         B1=>B1,
         B2=>B2,
         B3=>B3,

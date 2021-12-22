@@ -103,6 +103,7 @@ architecture Behavioral of TOP is
     
     COMPONENT MaquinaEstados
        PORT (
+            clk : in std_logic;
             B1 : in std_logic;
             B2 : in std_logic;
             B3 : in std_logic;
@@ -274,6 +275,7 @@ begin
     );
     
     MaquinaEstados1 : MaquinaEstados PORT MAP(
+        clk=>clk,
         B1=>B_U_aux,
         B2=>B_D_aux,
         B3=>B_R_aux,

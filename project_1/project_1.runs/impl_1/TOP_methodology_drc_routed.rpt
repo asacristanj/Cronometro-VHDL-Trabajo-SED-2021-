@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Dec 22 10:59:08 2021
+| Date         : Wed Dec 22 11:43:34 2021
 | Host         : Supersacris running 64-bit major release  (build 9200)
 | Command      : report_methodology -file TOP_methodology_drc_routed.rpt -pb TOP_methodology_drc_routed.pb -rpx TOP_methodology_drc_routed.rpx
 | Design       : TOP
@@ -23,13 +23,13 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 301
+             Violations found: 326
 +-----------+------------------+------------------------------+------------+
 | Rule      | Severity         | Description                  | Violations |
 +-----------+------------------+------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell  | 176        |
-| LUTAR-1   | Warning          | LUT drives async reset alert | 12         |
-| TIMING-20 | Warning          | Non-clocked latch            | 113        |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell  | 252        |
+| LUTAR-1   | Warning          | LUT drives async reset alert | 10         |
+| TIMING-20 | Warning          | Non-clocked latch            | 64         |
 +-----------+------------------+------------------------------+------------+
 
 2. REPORT DETAILS
@@ -701,217 +701,597 @@ Related violations: <none>
 
 TIMING-17#134 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[0]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#135 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[10]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#136 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[11]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#137 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[12]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#138 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[13]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#139 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[14]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#140 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[15]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#141 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[16]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#142 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[17]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#143 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[18]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#144 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[19]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#145 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[1]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#146 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[20]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/contador_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#147 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[21]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/Inst_clk10khz/temporal_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#148 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[22]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#149 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[23]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#150 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[24]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#151 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[25]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#152 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[2]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#153 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[3]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#154 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[4]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#155 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[5]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#156 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[6]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#157 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[7]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#158 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[8]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#159 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[9]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#160 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/Inst_clk1hz/temporal_reg/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#161 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/dec_min_reg[0]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#162 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/dec_min_reg[1]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#163 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/dec_min_reg[2]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#164 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/dec_min_reg[3]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#165 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/dec_sec_reg[0]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#166 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/dec_sec_reg[1]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#167 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/dec_sec_reg[2]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#168 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/dec_sec_reg[3]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#169 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/unit_min_reg[0]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#170 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/unit_min_reg[1]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#171 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/unit_min_reg[2]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#172 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/unit_min_reg[3]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#173 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/unit_sec_reg[0]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#174 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/unit_sec_reg[1]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#175 Critical Warning
 Non-clocked sequential cell  
-The clock pin Modo_Crono1/unit_sec_reg[2]/C is not reached by a timing clock
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#176 Critical Warning
 Non-clocked sequential cell  
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#177 Critical Warning
+Non-clocked sequential cell  
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#178 Critical Warning
+Non-clocked sequential cell  
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#179 Critical Warning
+Non-clocked sequential cell  
+The clock pin MaquinaEstados1/submaquina1.Modo_aux_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#180 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#181 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#182 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#183 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#184 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[13]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#185 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[14]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#186 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[15]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#187 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[16]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#188 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[17]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#189 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[18]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#190 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[19]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#191 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#192 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[20]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#193 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[21]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#194 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[22]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#195 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[23]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#196 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[24]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#197 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[25]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#198 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#199 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#200 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#201 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#202 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#203 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#204 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#205 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/contador_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#206 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/Inst_clk1hz/temporal_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#207 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/dec_min_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#208 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/dec_min_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#209 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/dec_min_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#210 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/dec_min_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#211 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/dec_sec_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#212 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/dec_sec_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#213 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/dec_sec_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#214 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/dec_sec_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#215 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/unit_min_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#216 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/unit_min_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#217 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/unit_min_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#218 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/unit_min_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#219 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/unit_sec_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#220 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/unit_sec_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#221 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Crono1/unit_sec_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#222 Critical Warning
+Non-clocked sequential cell  
 The clock pin Modo_Crono1/unit_sec_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#223 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#224 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[10]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#225 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[11]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#226 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[12]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#227 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#228 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#229 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#230 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[4]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#231 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[5]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#232 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#233 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[7]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#234 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[8]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#235 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/contador_reg[9]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#236 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/Inst_clk10khz/temporal_reg/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#237 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/dec_min_aux_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#238 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/dec_min_aux_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#239 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/dec_min_aux_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#240 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/dec_min_aux_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#241 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/dec_sec_aux_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#242 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/dec_sec_aux_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#243 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/dec_sec_aux_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#244 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/dec_sec_aux_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#245 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/unit_min_aux_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#246 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/unit_min_aux_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#247 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/unit_min_aux_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#248 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/unit_min_aux_reg[3]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#249 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/unit_sec_aux_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#250 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/unit_sec_aux_reg[1]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#251 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/unit_sec_aux_reg[2]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#252 Critical Warning
+Non-clocked sequential cell  
+The clock pin Modo_Temp1/Sel_Cuenta1/unit_sec_aux_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 LUTAR-1#1 Warning
@@ -926,32 +1306,32 @@ Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell GestorEntradas1/DetectorFlanco3/Enable_count_A_reg_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) Ajedrez1/Enable_count_A_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell GestorEntradas1/DetectorFlanco3/Enable_count_A_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Ajedrez1/Enable_count_A_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#4 Warning
 LUT drives async reset alert  
-LUT cell GestorEntradas1/DetectorFlanco5/Enable_sel_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Modo_Temp1/Enable_sel_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell GestorEntradas1/DetectorFlanco5/Enable_B_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) MaquinaEstados1/Enable_B_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#5 Warning
 LUT drives async reset alert  
-LUT cell GestorEntradas1/DetectorFlanco5/Reset_s_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Modo_Crono1/Reset_s_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell GestorEntradas1/DetectorFlanco5/Enable_B_reg_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) MaquinaEstados1/Enable_B_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#6 Warning
 LUT drives async reset alert  
-LUT cell GestorEntradas1/DetectorFlanco5/Start_s_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Modo_Crono1/Start_s_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell GestorEntradas1/DetectorFlanco5/Enable_sel_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Modo_Temp1/Enable_sel_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#7 Warning
 LUT drives async reset alert  
-LUT cell MaquinaEstados1/Enable_B_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) MaquinaEstados1/Enable_B_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell GestorEntradas1/DetectorFlanco5/Reset_s_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Modo_Crono1/Reset_s_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#8 Warning
 LUT drives async reset alert  
-LUT cell MaquinaEstados1/Enable_B_reg_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) MaquinaEstados1/Enable_B_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell GestorEntradas1/DetectorFlanco5/Start_s_reg_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) Modo_Crono1/Start_s_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#9 Warning
@@ -962,31 +1342,6 @@ Related violations: <none>
 LUTAR-1#10 Warning
 LUT drives async reset alert  
 LUT cell MaquinaEstados1/Sel_modo_reg_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) MaquinaEstados1/Sel_modo_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#11 Warning
-LUT drives async reset alert  
-LUT cell MaquinaEstados1/submaquina1.Modo_aux_reg[0]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) MaquinaEstados1/submaquina1.Modo_aux_reg[0]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#12 Warning
-LUT drives async reset alert  
-LUT cell MaquinaEstados1/submaquina1.Modo_aux_reg[31]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) MaquinaEstados1/submaquina1.Modo_aux_reg[10]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[11]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[12]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[13]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[14]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[15]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[16]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[17]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[18]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[19]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[1]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[20]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[21]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[22]/CLR,
-MaquinaEstados1/submaquina1.Modo_aux_reg[23]/CLR
- (the first 15 of 31 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-20#1 Warning
@@ -1026,530 +1381,285 @@ Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/code7_reg[0] cannot be properly analyzed as its control pin MaquinaEstados1/code7_reg[0]/G is not reached by a timing clock
+The latch MaquinaEstados1/code7_reg[1] cannot be properly analyzed as its control pin MaquinaEstados1/code7_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/code7_reg[1] cannot be properly analyzed as its control pin MaquinaEstados1/code7_reg[1]/G is not reached by a timing clock
+The latch MaquinaEstados1/code7_reg[2] cannot be properly analyzed as its control pin MaquinaEstados1/code7_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#10 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/code7_reg[2] cannot be properly analyzed as its control pin MaquinaEstados1/code7_reg[2]/G is not reached by a timing clock
+The latch MaquinaEstados1/code8_reg[0] cannot be properly analyzed as its control pin MaquinaEstados1/code8_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/code8_reg[0] cannot be properly analyzed as its control pin MaquinaEstados1/code8_reg[0]/G is not reached by a timing clock
+The latch Modo_Crono1/Reset_s_reg cannot be properly analyzed as its control pin Modo_Crono1/Reset_s_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[0]/L7 (in MaquinaEstados1/submaquina1.Modo_aux_reg[0] macro) cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[0]/L7/G is not reached by a timing clock
+The latch Modo_Crono1/Start_s_reg cannot be properly analyzed as its control pin Modo_Crono1/Start_s_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#13 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[10] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[10]/G is not reached by a timing clock
+The latch Modo_Crono1/code6_reg[3] cannot be properly analyzed as its control pin Modo_Crono1/code6_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#14 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[11] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[11]/G is not reached by a timing clock
+The latch Modo_Temp1/Enable_count_reg cannot be properly analyzed as its control pin Modo_Temp1/Enable_count_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#15 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[12] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[12]/G is not reached by a timing clock
+The latch Modo_Temp1/Enable_sel_reg cannot be properly analyzed as its control pin Modo_Temp1/Enable_sel_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#16 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[13] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[13]/G is not reached by a timing clock
+The latch Modo_Temp1/code1_Sel_reg[0] cannot be properly analyzed as its control pin Modo_Temp1/code1_Sel_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#17 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[14] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[14]/G is not reached by a timing clock
+The latch Modo_Temp1/code1_Sel_reg[1] cannot be properly analyzed as its control pin Modo_Temp1/code1_Sel_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#18 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[15] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[15]/G is not reached by a timing clock
+The latch Modo_Temp1/code1_Sel_reg[2] cannot be properly analyzed as its control pin Modo_Temp1/code1_Sel_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#19 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[16] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[16]/G is not reached by a timing clock
+The latch Modo_Temp1/code1_Sel_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/code1_Sel_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#20 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[17] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[17]/G is not reached by a timing clock
+The latch Modo_Temp1/code2_Sel_reg[0] cannot be properly analyzed as its control pin Modo_Temp1/code2_Sel_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#21 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[18] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[18]/G is not reached by a timing clock
+The latch Modo_Temp1/code2_Sel_reg[1] cannot be properly analyzed as its control pin Modo_Temp1/code2_Sel_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#22 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[19] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[19]/G is not reached by a timing clock
+The latch Modo_Temp1/code2_Sel_reg[2] cannot be properly analyzed as its control pin Modo_Temp1/code2_Sel_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#23 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[1] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[1]/G is not reached by a timing clock
+The latch Modo_Temp1/code2_Sel_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/code2_Sel_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#24 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[20] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[20]/G is not reached by a timing clock
+The latch Modo_Temp1/code3_Sel_reg[0] cannot be properly analyzed as its control pin Modo_Temp1/code3_Sel_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#25 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[21] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[21]/G is not reached by a timing clock
+The latch Modo_Temp1/code3_Sel_reg[1] cannot be properly analyzed as its control pin Modo_Temp1/code3_Sel_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#26 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[22] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[22]/G is not reached by a timing clock
+The latch Modo_Temp1/code3_Sel_reg[2] cannot be properly analyzed as its control pin Modo_Temp1/code3_Sel_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#27 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[23] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[23]/G is not reached by a timing clock
+The latch Modo_Temp1/code3_Sel_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/code3_Sel_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#28 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[24] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[24]/G is not reached by a timing clock
+The latch Modo_Temp1/code4_Sel_reg[0] cannot be properly analyzed as its control pin Modo_Temp1/code4_Sel_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#29 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[25] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[25]/G is not reached by a timing clock
+The latch Modo_Temp1/code4_Sel_reg[1] cannot be properly analyzed as its control pin Modo_Temp1/code4_Sel_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#30 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[26] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[26]/G is not reached by a timing clock
+The latch Modo_Temp1/code4_Sel_reg[2] cannot be properly analyzed as its control pin Modo_Temp1/code4_Sel_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#31 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[27] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[27]/G is not reached by a timing clock
+The latch Modo_Temp1/code4_Sel_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/code4_Sel_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#32 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[28] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[28]/G is not reached by a timing clock
+The latch Modo_Temp1/code6_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/code6_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#33 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[29] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[29]/G is not reached by a timing clock
+The latch SuperMux1/code1_reg[0] cannot be properly analyzed as its control pin SuperMux1/code1_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#34 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[2] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[2]/G is not reached by a timing clock
+The latch SuperMux1/code1_reg[1] cannot be properly analyzed as its control pin SuperMux1/code1_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#35 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[30] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[30]/G is not reached by a timing clock
+The latch SuperMux1/code1_reg[2] cannot be properly analyzed as its control pin SuperMux1/code1_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#36 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[31] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[31]/G is not reached by a timing clock
+The latch SuperMux1/code1_reg[3] cannot be properly analyzed as its control pin SuperMux1/code1_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#37 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[3] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[3]/G is not reached by a timing clock
+The latch SuperMux1/code2_reg[0] cannot be properly analyzed as its control pin SuperMux1/code2_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#38 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[4] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[4]/G is not reached by a timing clock
+The latch SuperMux1/code2_reg[1] cannot be properly analyzed as its control pin SuperMux1/code2_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#39 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[5] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[5]/G is not reached by a timing clock
+The latch SuperMux1/code2_reg[2] cannot be properly analyzed as its control pin SuperMux1/code2_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#40 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[6] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[6]/G is not reached by a timing clock
+The latch SuperMux1/code2_reg[3] cannot be properly analyzed as its control pin SuperMux1/code2_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#41 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[7] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[7]/G is not reached by a timing clock
+The latch SuperMux1/code3_reg[0] cannot be properly analyzed as its control pin SuperMux1/code3_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#42 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[8] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[8]/G is not reached by a timing clock
+The latch SuperMux1/code3_reg[1] cannot be properly analyzed as its control pin SuperMux1/code3_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#43 Warning
 Non-clocked latch  
-The latch MaquinaEstados1/submaquina1.Modo_aux_reg[9] cannot be properly analyzed as its control pin MaquinaEstados1/submaquina1.Modo_aux_reg[9]/G is not reached by a timing clock
+The latch SuperMux1/code3_reg[2] cannot be properly analyzed as its control pin SuperMux1/code3_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#44 Warning
 Non-clocked latch  
-The latch Modo_Crono1/Reset_s_reg cannot be properly analyzed as its control pin Modo_Crono1/Reset_s_reg/G is not reached by a timing clock
+The latch SuperMux1/code3_reg[3] cannot be properly analyzed as its control pin SuperMux1/code3_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#45 Warning
 Non-clocked latch  
-The latch Modo_Crono1/Start_s_reg cannot be properly analyzed as its control pin Modo_Crono1/Start_s_reg/G is not reached by a timing clock
+The latch SuperMux1/code4_reg[0] cannot be properly analyzed as its control pin SuperMux1/code4_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#46 Warning
 Non-clocked latch  
-The latch Modo_Crono1/code6_reg[3] cannot be properly analyzed as its control pin Modo_Crono1/code6_reg[3]/G is not reached by a timing clock
+The latch SuperMux1/code4_reg[1] cannot be properly analyzed as its control pin SuperMux1/code4_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#47 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Enable_count_reg cannot be properly analyzed as its control pin Modo_Temp1/Enable_count_reg/G is not reached by a timing clock
+The latch SuperMux1/code4_reg[2] cannot be properly analyzed as its control pin SuperMux1/code4_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#48 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Enable_sel_reg cannot be properly analyzed as its control pin Modo_Temp1/Enable_sel_reg/G is not reached by a timing clock
+The latch SuperMux1/code4_reg[3] cannot be properly analyzed as its control pin SuperMux1/code4_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#49 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/dec_min_aux_reg[0] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/dec_min_aux_reg[0]/G is not reached by a timing clock
+The latch SuperMux1/code5_reg[0] cannot be properly analyzed as its control pin SuperMux1/code5_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#50 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/dec_min_aux_reg[1] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/dec_min_aux_reg[1]/G is not reached by a timing clock
+The latch SuperMux1/code5_reg[1] cannot be properly analyzed as its control pin SuperMux1/code5_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#51 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/dec_min_aux_reg[2] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/dec_min_aux_reg[2]/G is not reached by a timing clock
+The latch SuperMux1/code5_reg[2] cannot be properly analyzed as its control pin SuperMux1/code5_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#52 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/dec_min_aux_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/dec_min_aux_reg[3]/G is not reached by a timing clock
+The latch SuperMux1/code5_reg[3] cannot be properly analyzed as its control pin SuperMux1/code5_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#53 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/dec_sec_aux_reg[0] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/dec_sec_aux_reg[0]/G is not reached by a timing clock
+The latch SuperMux1/code6_reg[0] cannot be properly analyzed as its control pin SuperMux1/code6_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#54 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/dec_sec_aux_reg[1] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/dec_sec_aux_reg[1]/G is not reached by a timing clock
+The latch SuperMux1/code6_reg[1] cannot be properly analyzed as its control pin SuperMux1/code6_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#55 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/dec_sec_aux_reg[2] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/dec_sec_aux_reg[2]/G is not reached by a timing clock
+The latch SuperMux1/code6_reg[2] cannot be properly analyzed as its control pin SuperMux1/code6_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#56 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/dec_sec_aux_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/dec_sec_aux_reg[3]/G is not reached by a timing clock
+The latch SuperMux1/code6_reg[3] cannot be properly analyzed as its control pin SuperMux1/code6_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#57 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/unit_min_aux_reg[0] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/unit_min_aux_reg[0]/G is not reached by a timing clock
+The latch SuperMux1/code7_reg[0] cannot be properly analyzed as its control pin SuperMux1/code7_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#58 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/unit_min_aux_reg[1] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/unit_min_aux_reg[1]/G is not reached by a timing clock
+The latch SuperMux1/code7_reg[1] cannot be properly analyzed as its control pin SuperMux1/code7_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#59 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/unit_min_aux_reg[2] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/unit_min_aux_reg[2]/G is not reached by a timing clock
+The latch SuperMux1/code7_reg[2] cannot be properly analyzed as its control pin SuperMux1/code7_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#60 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/unit_min_aux_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/unit_min_aux_reg[3]/G is not reached by a timing clock
+The latch SuperMux1/code7_reg[3] cannot be properly analyzed as its control pin SuperMux1/code7_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#61 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/unit_sec_aux_reg[0] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/unit_sec_aux_reg[0]/G is not reached by a timing clock
+The latch SuperMux1/code8_reg[0] cannot be properly analyzed as its control pin SuperMux1/code8_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#62 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/unit_sec_aux_reg[1] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/unit_sec_aux_reg[1]/G is not reached by a timing clock
+The latch SuperMux1/code8_reg[1] cannot be properly analyzed as its control pin SuperMux1/code8_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#63 Warning
 Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/unit_sec_aux_reg[2] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/unit_sec_aux_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#64 Warning
-Non-clocked latch  
-The latch Modo_Temp1/Sel_Cuenta1/unit_sec_aux_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/Sel_Cuenta1/unit_sec_aux_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#65 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code1_Sel_reg[0] cannot be properly analyzed as its control pin Modo_Temp1/code1_Sel_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#66 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code1_Sel_reg[1] cannot be properly analyzed as its control pin Modo_Temp1/code1_Sel_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#67 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code1_Sel_reg[2] cannot be properly analyzed as its control pin Modo_Temp1/code1_Sel_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#68 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code1_Sel_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/code1_Sel_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#69 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code2_Sel_reg[0] cannot be properly analyzed as its control pin Modo_Temp1/code2_Sel_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#70 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code2_Sel_reg[1] cannot be properly analyzed as its control pin Modo_Temp1/code2_Sel_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#71 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code2_Sel_reg[2] cannot be properly analyzed as its control pin Modo_Temp1/code2_Sel_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#72 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code2_Sel_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/code2_Sel_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#73 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code3_Sel_reg[0] cannot be properly analyzed as its control pin Modo_Temp1/code3_Sel_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#74 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code3_Sel_reg[1] cannot be properly analyzed as its control pin Modo_Temp1/code3_Sel_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#75 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code3_Sel_reg[2] cannot be properly analyzed as its control pin Modo_Temp1/code3_Sel_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#76 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code3_Sel_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/code3_Sel_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#77 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code4_Sel_reg[0] cannot be properly analyzed as its control pin Modo_Temp1/code4_Sel_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#78 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code4_Sel_reg[1] cannot be properly analyzed as its control pin Modo_Temp1/code4_Sel_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#79 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code4_Sel_reg[2] cannot be properly analyzed as its control pin Modo_Temp1/code4_Sel_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#80 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code4_Sel_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/code4_Sel_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#81 Warning
-Non-clocked latch  
-The latch Modo_Temp1/code6_reg[3] cannot be properly analyzed as its control pin Modo_Temp1/code6_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#82 Warning
-Non-clocked latch  
-The latch SuperMux1/code1_reg[0] cannot be properly analyzed as its control pin SuperMux1/code1_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#83 Warning
-Non-clocked latch  
-The latch SuperMux1/code1_reg[1] cannot be properly analyzed as its control pin SuperMux1/code1_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#84 Warning
-Non-clocked latch  
-The latch SuperMux1/code1_reg[2] cannot be properly analyzed as its control pin SuperMux1/code1_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#85 Warning
-Non-clocked latch  
-The latch SuperMux1/code1_reg[3] cannot be properly analyzed as its control pin SuperMux1/code1_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#86 Warning
-Non-clocked latch  
-The latch SuperMux1/code2_reg[0] cannot be properly analyzed as its control pin SuperMux1/code2_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#87 Warning
-Non-clocked latch  
-The latch SuperMux1/code2_reg[1] cannot be properly analyzed as its control pin SuperMux1/code2_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#88 Warning
-Non-clocked latch  
-The latch SuperMux1/code2_reg[2] cannot be properly analyzed as its control pin SuperMux1/code2_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#89 Warning
-Non-clocked latch  
-The latch SuperMux1/code2_reg[3] cannot be properly analyzed as its control pin SuperMux1/code2_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#90 Warning
-Non-clocked latch  
-The latch SuperMux1/code3_reg[0] cannot be properly analyzed as its control pin SuperMux1/code3_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#91 Warning
-Non-clocked latch  
-The latch SuperMux1/code3_reg[1] cannot be properly analyzed as its control pin SuperMux1/code3_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#92 Warning
-Non-clocked latch  
-The latch SuperMux1/code3_reg[2] cannot be properly analyzed as its control pin SuperMux1/code3_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#93 Warning
-Non-clocked latch  
-The latch SuperMux1/code3_reg[3] cannot be properly analyzed as its control pin SuperMux1/code3_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#94 Warning
-Non-clocked latch  
-The latch SuperMux1/code4_reg[0] cannot be properly analyzed as its control pin SuperMux1/code4_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#95 Warning
-Non-clocked latch  
-The latch SuperMux1/code4_reg[1] cannot be properly analyzed as its control pin SuperMux1/code4_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#96 Warning
-Non-clocked latch  
-The latch SuperMux1/code4_reg[2] cannot be properly analyzed as its control pin SuperMux1/code4_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#97 Warning
-Non-clocked latch  
-The latch SuperMux1/code4_reg[3] cannot be properly analyzed as its control pin SuperMux1/code4_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#98 Warning
-Non-clocked latch  
-The latch SuperMux1/code5_reg[0] cannot be properly analyzed as its control pin SuperMux1/code5_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#99 Warning
-Non-clocked latch  
-The latch SuperMux1/code5_reg[1] cannot be properly analyzed as its control pin SuperMux1/code5_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#100 Warning
-Non-clocked latch  
-The latch SuperMux1/code5_reg[2] cannot be properly analyzed as its control pin SuperMux1/code5_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#101 Warning
-Non-clocked latch  
-The latch SuperMux1/code5_reg[3] cannot be properly analyzed as its control pin SuperMux1/code5_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#102 Warning
-Non-clocked latch  
-The latch SuperMux1/code6_reg[0] cannot be properly analyzed as its control pin SuperMux1/code6_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#103 Warning
-Non-clocked latch  
-The latch SuperMux1/code6_reg[1] cannot be properly analyzed as its control pin SuperMux1/code6_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#104 Warning
-Non-clocked latch  
-The latch SuperMux1/code6_reg[2] cannot be properly analyzed as its control pin SuperMux1/code6_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#105 Warning
-Non-clocked latch  
-The latch SuperMux1/code6_reg[3] cannot be properly analyzed as its control pin SuperMux1/code6_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#106 Warning
-Non-clocked latch  
-The latch SuperMux1/code7_reg[0] cannot be properly analyzed as its control pin SuperMux1/code7_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#107 Warning
-Non-clocked latch  
-The latch SuperMux1/code7_reg[1] cannot be properly analyzed as its control pin SuperMux1/code7_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#108 Warning
-Non-clocked latch  
-The latch SuperMux1/code7_reg[2] cannot be properly analyzed as its control pin SuperMux1/code7_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#109 Warning
-Non-clocked latch  
-The latch SuperMux1/code7_reg[3] cannot be properly analyzed as its control pin SuperMux1/code7_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#110 Warning
-Non-clocked latch  
-The latch SuperMux1/code8_reg[0] cannot be properly analyzed as its control pin SuperMux1/code8_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#111 Warning
-Non-clocked latch  
-The latch SuperMux1/code8_reg[1] cannot be properly analyzed as its control pin SuperMux1/code8_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#112 Warning
-Non-clocked latch  
 The latch SuperMux1/code8_reg[2] cannot be properly analyzed as its control pin SuperMux1/code8_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
-TIMING-20#113 Warning
+TIMING-20#64 Warning
 Non-clocked latch  
 The latch SuperMux1/code8_reg[3] cannot be properly analyzed as its control pin SuperMux1/code8_reg[3]/G is not reached by a timing clock
 Related violations: <none>

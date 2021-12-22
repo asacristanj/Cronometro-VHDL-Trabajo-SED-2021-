@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Dec 22 10:57:24 2021
+| Date         : Wed Dec 22 11:41:54 2021
 | Host         : Supersacris running 64-bit major release  (build 9200)
 | Command      : report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb
 | Design       : TOP
@@ -30,14 +30,14 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                |  307 |     0 |          0 |     63400 |  0.48 |
-|   LUT as Logic             |  302 |     0 |          0 |     63400 |  0.48 |
+| Slice LUTs*                |  317 |     0 |          0 |     63400 |  0.50 |
+|   LUT as Logic             |  312 |     0 |          0 |     63400 |  0.49 |
 |   LUT as Memory            |    5 |     0 |          0 |     19000 |  0.03 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |    5 |     0 |            |           |       |
-| Slice Registers            |  284 |     0 |          0 |    126800 |  0.22 |
-|   Register as Flip Flop    |  171 |     0 |          0 |    126800 |  0.13 |
-|   Register as Latch        |  113 |     0 |          0 |    126800 |  0.09 |
+| Slice Registers            |  311 |     0 |          0 |    126800 |  0.25 |
+|   Register as Flip Flop    |  247 |     0 |          0 |    126800 |  0.19 |
+|   Register as Latch        |   64 |     0 |          0 |    126800 |  0.05 |
 | F7 Muxes                   |    0 |     0 |          0 |     31700 |  0.00 |
 | F8 Muxes                   |    0 |     0 |          0 |     15850 |  0.00 |
 +----------------------------+------+-------+------------+-----------+-------+
@@ -50,7 +50,7 @@ Table of Contents
 +-------+--------------+-------------+--------------+
 | Total | Clock Enable | Synchronous | Asynchronous |
 +-------+--------------+-------------+--------------+
-| 4     |            _ |           - |            - |
+| 3     |            _ |           - |            - |
 | 0     |            _ |           - |          Set |
 | 0     |            _ |           - |        Reset |
 | 0     |            _ |         Set |            - |
@@ -59,7 +59,7 @@ Table of Contents
 | 1     |          Yes |           - |          Set |
 | 124   |          Yes |           - |        Reset |
 | 8     |          Yes |         Set |            - |
-| 147   |          Yes |       Reset |            - |
+| 175   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,17 +148,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  147 |        Flop & Latch |
-| LDCE     |  112 |        Flop & Latch |
-| LUT4     |   92 |                 LUT |
-| LUT6     |   88 |                 LUT |
-| LUT5     |   75 |                 LUT |
-| LUT1     |   55 |                 LUT |
-| CARRY4   |   40 |          CarryLogic |
-| LUT3     |   35 |                 LUT |
-| LUT2     |   21 |                 LUT |
+| FDRE     |  175 |        Flop & Latch |
+| LUT6     |  124 |                 LUT |
+| LUT4     |   89 |                 LUT |
+| FDCE     |   64 |        Flop & Latch |
+| LDCE     |   63 |        Flop & Latch |
+| LUT1     |   57 |                 LUT |
+| LUT5     |   48 |                 LUT |
+| CARRY4   |   46 |          CarryLogic |
+| LUT3     |   34 |                 LUT |
+| LUT2     |   18 |                 LUT |
 | OBUF     |   16 |                  IO |
-| FDCE     |   16 |        Flop & Latch |
 | FDSE     |    8 |        Flop & Latch |
 | IBUF     |    7 |                  IO |
 | BUFG     |    6 |               Clock |

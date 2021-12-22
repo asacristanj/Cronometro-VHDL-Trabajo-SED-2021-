@@ -3,6 +3,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity MaquinaEstados is
     Port ( 
+        clk : in std_logic;
         B1 : in std_logic;
         B2 : in std_logic;
         B3 : in std_logic;
@@ -30,15 +31,27 @@ architecture Behavioral of MaquinaEstados is
     
     signal Sel_modo : std_logic :='1';
     
+     signal clk_10khz : std_logic;
+    
+    COMPONENT clk10khz
+       PORT (
+              CLK: in  STD_LOGIC;
+              clk_1hz : out STD_LOGIC
+            );
+     END COMPONENT;
     
 begin
-
+Inst_clk10khz: clk10khz 
+    PORT MAP (
+        CLK => CLK,
+        CLK_1hz => clk_10khz
+    );
     submaquina1 : process(B1,B2, Sel_modo)
     variable Modo_aux : integer:=0;
     begin
         if Sel_modo='0' then
             Modo_aux:=0;
-        else
+        elsif rising_edge (clk_10khz) and Sel_Modo='1'  then 
             if Modo_aux=0 then
                 Modo_aux:=1;
             end if;
@@ -96,8 +109,8 @@ begin
                 code4<="1111";
                 code5<="1111";
                 code6<="1111";
-                code7<="1010";
-                code8<="1011";
+                code7<="1011";
+                code8<="1010";
             elsif Modo=2 then
                 code1<="1111";
                 code2<="1111";
