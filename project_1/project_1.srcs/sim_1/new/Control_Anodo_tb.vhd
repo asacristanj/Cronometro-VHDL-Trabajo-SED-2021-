@@ -1,10 +1,10 @@
-library IEEE;
+library ieee;
 use ieee.std_logic_1164.all;
 
-entity tb_Control_Anodo is
-end tb_Control_Anodo;
+entity Control_Anodo_tb is
+end Control_Anodo_tb;
 
-architecture tb of tb_Control_Anodo is
+architecture tb of Control_Anodo_tb is
 
     component Control_Anodo
         port (CLK             : in std_logic;
@@ -32,7 +32,7 @@ architecture tb of tb_Control_Anodo is
     signal refrescar_anodo : std_logic_vector (7 downto 0);
     signal salida_disp     : std_logic_vector (6 downto 0);
 
-    constant TbPeriod : time := 1000 ns; //EDIT Put right period here
+    constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
@@ -51,15 +51,15 @@ begin
               refrescar_anodo => refrescar_anodo,
               salida_disp     => salida_disp);
 
-    //Clock generation
+    -- Clock generation
     TbClock <= not TbClock after TbPeriod/2 when TbSimEnded /= '1' else '0';
 
-    // EDIT: Check that CLK is really your main clock signal
+    -- EDIT: Check that CLK is really your main clock signal
     CLK <= TbClock;
 
     stimuli : process
     begin
-        // EDIT Adapt initialization as needed
+        -- EDIT Adapt initialization as needed
         code1 <= (others => '0');
         code2 <= (others => '0');
         code3 <= (others => '0');
@@ -69,26 +69,19 @@ begin
         code7 <= (others => '0');
         code8 <= (others => '0');
 
-        // Reset generation
-        //  EDIT: Replace YOURRESETSIGNAL below by the name of your reset as I haven't guessed it
-        //YOURRESETSIGNAL <= '1';
+        -- Reset generation
+        --  EDIT: Replace YOURRESETSIGNAL below by the name of your reset as I haven't guessed it
+        --YOURRESETSIGNAL <= '1';
         wait for 100 ns;
-        //YOURRESETSIGNAL <= '0';
+        --YOURRESETSIGNAL <= '0';
         wait for 100 ns;
 
-        // EDIT Add stimuli here
+        -- EDIT Add stimuli here
         wait for 100 * TbPeriod;
 
-        // Stop the clock and hence terminate the simulation
+        -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';
         wait;
     end process;
 
 end tb;
-
-// Configuration block below is required by some simulators. Usually no need to edit.
-
-configuration cfg_tb_Control_Anodo of tb_Control_Anodo is
-    for tb
-    end for;
-end cfg_tb_Control_Anodo;

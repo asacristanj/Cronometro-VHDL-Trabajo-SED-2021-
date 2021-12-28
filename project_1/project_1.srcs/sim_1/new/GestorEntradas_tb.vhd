@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity tb_GestorEntradas is
-end tb_GestorEntradas;
+entity GestorEntradas_tb is
+end GestorEntradas_tb;
 
-architecture tb of tb_GestorEntradas is
+architecture tb of GestorEntradas_tb is
 
     component GestorEntradas
         port (CLK       : in std_logic;
@@ -36,7 +36,7 @@ architecture tb of tb_GestorEntradas is
     signal B_C_out   : std_logic;
     signal reset_out : std_logic;
 
-    constant TbPeriod : time := 1000 ns; // EDIT Put right period here
+    constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
@@ -57,41 +57,34 @@ begin
               B_C_out   => B_C_out,
               reset_out => reset_out);
 
-    // Clock generation
+    -- Clock generation
     TbClock <= not TbClock after TbPeriod/2 when TbSimEnded /= '1' else '0';
 
-    // EDIT: Check that CLK is really your main clock signal
+    -- EDIT: Check that CLK is really your main clock signal
     CLK <= TbClock;
 
     stimuli : process
     begin
-        // EDIT Adapt initialization as needed
+        -- EDIT Adapt initialization as needed
         B_L <= '0';
         B_R <= '0';
         B_U <= '0';
         B_D <= '0';
         B_C <= '0';
 
-        // Reset generation
-        // EDIT: Check that reset is really your reset signal
+        -- Reset generation
+        -- EDIT: Check that reset is really your reset signal
         reset <= '1';
         wait for 100 ns;
         reset <= '0';
         wait for 100 ns;
 
-        // EDIT Add stimuli here
+        -- EDIT Add stimuli here
         wait for 100 * TbPeriod;
 
-        // Stop the clock and hence terminate the simulation
+        -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';
         wait;
     end process;
 
 end tb;
-
-// Configuration block below is required by some simulators. Usually no need to edit.
-
-configuration cfg_tb_GestorEntradas of tb_GestorEntradas is
-    for tb
-    end for;
-end cfg_tb_GestorEntradas;

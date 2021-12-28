@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity tb_Modo_Crono is
-end tb_Modo_Crono;
+entity Modo_Crono_tb is
+end Modo_Crono_tb;
 
-architecture tb of tb_Modo_Crono is
+architecture tb of Modo_Crono_tb is
 
     component Modo_Crono
         port (CLK      : in std_logic;
@@ -36,7 +36,7 @@ architecture tb of tb_Modo_Crono is
     signal Pause    : std_logic;
     signal Reset    : std_logic;
 
-    constant TbPeriod : time := 1000 ns; //EDIT Put right period here
+    constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
@@ -57,39 +57,32 @@ begin
               Pause    => Pause,
               Reset    => Reset);
 
-    //Clock generation
+    -- Clock generation
     TbClock <= not TbClock after TbPeriod/2 when TbSimEnded /= '1' else '0';
 
-    // EDIT: Check that CLK is really your main clock signal
+    -- EDIT: Check that CLK is really your main clock signal
     CLK <= TbClock;
 
     stimuli : process
     begin
-        // EDIT Adapt initialization as needed
+        -- EDIT Adapt initialization as needed
         Enable_A <= '0';
         Start <= '0';
         Pause <= '0';
 
-        // Reset generation
-        // EDIT: Check that Reset is really your reset signal
+        -- Reset generation
+        -- EDIT: Check that Reset is really your reset signal
         Reset <= '1';
         wait for 100 ns;
         Reset <= '0';
         wait for 100 ns;
 
-        // EDIT Add stimuli here
+        -- EDIT Add stimuli here
         wait for 100 * TbPeriod;
 
-        // Stop the clock and hence terminate the simulation
+        -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';
         wait;
     end process;
 
 end tb;
-
-// Configuration block below is required by some simulators. Usually no need to edit.
-
-configuration cfg_tb_Modo_Crono of tb_Modo_Crono is
-    for tb
-    end for;
-end cfg_tb_Modo_Crono;

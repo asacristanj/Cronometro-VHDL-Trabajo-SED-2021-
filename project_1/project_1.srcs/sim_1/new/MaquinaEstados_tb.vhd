@@ -1,10 +1,10 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity tb_MaquinaEstados is
-end tb_MaquinaEstados;
+entity MaquinaEstados_tb is
+end MaquinaEstados_tb;
 
-architecture tb of tb_MaquinaEstados is
+architecture tb of MaquinaEstados_tb is
 
     component MaquinaEstados
         port (clk      : in std_logic;
@@ -48,7 +48,7 @@ architecture tb of tb_MaquinaEstados is
     signal Enable_C : std_logic;
     signal Enable_S : std_logic;
 
-    constant TbPeriod : time := 1000 ns; // EDIT Put right period here
+    constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
@@ -75,41 +75,35 @@ begin
               Enable_C => Enable_C,
               Enable_S => Enable_S);
 
-    // Clock generation
+    -- Clock generation
     TbClock <= not TbClock after TbPeriod/2 when TbSimEnded /= '1' else '0';
 
-    // EDIT: Check that clk is really your main clock signal
+    -- EDIT: Check that clk is really your main clock signal
     clk <= TbClock;
 
     stimuli : process
     begin
-        // EDIT Adapt initialization as needed
+        -- EDIT Adapt initialization as needed
         B1 <= '0';
         B2 <= '0';
         B3 <= '0';
         B4 <= '0';
         B5 <= '0';
 
-        // Reset generation
-        // EDIT: Check that Reset is really your reset signal
+        -- Reset generation
+        -- EDIT: Check that Reset is really your reset signal
         Reset <= '1';
         wait for 100 ns;
         Reset <= '0';
         wait for 100 ns;
 
-        // EDIT Add stimuli here
+        -- EDIT Add stimuli here
         wait for 100 * TbPeriod;
 
-        // Stop the clock and hence terminate the simulation
+        -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';
         wait;
     end process;
 
 end tb;
 
-// Configuration block below is required by some simulators. Usually no need to edit.
-
-configuration cfg_tb_MaquinaEstados of tb_MaquinaEstados is
-    for tb
-    end for;
-end cfg_tb_MaquinaEstados;
