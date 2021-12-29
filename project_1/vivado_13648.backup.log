@@ -1,0 +1,71 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Dec 28 17:18:18 2021
+# Process ID: 13648
+# Current directory: C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8888 C:\Users\alejandro\Documents\GitHub\Cronometro-VHDL-Trabajo-SED-2021-\project_1\project_1.xpr
+# Log file: C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/vivado.log
+# Journal file: C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:26 ; elapsed = 00:00:10 . Memory (MB): peak = 1105.402 ; gain = 0.000
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Modo_Temp_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Modo_Temp_tb.v
+export_ip_user_files -of_objects  [get_files C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Modo_Crono_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Modo_Crono_tb.v
+export_ip_user_files -of_objects  [get_files C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Ajedrez_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Ajedrez_tb.v
+export_ip_user_files -of_objects  [get_files C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Control_Anodo_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Control_Anodo_tb.v
+export_ip_user_files -of_objects  [get_files C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Cuenta_atras1_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Cuenta_atras1_tb.v
+export_ip_user_files -of_objects  [get_files C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/GestorEntradas_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/GestorEntradas_tb.v
+export_ip_user_files -of_objects  [get_files C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/MaquinaEstados_tb.v] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/MaquinaEstados_tb.v
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Control_Anodo.vhd w ]
+add_files -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Control_Anodo.vhd
+update_compile_order -fileset sim_1
+export_ip_user_files -of_objects  [get_files C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Control_Anodo.vhd] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Control_Anodo.vhd
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Control_Anodo_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Control_Anodo_tb.vhd
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/GestorEntradas_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/GestorEntradas_tb.vhd
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Ajedrez_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Ajedrez_tb.vhd
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/MaquinaEstados_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/MaquinaEstados_tb.vhd
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Modo_Crono_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Modo_Crono_tb.vhd
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Modo_Temp_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Modo_Temp_tb.vhd
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Cuenta_atras_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Cuenta_atras_tb.vhd
+update_compile_order -fileset sim_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 28 18:49:02 2021...

@@ -140,7 +140,7 @@ begin
         code4=>code4
     );
 
-    modoTemp : process
+    modoTemp : process (Enable_B)
     begin
         if Enable_B='1' then
             code8<="1100";
@@ -181,7 +181,7 @@ begin
         elsif Enable_B='1' and Enable_sel='0' and Enable_count='1' and B2='1' then--si está contando y nop está en modo sel y se pulsa pausa(B2) se para
             Enable_count<='0';
             Reset_aux<='0';
-        elsif Enable_B='1' and Enable_sel='0'and B5='1' then --se retoma la cuenta en cso de q estuviera pusado
+        elsif Enable_B='1' and Enable_sel='0'and B5='1' then --se retoma la cuenta en caso de q estuviera pusado
             Enable_count<='1';
             Reset_aux<='0';
         elsif Enable_B='1' and Enable_sel='0' and B4='1' then

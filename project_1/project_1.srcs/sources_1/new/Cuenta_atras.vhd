@@ -42,12 +42,12 @@ begin
     );
     
     
-    maquinaestados : process (Enable_count,Reset)
+    maquinaestados : process (Enable_count, Reset)
     begin
         if Enable_count = '1' then --Si está activa la habilitación y Pulsamos botón Start
             Start_s<='1'; --Activamos la señal que habilita en el segundo process la cuenta por cada segundo
             Reset_s<='0'; --Desactivamos la señal que resetea el contador al valor inicial
-        elsif Enable_count='0' then 
+        elsif Enable_count='0' and Reset='0' then 
             Start_s<='0';
             Reset_s<='0';
         elsif Reset = '1'then
@@ -56,7 +56,7 @@ begin
     end process;
     
     
-    process (clk_1hz, Start_s, Reset_s, Enable_count)
+    process (clk, Start_s, Reset_s, Enable_count)
     
     subtype V is integer range 0 to 15;
     variable unit_sec : V :=0;
@@ -71,7 +71,7 @@ begin
             unit_min:=code3_in;
             dec_min:=code4_in;
             led<='0';
-        elsif rising_edge(clk_1hz) and Start_s='1' then
+        elsif rising_edge(clk) and Start_s='1' then
             if unit_sec=0 and dec_sec=0 and unit_min=0 and dec_min=0 then
                 led<='1';
             elsif unit_sec=0 then
@@ -102,9 +102,6 @@ begin
         code3_out <= std_logic_vector(to_unsigned(unit_min,code3_out'length));
         code4_out <= std_logic_vector(to_unsigned(dec_min,code4_out'length));
     end process;
-    
-    
-    
 
 
 end Behavioral;

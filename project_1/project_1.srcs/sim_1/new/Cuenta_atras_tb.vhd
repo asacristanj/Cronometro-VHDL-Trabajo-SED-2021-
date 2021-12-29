@@ -18,7 +18,8 @@ architecture tb of Cuenta_atras_tb is
               code2_out    : out std_logic_vector (3 downto 0);
               code3_out    : out std_logic_vector (3 downto 0);
               code4_out    : out std_logic_vector (3 downto 0);
-              led          : out std_logic);
+              led          : out std_logic;
+              Start_ss     : out std_logic);
     end component;
 
     signal CLK          : std_logic;
@@ -33,8 +34,9 @@ architecture tb of Cuenta_atras_tb is
     signal code3_out    : std_logic_vector (3 downto 0);
     signal code4_out    : std_logic_vector (3 downto 0);
     signal led          : std_logic;
+    signal Start_ss     : std_logic;
 
-    constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
+    constant TbPeriod : time := 100 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
@@ -52,7 +54,8 @@ begin
               code2_out    => code2_out,
               code3_out    => code3_out,
               code4_out    => code4_out,
-              led          => led);
+              led          => led,
+              Start_ss     => Start_ss);
 
     -- Clock generation
     TbClock <= not TbClock after TbPeriod/2 when TbSimEnded /= '1' else '0';
@@ -64,10 +67,10 @@ begin
     begin
         -- EDIT Adapt initialization as needed
         Enable_count <= '0';
-        code1_in <= 0;
-        code2_in <= 0;
-        code3_in <= 0;
-        code4_in <= 0;
+        code1_in <= 1;
+        code2_in <= 1;
+        code3_in <= 1;
+        code4_in <= 1;
 
         -- Reset generation
         -- EDIT: Check that Reset is really your reset signal
@@ -77,6 +80,9 @@ begin
         wait for 100 ns;
 
         -- EDIT Add stimuli here
+         Enable_count <= '1';
+         wait for 200 ns;
+        
         wait for 100 * TbPeriod;
 
         -- Stop the clock and hence terminate the simulation
