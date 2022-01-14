@@ -77,6 +77,37 @@ begin
         wait for 100 ns;
 
         -- EDIT Add stimuli here
+        code1 <= "1101";
+        wait for 100 * TbPeriod;
+        code2 <= "1011";
+        wait for 100 * TbPeriod;
+        code3 <= "0111";
+        wait for 100 * TbPeriod;
+        code4 <= "1101";
+        wait for 100 * TbPeriod;
+        code5 <= "1110";
+        wait for 100 * TbPeriod;
+        code6 <= "1111";
+        wait for 100 * TbPeriod;
+        code7 <= "1110";
+        wait for 100 * TbPeriod;
+        code8 <= "0011";
+        wait for 100 * TbPeriod;
+        code1 <= (others => '0');
+        wait for 100 * TbPeriod;
+        code2 <= (others => '0');
+        wait for 100 * TbPeriod;
+        code3 <= (others => '0');
+        wait for 100 * TbPeriod;
+        code4 <= (others => '0');
+        wait for 100 * TbPeriod;
+        code5 <= (others => '0');
+        wait for 100 * TbPeriod;
+        code6 <= (others => '0');
+        wait for 100 * TbPeriod;
+        code7 <= (others => '0');
+        wait for 100 * TbPeriod;
+        code8 <= (others => '0');
         wait for 100 * TbPeriod;
 
         -- Stop the clock and hence terminate the simulation

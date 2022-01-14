@@ -80,6 +80,25 @@ begin
         wait for 100 ns;
 
         -- EDIT Add stimuli here
+        B_L <= '1';
+        wait for 100 * TbPeriod;
+        B_R <= '1';
+        wait for 100 * TbPeriod;
+        B_U <= '1';
+        wait for 100 * TbPeriod;
+        B_D <= '1';
+        wait for 100 * TbPeriod;
+        B_C <= '1';
+        wait for 100 * TbPeriod;
+        B_L <= '0';
+        wait for 100 * TbPeriod;
+        B_R <= '0';
+        wait for 100 * TbPeriod;
+        B_U <= '0';
+        wait for 100 * TbPeriod;
+        B_D <= '0';
+        wait for 100 * TbPeriod;
+        B_C <= '0';
         wait for 100 * TbPeriod;
 
         -- Stop the clock and hence terminate the simulation

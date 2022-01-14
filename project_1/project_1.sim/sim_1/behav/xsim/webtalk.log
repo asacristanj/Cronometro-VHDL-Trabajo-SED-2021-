@@ -2,13 +2,13 @@
 # Webtalk v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Dec 29 12:49:27 2021
-# Process ID: 26136
+# Start of session at: Fri Jan 14 20:00:54 2022
+# Process ID: 16536
 # Current directory: C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/Modo_Temp_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/Control_Anodo_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/Modo_Temp_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/Modo_Temp_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Dec 29 12:49:31 2021. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2021.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Wed Dec 29 12:49:31 2021...
+source C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/Control_Anodo_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/Control_Anodo_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Fri Jan 14 20:00:58 2022. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2021.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Jan 14 20:00:58 2022...
