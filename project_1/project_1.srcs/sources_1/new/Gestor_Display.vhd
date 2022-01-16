@@ -90,9 +90,9 @@ Inst_deco8: deco1 PORT MAP (
 );
 
 
-    process (clk_10khz)
+    process (clk)
     begin
-        if rising_edge(clk_10khz) then
+        if rising_edge(clk) then
             if flag=1 then
                 refrescar_anodo(0) <=  '0';
                 refrescar_anodo(7 downto 1) <=  "1111111";

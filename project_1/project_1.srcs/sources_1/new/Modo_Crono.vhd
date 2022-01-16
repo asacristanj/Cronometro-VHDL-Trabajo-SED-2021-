@@ -56,7 +56,7 @@ begin
     
     
     
-    process (clk_1hz, Start_s, Reset_s)
+    process (clk, Start_s, Reset_s)
     subtype V is integer range 0 to 15;
     variable unit_sec : V :=0;
     variable unit_min : V :=0;
@@ -69,7 +69,7 @@ begin
                 dec_sec:=0;
                 unit_min:=0;
                 dec_min:=0;
-        elsif rising_edge(clk_1hz) and Start_s='1' then
+        elsif rising_edge(clk) and Start_s='1' then
             unit_sec:=unit_sec+1;
             if unit_sec=10 then
             unit_sec:=0;
@@ -99,7 +99,7 @@ begin
         code4 <= std_logic_vector(to_unsigned(dec_min,code5'length));
     end process;
     
-    Marca_cron : process 
+    Marca_cron : process (Enable_A)
     begin
     if Enable_A='1' then
         code8<="1010";

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sun Jan 16 22:17:25 2022
+| Date         : Sun Jan 16 23:21:32 2022
 | Host         : Supersacris running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file TOP_control_sets_placed.rpt
 | Design       : TOP
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    88 |
-|    Minimum number of control sets                        |    88 |
+| Total control sets                                       |    85 |
+|    Minimum number of control sets                        |    85 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   543 |
+| Unused register locations in slices containing registers |   528 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    88 |
+| Total control sets |    85 |
 | >= 0 to < 4        |    66 |
 | >= 4 to < 6        |    17 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     1 |
-| >= 12 to < 14      |     1 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     3 |
+| >= 16              |     2 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              90 |           33 |
-| No           | No                    | Yes                    |              24 |           21 |
-| No           | Yes                   | No                     |              70 |           39 |
+| No           | No                    | No                     |              86 |           31 |
+| No           | No                    | Yes                    |              24 |           20 |
+| No           | Yes                   | No                     |              33 |           30 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              57 |           29 |
+| Yes          | No                    | Yes                    |              57 |           30 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -73,94 +73,91 @@ Table of Contents
 +--------------------------------------------------------------------+--------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
 |                            Clock Signal                            |                   Enable Signal                  |                   Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
 +--------------------------------------------------------------------+--------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
-|  Ajedrez1/Enable_count_A_reg/G0                                    |                                                  |                                                      |                1 |              1 |         1.00 |
 |  Ajedrez1/Reset_aux_A_reg/G0                                       |                                                  |                                                      |                1 |              1 |         1.00 |
-|  Ajedrez1/Reset_aux_A_reg/Q                                        |                                                  | Ajedrez1/JugadorA/Reset_s_reg_i_1__1_n_1             |                1 |              1 |         1.00 |
 |  Ajedrez1/Reset_aux_A_reg/Q                                        |                                                  | Ajedrez1/JugadorB/Reset_s_reg_i_1__2_n_1             |                1 |              1 |         1.00 |
+|  Ajedrez1/Reset_aux_A_reg/Q                                        |                                                  | Ajedrez1/JugadorA/Reset_s_reg_i_1__1_n_1             |                1 |              1 |         1.00 |
 | ~Ajedrez1/Reset_aux_A_reg/Q                                        |                                                  | Ajedrez1/Enable_count_A_reg/Q                        |                1 |              1 |         1.00 |
 | ~Ajedrez1/Reset_aux_A_reg/Q                                        |                                                  | Ajedrez1/Enable_count_B                              |                1 |              1 |         1.00 |
-|  Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_1_n_1              |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
-|  Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_1_n_1              |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[2]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[2]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[1]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[3]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
-|  Control_Anodo1/Inst_clk10khz/clk_10khz                            |                                                  | Control_Anodo1/flag[0]                               |                1 |              1 |         1.00 |
-|  Control_Anodo1/Inst_clk10khz/clk_10khz                            |                                                  | Control_Anodo1/refrescar_anodo[7]_i_1_n_1            |                1 |              1 |         1.00 |
-|  GestorEntradas1/DetectorFlanco2/B_R_aux                           |                                                  | GestorEntradas1/DetectorFlanco3/sreg_reg[0]_0        |                1 |              1 |         1.00 |
+|  Ajedrez1/Enable_count_A_reg/G0                                    |                                                  |                                                      |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_sec[3]_P_i_1_n_1   | Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
 |  GestorEntradas1/DetectorFlanco/sreg_reg[0]_0                      |                                                  | GestorEntradas1/DetectorFlanco5/sreg_reg[0]_0        |                1 |              1 |         1.00 |
-|  GestorEntradas1/DetectorFlanco4/sreg_reg[0]_0                     |                                                  | GestorEntradas1/DetectorFlanco5/sreg_reg[1]_0        |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_min0                | Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_min0                | Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_min0                | Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_min0                | Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_sec0                | Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_sec0                | Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_sec0                | Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_sec0                | Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/led0                    | Modo_Temp1/Cuenta_atras1/Reset_s                     |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_min0               | Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_min0               | Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_min0               | Modo_Temp1/Cuenta_atras1/unit_min_reg[2]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_min0               | Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
+|  GestorEntradas1/DetectorFlanco2/B_R_aux                           |                                                  | GestorEntradas1/DetectorFlanco3/sreg_reg[0]_0        |                1 |              1 |         1.00 |
 |  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_sec[3]_P_i_1_n_1   | Modo_Temp1/Cuenta_atras1/unit_sec_reg[1]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
+|  Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  GestorEntradas1/DetectorFlanco4/sreg_reg[0]_0                     |                                                  | GestorEntradas1/DetectorFlanco5/sreg_reg[1]_0        |                1 |              1 |         1.00 |
 |  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_sec[3]_P_i_1_n_1   | Modo_Temp1/Cuenta_atras1/unit_sec_reg[2]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
 |  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_sec[3]_P_i_1_n_1   | Modo_Temp1/Cuenta_atras1/unit_sec_reg[3]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_sec[3]_P_i_1_n_1   | Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
 |  MaquinaEstados1/Enable_A                                          |                                                  |                                                      |                1 |              1 |         1.00 |
 |  MaquinaEstados1/FSM_sequential_estadoActual_reg[2]_3              |                                                  |                                                      |                1 |              1 |         1.00 |
-|  Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
 |  Modo_Temp1/Cuenta_atras1/Reset_aux                                |                                                  | Modo_Temp1/Cuenta_atras1/Reset_s_reg_i_2__0_n_1      |                1 |              1 |         1.00 |
-|  Modo_Temp1/Cuenta_atras1/Start_s_reg_i_1__0_n_1                   |                                                  | Modo_Temp1/Q[1]                                      |                1 |              1 |         1.00 |
-|  Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
 |  Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
 |  Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
-|  Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_1_n_1              |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
-|  Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_1_n_1              |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_min0               | Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
+|  Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  Modo_Temp1/Cuenta_atras1/Start_s_reg_i_1__0_n_1                   |                                                  | Modo_Temp1/Q[1]                                      |                1 |              1 |         1.00 |
+|  Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_1_n_1               |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_1_n_1              |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
 |  Modo_Temp1/Cuenta_atras1/unit_sec_reg[1]_LDC_i_1_n_1              |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[1]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
+|  Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_1_n_1              |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
+|  Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_1_n_1              |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
 |  Modo_Temp1/Cuenta_atras1/unit_min_reg[2]_LDC_i_1_n_1              |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[2]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
+|  Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_1_n_1              |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
 |  Modo_Temp1/Cuenta_atras1/unit_sec_reg[2]_LDC_i_1_n_1              |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[2]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
 |  Modo_Temp1/Cuenta_atras1/unit_sec_reg[3]_LDC_i_1_n_1              |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[3]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
-|  Control_Anodo1/Inst_clk10khz/clk_10khz                            |                                                  | Control_Anodo1/flag[2]                               |                1 |              2 |         2.00 |
-|  CLK_IBUF_BUFG                                                     | GestorEntradas1/DetectorFlanco5/sreg_reg[0]_1[0] | reset_IBUF                                           |                1 |              3 |         3.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Ajedrez1/JugadorA/Reset_s                            |                2 |              4 |         2.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Ajedrez1/JugadorB/Reset_s                            |                3 |              4 |         1.33 |
-|  CLK_IBUF_BUFG                                                     | Ajedrez1/JugadorA/unit_min[3]_i_1__0_n_1         | Ajedrez1/JugadorA/Reset_s                            |                1 |              4 |         4.00 |
-|  MaquinaEstados1/Enable_S                                          |                                                  |                                                      |                1 |              4 |         4.00 |
-|  CLK_IBUF_BUFG                                                     | Ajedrez1/JugadorA/unit_sec0                      | Ajedrez1/JugadorA/Reset_s                            |                2 |              4 |         2.00 |
-|  Modo_Crono1/Inst_clk1hz/CLK                                       | Modo_Crono1/Start_s                              | Modo_Crono1/Reset_s                                  |                1 |              4 |         4.00 |
-|  Modo_Crono1/Inst_clk1hz/CLK                                       | Modo_Crono1/dec_min0                             | Modo_Crono1/Reset_s                                  |                1 |              4 |         4.00 |
-|  GestorEntradas1/DetectorFlanco3/FSM_onehot_estadoActual_reg[1][0] |                                                  |                                                      |                1 |              4 |         4.00 |
-|  Modo_Crono1/Inst_clk1hz/CLK                                       | Modo_Crono1/unit_min0                            | Modo_Crono1/Reset_s                                  |                1 |              4 |         4.00 |
-|  Control_Anodo1/Inst_clk10khz/clk_10khz                            |                                                  | Control_Anodo1/flag[1]                               |                1 |              4 |         4.00 |
-|  Modo_Crono1/Inst_clk1hz/CLK                                       | Modo_Crono1/dec_sec0                             | Modo_Crono1/Reset_s                                  |                1 |              4 |         4.00 |
-|  CLK_IBUF_BUFG                                                     | Ajedrez1/JugadorB/unit_sec0                      | Ajedrez1/JugadorB/Reset_s                            |                1 |              4 |         4.00 |
-|  CLK_IBUF_BUFG                                                     | Ajedrez1/JugadorB/unit_min[3]_i_1__1_n_1         | Ajedrez1/JugadorB/Reset_s                            |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_min0               | Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_min0               | Modo_Temp1/Cuenta_atras1/unit_min_reg[2]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Control_Anodo1/flag[0]                               |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/unit_min0               | Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_1_n_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Control_Anodo1/refrescar_anodo[7]_i_1_n_1            |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/led0                    | Modo_Temp1/Cuenta_atras1/Reset_s                     |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_2_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_min_reg[2]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[1]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[2]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Temp1/Cuenta_atras1/unit_sec_reg[3]_LDC_i_2_n_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_sec0                | Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_min0                | Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_min0                | Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_min0                | Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_min0                | Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_sec0                | Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_sec0                | Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/Cuenta_atras1/dec_sec0                | Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_1_n_1  |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Control_Anodo1/flag[2]                               |                1 |              2 |         2.00 |
+|  CLK_IBUF_BUFG                                                     | GestorEntradas1/DetectorFlanco5/sreg_reg[0]_1[0] | reset_IBUF                                           |                2 |              3 |         1.50 |
 |  GestorEntradas1/DetectorFlanco/FSM_onehot_estadoActual_reg[1][0]  |                                                  |                                                      |                1 |              4 |         4.00 |
-|  GestorEntradas1/DetectorFlanco2/FSM_onehot_estadoActual_reg[1][0] |                                                  |                                                      |                2 |              4 |         2.00 |
+|  GestorEntradas1/DetectorFlanco2/FSM_onehot_estadoActual_reg[1][0] |                                                  |                                                      |                1 |              4 |         4.00 |
 |  GestorEntradas1/DetectorFlanco4/E[0]                              |                                                  |                                                      |                1 |              4 |         4.00 |
-|  CLK_IBUF_BUFG                                                     | Modo_Temp1/FSM_onehot_estadoActual[4]_i_1_n_1    | MaquinaEstados1/FSM_sequential_estadoActual_reg[1]_0 |                2 |              5 |         2.50 |
-|  Control_Anodo1/Inst_clk10khz/clk_10khz                            |                                                  |                                                      |                4 |             10 |         2.50 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Control_Anodo1/Inst_clk10khz/temporal                |                3 |             12 |         4.00 |
-|  CLK_IBUF_BUFG                                                     |                                                  | Modo_Crono1/Inst_clk1hz/temporal                     |                7 |             25 |         3.57 |
-|  CLK_IBUF_BUFG                                                     |                                                  |                                                      |               10 |             29 |         2.90 |
+|  MaquinaEstados1/Enable_S                                          |                                                  |                                                      |                1 |              4 |         4.00 |
+|  GestorEntradas1/DetectorFlanco3/FSM_onehot_estadoActual_reg[1][0] |                                                  |                                                      |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Ajedrez1/JugadorB/Reset_s                            |                2 |              4 |         2.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Control_Anodo1/flag[1]                               |                2 |              4 |         2.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Crono1/unit_min0                            | Modo_Crono1/Reset_s                                  |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Crono1/dec_min0                             | Modo_Crono1/Reset_s                                  |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                                     |                                                  | Ajedrez1/JugadorA/Reset_s                            |                2 |              4 |         2.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Crono1/Start_s                              | Modo_Crono1/Reset_s                                  |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Crono1/dec_sec0                             | Modo_Crono1/Reset_s                                  |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                                     | Ajedrez1/JugadorA/unit_min[3]_i_1__0_n_1         | Ajedrez1/JugadorA/Reset_s                            |                2 |              4 |         2.00 |
+|  CLK_IBUF_BUFG                                                     | Ajedrez1/JugadorA/unit_sec0                      | Ajedrez1/JugadorA/Reset_s                            |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                                     | Ajedrez1/JugadorB/unit_min[3]_i_1__1_n_1         | Ajedrez1/JugadorB/Reset_s                            |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                                     | Ajedrez1/JugadorB/unit_sec0                      | Ajedrez1/JugadorB/Reset_s                            |                2 |              4 |         2.00 |
+|  CLK_IBUF_BUFG                                                     | Modo_Temp1/FSM_onehot_estadoActual[4]_i_1_n_1    | MaquinaEstados1/FSM_sequential_estadoActual_reg[1]_0 |                1 |              5 |         5.00 |
 |  n_0_168_BUFG                                                      |                                                  |                                                      |                9 |             32 |         3.56 |
+|  CLK_IBUF_BUFG                                                     |                                                  |                                                      |               13 |             35 |         2.69 |
 +--------------------------------------------------------------------+--------------------------------------------------+------------------------------------------------------+------------------+----------------+--------------+
 
 

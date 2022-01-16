@@ -36,7 +36,7 @@ architecture tb of Modo_Crono_tb is
     signal Pause    : std_logic;
     signal Reset    : std_logic;
 
-    constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
+    constant TbPeriod : time := 100 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
@@ -78,7 +78,13 @@ begin
         wait for 100 ns;
 
         -- EDIT Add stimuli here
-        wait for 100 * TbPeriod;
+        enable_a<='1';
+        wait for 100 ns;
+        start<='1';
+        wait for 100 ns;
+        start <= '0';
+        
+        wait for 1000 ns;
 
         -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';
