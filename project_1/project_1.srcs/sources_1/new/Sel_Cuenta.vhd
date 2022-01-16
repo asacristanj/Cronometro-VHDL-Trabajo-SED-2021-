@@ -50,10 +50,10 @@ process(B1,B2,B3,B4,Enable)
 begin
 
     if Enable = '0' then
-        unit_sec_aux:=0;
-        unit_min_aux:=0;
-        dec_sec_aux:=0;
-        dec_min_aux:=0;
+        --unit_sec_aux:=0;
+        --unit_min_aux:=0;
+        --dec_sec_aux:=0;
+        --dec_min_aux:=0;
     else --if rising_edge(clk_10khz) then
         if B1='1' then
             unit_sec_aux:=unit_sec_aux+1;

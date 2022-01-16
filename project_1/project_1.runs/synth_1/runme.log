@@ -17,9 +17,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 24552
+INFO: [Synth 8-7075] Helper process launched with PID 9852
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1120.348 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1120.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-2551] possible infinite loop; process does not have a wait statement [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:102]
 INFO: [Synth 8-638] synthesizing module 'TOP' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:19]
@@ -58,12 +58,11 @@ INFO: [Synth 8-256] done synthesizing module 'clk1Hz' (6#1) [C:/Users/alejandro/
 INFO: [Synth 8-256] done synthesizing module 'Modo_Crono' (7#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:23]
 INFO: [Synth 8-3491] module 'Modo_Temp' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:5' bound to instance 'Modo_Temp1' of component 'Modo_Temp' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:315]
 INFO: [Synth 8-638] synthesizing module 'Modo_Temp' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:26]
-INFO: [Synth 8-3491] module 'Sel_Cuenta' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:5' bound to instance 'Sel_Cuenta1' of component 'Sel_Cuenta' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:98]
+INFO: [Synth 8-3491] module 'Sel_Cuenta' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:5' bound to instance 'Sel_Cuenta1' of component 'Sel_Cuenta' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:100]
 INFO: [Synth 8-638] synthesizing module 'Sel_Cuenta' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:22]
 INFO: [Synth 8-3491] module 'clk10kHz' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:4' bound to instance 'Inst_clk10khz' of component 'clk10khz' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:37]
-WARNING: [Synth 8-614] signal 'clk_10khz' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:43]
 INFO: [Synth 8-256] done synthesizing module 'Sel_Cuenta' (8#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:22]
-INFO: [Synth 8-3491] module 'Cuenta_atras' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:7' bound to instance 'Cuenta_atras1' of component 'Cuenta_atras' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:112]
+INFO: [Synth 8-3491] module 'Cuenta_atras' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:7' bound to instance 'Cuenta_atras1' of component 'Cuenta_atras' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:114]
 INFO: [Synth 8-638] synthesizing module 'Cuenta_atras' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:24]
 INFO: [Synth 8-3491] module 'clk1Hz' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:4' bound to instance 'Inst_clk1hz' of component 'clk1hz' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:41]
 WARNING: [Synth 8-614] signal 'code1_in' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:65]
@@ -71,19 +70,18 @@ WARNING: [Synth 8-614] signal 'code2_in' is read in the process but is not in th
 WARNING: [Synth 8-614] signal 'code3_in' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:65]
 WARNING: [Synth 8-614] signal 'code4_in' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:65]
 INFO: [Synth 8-256] done synthesizing module 'Cuenta_atras' (9#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:24]
-INFO: [Synth 8-3491] module 'Mux_Temp' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:5' bound to instance 'Mux_Temp1' of component 'Mux_Temp' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:127]
-INFO: [Synth 8-638] synthesizing module 'Mux_Temp' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:23]
-WARNING: [Synth 8-614] signal 'code1_Sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:26]
-WARNING: [Synth 8-614] signal 'code2_Sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:26]
-WARNING: [Synth 8-614] signal 'code3_Sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:26]
-WARNING: [Synth 8-614] signal 'code4_Sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:26]
-WARNING: [Synth 8-614] signal 'code1_Count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:26]
-WARNING: [Synth 8-614] signal 'code2_Count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:26]
-WARNING: [Synth 8-614] signal 'code3_Count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:26]
-WARNING: [Synth 8-614] signal 'code4_Count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'Mux_Temp' (10#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:23]
-WARNING: [Synth 8-614] signal 'Enable_sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:167]
-WARNING: [Synth 8-614] signal 'Enable_count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:167]
+INFO: [Synth 8-3491] module 'Mux_Temp' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:5' bound to instance 'Mux_Temp1' of component 'Mux_Temp' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'Mux_Temp' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:24]
+WARNING: [Synth 8-614] signal 'code1_Sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
+WARNING: [Synth 8-614] signal 'code2_Sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
+WARNING: [Synth 8-614] signal 'code3_Sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
+WARNING: [Synth 8-614] signal 'code4_Sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
+WARNING: [Synth 8-614] signal 'code1_Count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
+WARNING: [Synth 8-614] signal 'code2_Count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
+WARNING: [Synth 8-614] signal 'code3_Count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
+WARNING: [Synth 8-614] signal 'code4_Count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Mux_Temp' (10#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:24]
+WARNING: [Synth 8-614] signal 'Enable_sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:174]
 INFO: [Synth 8-256] done synthesizing module 'Modo_Temp' (11#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:26]
 INFO: [Synth 8-3491] module 'Ajedrez' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:5' bound to instance 'Ajedrez1' of component 'Ajedrez' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:334]
 INFO: [Synth 8-638] synthesizing module 'Ajedrez' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:26]
@@ -141,18 +139,18 @@ INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/Gi
 INFO: [Synth 8-256] done synthesizing module 'Control_Anodo' (15#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:21]
 INFO: [Synth 8-256] done synthesizing module 'TOP' (16#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:19]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1120.348 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1120.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1120.348 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1120.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1120.348 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1120.680 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1120.348 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1120.680 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -163,27 +161,28 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1136.039 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1161.418 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1136.039 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1161.418 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1136.039 ; gain = 15.691
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1136.039 ; gain = 15.691
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1136.039 ; gain = 15.691
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'estadoActual_reg' in module 'Modo_Temp'
 INFO: [Synth 8-802] inferred FSM for state register 'flag_reg' in module 'Control_Anodo'
 WARNING: [Synth 8-327] inferring latch for variable 'code1_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:107]
 WARNING: [Synth 8-327] inferring latch for variable 'code7_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:113]
@@ -197,14 +196,25 @@ WARNING: [Synth 8-327] inferring latch for variable 'Reset_s_reg' [C:/Users/alej
 WARNING: [Synth 8-327] inferring latch for variable 'code6_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
 WARNING: [Synth 8-327] inferring latch for variable 'code7_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
 WARNING: [Synth 8-327] inferring latch for variable 'code8_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
+WARNING: [Synth 8-327] inferring latch for variable 'unit_sec_aux_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:59]
+WARNING: [Synth 8-327] inferring latch for variable 'dec_sec_aux_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:65]
+WARNING: [Synth 8-327] inferring latch for variable 'unit_min_aux_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:71]
+WARNING: [Synth 8-327] inferring latch for variable 'dec_min_aux_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:77]
 WARNING: [Synth 8-327] inferring latch for variable 'Reset_s_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:54]
 WARNING: [Synth 8-327] inferring latch for variable 'Start_s_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:53]
-WARNING: [Synth 8-327] inferring latch for variable 'code6_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:148]
-WARNING: [Synth 8-327] inferring latch for variable 'code7_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:147]
-WARNING: [Synth 8-327] inferring latch for variable 'code8_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:146]
-WARNING: [Synth 8-327] inferring latch for variable 'Enable_count_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:114]
-WARNING: [Synth 8-327] inferring latch for variable 'Reset_aux_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:115]
-WARNING: [Synth 8-327] inferring latch for variable 'Enable_sel_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:104]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      rp |                            00001 |                              100
+                     sel |                            00010 |                              000
+                       c |                            00100 |                              001
+                       p |                            01000 |                              010
+                       r |                            10000 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'estadoActual_reg' using encoding 'one-hot' in module 'Modo_Temp'
+WARNING: [Synth 8-327] inferring latch for variable 'code6_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:151]
+WARNING: [Synth 8-327] inferring latch for variable 'code7_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:150]
+WARNING: [Synth 8-327] inferring latch for variable 'code8_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:149]
 WARNING: [Synth 8-327] inferring latch for variable 'Enable_count_A_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:60]
 WARNING: [Synth 8-327] inferring latch for variable 'Reset_aux_A_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:61]
 WARNING: [Synth 8-327] inferring latch for variable 'Enable_count_B_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:75]
@@ -231,7 +241,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'code8_reg' [C:/Users/alejan
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'flag_reg' using encoding 'sequential' in module 'Control_Anodo'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1136.039 ; gain = 15.691
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -241,14 +251,14 @@ Detailed RTL Component Info :
 	   2 Input   32 Bit       Adders := 2     
 	   2 Input   26 Bit       Adders := 4     
 	   2 Input   13 Bit       Adders := 3     
-	   2 Input    4 Bit       Adders := 28    
+	   2 Input    4 Bit       Adders := 24    
 +---Registers : 
 	               32 Bit    Registers := 1     
 	               26 Bit    Registers := 4     
 	               13 Bit    Registers := 3     
 	                8 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 20    
+	                4 Bit    Registers := 16    
 	                3 Bit    Registers := 6     
 	                2 Bit    Registers := 6     
 	                1 Bit    Registers := 16    
@@ -258,11 +268,14 @@ Detailed RTL Component Info :
 	   2 Input   13 Bit        Muxes := 3     
 	   8 Input    8 Bit        Muxes := 1     
 	   8 Input    7 Bit        Muxes := 1     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 2     
 	   3 Input    4 Bit        Muxes := 2     
 	   2 Input    4 Bit        Muxes := 72    
 	   8 Input    3 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 38    
+	   2 Input    1 Bit        Muxes := 36    
 	   4 Input    1 Bit        Muxes := 1     
+	   5 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -279,25 +292,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1136.039 ; gain = 15.691
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1136.039 ; gain = 15.691
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1136.039 ; gain = 15.691
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 1144.543 ; gain = 24.195
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -315,37 +328,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1144.543 ; gain = 24.195
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1144.543 ; gain = 24.195
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1144.543 ; gain = 24.195
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1144.543 ; gain = 24.195
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1144.543 ; gain = 24.195
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1144.543 ; gain = 24.195
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -380,51 +393,51 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     5|
-|2     |CARRY4 |    32|
-|3     |LUT1   |    55|
-|4     |LUT2   |    54|
-|5     |LUT3   |    39|
-|6     |LUT4   |   117|
-|7     |LUT5   |    63|
-|8     |LUT6   |   103|
+|2     |CARRY4 |    29|
+|3     |LUT1   |    52|
+|4     |LUT2   |    52|
+|5     |LUT3   |    44|
+|6     |LUT4   |   122|
+|7     |LUT5   |    77|
+|8     |LUT6   |   104|
 |9     |SRL16E |     5|
-|10    |FDCE   |   103|
-|11    |FDPE   |    18|
-|12    |FDRE   |    99|
+|10    |FDCE   |    91|
+|11    |FDPE   |    19|
+|12    |FDRE   |    85|
 |13    |FDSE   |     8|
-|14    |LD     |    39|
-|15    |LDC    |    25|
-|16    |LDCP   |     4|
+|14    |LD     |    55|
+|15    |LDC    |    23|
+|16    |LDCP   |     3|
 |17    |LDP    |     4|
 |18    |IBUF   |     7|
 |19    |OBUF   |    16|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1144.543 ; gain = 24.195
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1161.418 ; gain = 40.738
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 31 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 1144.543 ; gain = 8.504
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1144.543 ; gain = 24.195
+Synthesis finished with 0 errors, 0 critical warnings and 32 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:35 . Memory (MB): peak = 1161.418 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1161.418 ; gain = 40.738
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1155.266 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 104 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1161.418 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 114 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 2 inverter(s) to 3 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1160.883 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1166.180 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 72 instances were transformed.
-  LD => LDCE: 39 instances
-  LDC => LDCE: 25 instances
-  LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 4 instances
-  LDP => LDPE: 1 instance 
-  LDP => LDPE (inverted pins: G): 3 instances
+  A total of 85 instances were transformed.
+  LD => LDCE: 55 instances
+  LDC => LDCE: 23 instances
+  LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 3 instances
+  LDP => LDPE: 2 instances
+  LDP => LDPE (inverted pins: G): 2 instances
 
-Synth Design complete, checksum: e9b6b469
+Synth Design complete, checksum: ee1560e4
 INFO: [Common 17-83] Releasing license: Synthesis
-86 Infos, 81 Warnings, 0 Critical Warnings and 0 Errors encountered.
+88 Infos, 80 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 1160.883 ; gain = 40.535
+synth_design: Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1166.180 ; gain = 45.500
 INFO: [Common 17-1381] The checkpoint 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/synth_1/TOP.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jan 16 16:38:37 2022...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 16 19:09:04 2022...

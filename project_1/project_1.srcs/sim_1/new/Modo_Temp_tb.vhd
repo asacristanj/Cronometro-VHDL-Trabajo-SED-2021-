@@ -119,7 +119,15 @@ begin
         B5<='1';
         wait for 100 ns;
         B5<='0';
-        wait for 1000 ns;
+        wait for 100 ns;
+        B4<='1';
+        wait for 100 ns;
+        B4<='0';
+        wait for 100 ns;
+        B5<='1';
+        wait for 100 ns;
+        B5<='0';
+        wait for 2000 ns;
         -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';
         wait;

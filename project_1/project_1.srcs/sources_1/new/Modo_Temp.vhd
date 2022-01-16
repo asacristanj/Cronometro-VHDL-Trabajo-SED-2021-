@@ -24,7 +24,8 @@ entity Modo_Temp is
 end Modo_Temp;
 
 architecture Behavioral of Modo_Temp is
-
+type estados is (Sel,c,p,r,rp);
+signal estadoActual, siguienteEstado:estados;
     signal Enable_sel : std_logic:='0';
     signal Enable_count : std_logic:='0';
    -- signal unit_sec_aux : integer :=0;
@@ -162,35 +163,91 @@ begin
    --     end if;
    -- end process;
     
-    
-    
-    
-    
-maquinaestados : process (B5, Enable_B, B2, B4) --Cambia  entre el modo seleccionar cuenta y el de contar 
-begin
-    if Enable_B='0' then --modo temporizador desconectado
-        Reset_aux<='1';
-        Enable_sel<='0';
-        Enable_count<='0';
-    else --modo temporizador conectado
-        if Enable_B='1' and Enable_sel='0' and Enable_count='0' then --Si no está ni modosel ni modo cuenta, y si está activdo el modotemp, entra en modo sel
-            Enable_sel<='1';
-        end if;
-        if Enable_B='1' and Enable_sel='1' and B5='1' then--si está en modo sel y se pulsa el start(b5) esq ya se ha seleccioando y se desea contar
-            Enable_sel<='0';                              --por lo q se desactiva modo sel y se activa el count para empezar a contar
-            Enable_count<='1';
-            Reset_aux<='0';
-        elsif Enable_B='1' and Enable_sel='0' and Enable_count='1' and B2='1' then--si está contando y nop está en modo sel y se pulsa pausa(B2) se para
-            Enable_count<='0';
-            Reset_aux<='0';
-        elsif Enable_B='1' and Enable_sel='0'and B5='1' then --se retoma la cuenta en caso de q estuviera pusado
-            Enable_count<='1';
-            Reset_aux<='0';
-        elsif Enable_B='1' and Enable_sel='0' and B4='1' then
-            Reset_aux<='1';
-        end if;
+ state_reg: process (clk,enable_b)
+ begin   
+    if enable_b='0' then
+        estadoActual<=rp;
+    elsif rising_edge(clk) then
+        estadoActual<= siguienteEstado;
     end if;
-    
+ end process;
+maquinaestados : process (Enable_B,estadoActual, B2,B4,B5) --Cambia  entre el modo seleccionar cuenta y el de contar 
+begin
+    siguienteEstado<=estadoActual;
+    --if Enable_B='0' then --modo temporizador desconectado
+        --Reset_aux<='1';
+        --Enable_sel<='0';
+        --Enable_count<='0';
+        --estadoActual<=Sel;
+   -- else --modo temporizador conectado
+        case estadoActual is
+            when Sel=>
+                if enable_sel='1' and B5='1' then
+                siguienteEstado<=c;
+                end if;
+            when c=>
+                if B2='1' then 
+                siguienteEstado<=p;
+                elsif B4='1' then
+                siguienteEstado<=r;
+                end if;
+            when p=>
+                if B4='1' then
+                siguienteEstado<=r;
+                elsif B5='1' then
+                siguienteEstado<=c;
+                end if;
+            when r=>
+                if B5='1' then
+                siguienteEstado<=c;
+                end if;
+            when rp=>
+                if enable_b='1' then
+                siguienteEstado<=sel;
+                end if;
+            end case;
+            
+   -- end if;
 end process;
-
+salidas: process(estadoActual)
+    begin 
+        case estadoActual is
+            when Sel=>
+                enable_sel<='1';
+                enable_count<='0';
+                reset_aux<='1';
+            when c=>
+                enable_sel<='0';
+                enable_count<='1';
+                reset_aux<='0';
+            when p=>
+                enable_sel<='0';
+                enable_count<='0';
+                reset_aux<='0';
+            when r=>
+                enable_sel<='0';
+                enable_count<='0';
+                reset_aux<='1';  
+            when rp=>
+                enable_sel<='0';
+                enable_count<='0';
+                reset_aux<='0';  
+        end case;
+    end process;
+        --if Enable_B='1' and Enable_sel='0' and Enable_count='0' then --Si no está ni modosel ni modo cuenta, y si está activdo el modotemp, entra en modo sel
+          --  Enable_sel<='1';
+        --end if;
+        --if Enable_B='1' and Enable_sel='1' and B5='1' then--si está en modo sel y se pulsa el start(b5) esq ya se ha seleccioando y se desea contar
+          --  Enable_sel<='0';                              --por lo q se desactiva modo sel y se activa el count para empezar a contar
+            --Enable_count<='1';
+            --Reset_aux<='0';
+        --elsif Enable_B='1' and Enable_sel='0' and Enable_count='1' and B2='1' then--si está contando y nop está en modo sel y se pulsa pausa(B2) se para
+          --  Enable_count<='0';
+            --Reset_aux<='0';
+        --elsif Enable_B='1' and Enable_sel='0'and B5='1' then --se retoma la cuenta en caso de q estuviera pusado
+          --  Enable_count<='1';
+          --  Reset_aux<='0';
+        --elsif Enable_B='1' and Enable_sel='0' and B4='1' then
+         --   Reset_aux<='1';
+       -- end if;    
 end Behavioral;

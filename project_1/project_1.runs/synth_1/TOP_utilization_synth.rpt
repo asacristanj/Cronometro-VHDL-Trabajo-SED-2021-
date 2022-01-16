@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sun Jan 16 16:38:37 2022
+| Date         : Sun Jan 16 19:09:04 2022
 | Host         : Supersacris running 64-bit major release  (build 9200)
 | Command      : report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb
 | Design       : TOP
@@ -30,14 +30,14 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                |  365 |     0 |          0 |     63400 |  0.58 |
-|   LUT as Logic             |  360 |     0 |          0 |     63400 |  0.57 |
+| Slice LUTs*                |  377 |     0 |          0 |     63400 |  0.59 |
+|   LUT as Logic             |  372 |     0 |          0 |     63400 |  0.59 |
 |   LUT as Memory            |    5 |     0 |          0 |     19000 |  0.03 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |    5 |     0 |            |           |       |
-| Slice Registers            |  300 |     0 |          0 |    126800 |  0.24 |
-|   Register as Flip Flop    |  228 |     0 |          0 |    126800 |  0.18 |
-|   Register as Latch        |   72 |     0 |          0 |    126800 |  0.06 |
+| Slice Registers            |  288 |     0 |          0 |    126800 |  0.23 |
+|   Register as Flip Flop    |  203 |     0 |          0 |    126800 |  0.16 |
+|   Register as Latch        |   85 |     0 |          0 |    126800 |  0.07 |
 | F7 Muxes                   |    0 |     0 |          0 |     31700 |  0.00 |
 | F8 Muxes                   |    0 |     0 |          0 |     15850 |  0.00 |
 +----------------------------+------+-------+------------+-----------+-------+
@@ -50,16 +50,16 @@ Table of Contents
 +-------+--------------+-------------+--------------+
 | Total | Clock Enable | Synchronous | Asynchronous |
 +-------+--------------+-------------+--------------+
-| 4     |            _ |           - |            - |
+| 3     |            _ |           - |            - |
 | 0     |            _ |           - |          Set |
 | 0     |            _ |           - |        Reset |
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 22    |          Yes |           - |          Set |
-| 167   |          Yes |           - |        Reset |
+| 23    |          Yes |           - |          Set |
+| 169   |          Yes |           - |        Reset |
 | 8     |          Yes |         Set |            - |
-| 99    |          Yes |       Reset |            - |
+| 85    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,17 +148,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT4     |  117 |                 LUT |
-| LUT6     |  103 |                 LUT |
-| FDCE     |  103 |        Flop & Latch |
-| FDRE     |   99 |        Flop & Latch |
-| LDCE     |   68 |        Flop & Latch |
-| LUT5     |   63 |                 LUT |
-| LUT2     |   54 |                 LUT |
-| LUT1     |   53 |                 LUT |
-| LUT3     |   47 |                 LUT |
-| CARRY4   |   32 |          CarryLogic |
-| FDPE     |   18 |        Flop & Latch |
+| LUT4     |  122 |                 LUT |
+| LUT6     |  104 |                 LUT |
+| FDCE     |   91 |        Flop & Latch |
+| FDRE     |   85 |        Flop & Latch |
+| LDCE     |   81 |        Flop & Latch |
+| LUT5     |   77 |                 LUT |
+| LUT2     |   52 |                 LUT |
+| LUT1     |   51 |                 LUT |
+| LUT3     |   50 |                 LUT |
+| CARRY4   |   29 |          CarryLogic |
+| FDPE     |   19 |        Flop & Latch |
 | OBUF     |   16 |                  IO |
 | FDSE     |    8 |        Flop & Latch |
 | IBUF     |    7 |                  IO |
