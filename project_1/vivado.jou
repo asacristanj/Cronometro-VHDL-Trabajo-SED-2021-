@@ -2,35 +2,36 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Fri Jan 14 18:49:54 2022
-# Process ID: 2208
-# Current directory: C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18812 C:\Users\alejandro\Documents\GitHub\Cronometro-VHDL-Trabajo-SED-2021-\project_1\project_1.xpr
-# Log file: C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/vivado.log
-# Journal file: C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1\vivado.jou
+# Start of session at: Sun Jan 16 09:49:11 2022
+# Process ID: 20660
+# Current directory: C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3324 C:\Users\Carlos\Documents\GitHub\Cronometro-VHDL-Trabajo-SED-2021-\project_1\project_1.xpr
+# Log file: C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/vivado.log
+# Journal file: C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.xpr
+open_project C:/Users/Carlos/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.xpr
 update_compile_order -fileset sources_1
+
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
-set_property top GestorEntradas_tb [get_filesets sim_1]
+set_property top Cuenta_atras_tb [get_filesets sim_1]
 set_property top_lib xil_defaultlib [get_filesets sim_1]
 # Re-enabling previously disabled source management mode.
 set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sim_1
 launch_simulation
-source GestorEntradas_tb.tcl
-run all
-close_sim
+launch_simulation
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
-set_property top Control_Anodo_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top Cuenta_atras [current_fileset]
 # Re-enabling previously disabled source management mode.
 set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
 launch_simulation
-source Control_Anodo_tb.tcl
-run all
-close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TOP [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1

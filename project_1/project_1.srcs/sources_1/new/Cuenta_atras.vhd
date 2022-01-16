@@ -7,10 +7,10 @@ entity Cuenta_atras is
         CLK : in std_logic;
         Enable_count : in std_logic;
         Reset : in std_logic;
-        code1_in : in integer;
-        code2_in : in integer;
-        code3_in : in integer;
-        code4_in : in integer;
+        code1_in : in std_logic_vector(3 downto 0);
+        code2_in : in std_logic_vector(3 downto 0);
+        code3_in : in std_logic_vector(3 downto 0);
+        code4_in : in std_logic_vector(3 downto 0);
         code1_out : out std_logic_vector(3 downto 0);--unidades de segundo
         code2_out : out std_logic_vector(3 downto 0);--decenas de segundo
         code3_out : out std_logic_vector(3 downto 0);--unidades de minuto
@@ -24,6 +24,7 @@ architecture Behavioral of Cuenta_atras is
     signal Start_s : std_logic :='0';
     signal Reset_s : std_logic :='1';
     signal Set : std_logic :='1';
+    
     
     signal clk_1hz : std_logic;
     
@@ -42,6 +43,8 @@ begin
     );
     
     
+    
+    
     maquinaestados : process (Enable_count, Reset)
     begin
         if Enable_count = '1' then --Si está activa la habilitación y Pulsamos botón Start
@@ -56,6 +59,7 @@ begin
     end process;
     
     
+    
     process (clk, Start_s, Reset_s, Enable_count)
     
     subtype V is integer range 0 to 15;
@@ -66,10 +70,10 @@ begin
     begin
         
         if Reset_s='1' then --Reset prioritario
-            unit_sec:=code1_in;
-            dec_sec:=code2_in;
-            unit_min:=code3_in;
-            dec_min:=code4_in;
+            unit_sec:=integer(code1_in);
+            dec_sec:=integer(code2_in);
+            unit_min:=integer(code3_in);
+            dec_min:=integer(code4_in);
             led<='0';
         elsif rising_edge(clk) and Start_s='1' then
             if unit_sec=0 and dec_sec=0 and unit_min=0 and dec_min=0 then

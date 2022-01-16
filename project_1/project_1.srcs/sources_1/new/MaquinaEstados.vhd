@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
 
 entity MaquinaEstados is
     Port ( 
@@ -27,7 +28,7 @@ end MaquinaEstados;
 
 architecture Behavioral of MaquinaEstados is
     
-    signal Modo : integer :=0; --0==Reposo//1==crono//2==temp//3==ajedrez
+    signal Modo : unsigned(1 downto 0); --0==Reposo//1==crono//2==temp//3==ajedrez
     
     signal Sel_modo : std_logic :='1';
     
@@ -67,7 +68,7 @@ Inst_clk10khz: clk10khz
                 end if;
             end if;
         end if;
-        Modo<=Modo_aux;
+        Modo<=to_unsigned(Modo_aux,Modo'length);
     end process;
     
     submaquina2 : process(B5,reset,Modo)

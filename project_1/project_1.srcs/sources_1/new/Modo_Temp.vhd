@@ -51,10 +51,10 @@ architecture Behavioral of Modo_Temp is
         B3 : in std_logic;
         B4 : in std_logic;
         Enable : in std_logic;
-        unit_sec : out integer;
-        dec_sec : out integer;
-        unit_min : out integer;
-        dec_min : out integer
+        code1_Sel : out std_logic_vector(3 downto 0);
+        code2_Sel : out std_logic_vector(3 downto 0);
+        code3_Sel : out std_logic_vector(3 downto 0);
+        code4_Sel : out std_logic_vector(3 downto 0)
        );
     END COMPONENT;
     
@@ -63,10 +63,10 @@ architecture Behavioral of Modo_Temp is
         CLK : in std_logic;
         Enable_count : in std_logic;
         Reset : in std_logic;
-        code1_in : in integer;
-        code2_in : in integer;
-        code3_in : in integer;
-        code4_in : in integer;
+        code1_in : in std_logic_vector(3 downto 0);
+        code2_in : in std_logic_vector(3 downto 0);
+        code3_in : in std_logic_vector(3 downto 0);
+        code4_in : in std_logic_vector(3 downto 0);
         code1_out : out std_logic_vector(3 downto 0);--unidades de segundo
         code2_out : out std_logic_vector(3 downto 0);--decenas de segundo
         code3_out : out std_logic_vector(3 downto 0);--unidades de minuto
@@ -102,10 +102,10 @@ begin
         B3=>B3,
         B4=>B4,
         Enable=>Enable_sel,
-        unit_sec=>unit_sec_aux,
-        dec_sec=>dec_sec_aux,
-        unit_min=>unit_min_aux,
-        dec_min=>dec_min_aux
+        code1_Sel=>code1_Sel,
+        code2_Sel=>code2_Sel,
+        code3_Sel=>code3_Sel,
+        code4_Sel=>code4_Sel
     );
 
 
@@ -113,10 +113,10 @@ begin
         CLK => CLK,
         Enable_count => Enable_count,
         Reset => Reset_aux,
-        code1_in => unit_sec_aux,
-        code2_in => dec_sec_aux,
-        code3_in =>unit_min_aux,
-        code4_in => dec_min_aux,
+        code1_in => code1_Sel,
+        code2_in => code2_Sel,
+        code3_in => code3_Sel,
+        code4_in => code4_Sel,
         code1_out => code1_Count,--unidades de segundo
         code2_out => code2_Count,--decenas de segundo
         code3_out => code3_Count,--unidades de minuto
@@ -150,15 +150,15 @@ begin
         end if;
     end process;
 
-    SeleccionandoCuenta : process(Enable_sel)
-    begin
-        if Enable_sel='1' then
-            code1_Sel<=std_logic_vector(to_unsigned(unit_sec_aux,code1'length));
-            code2_Sel<=std_logic_vector(to_unsigned(dec_sec_aux,code1'length));
-            code3_Sel<=std_logic_vector(to_unsigned(unit_min_aux,code1'length));
-            code4_Sel<=std_logic_vector(to_unsigned(dec_min_aux,code1'length));
-        end if;
-    end process;
+   -- SeleccionandoCuenta : process(Enable_sel)
+   -- begin
+   --    if Enable_sel='1' then
+   --         code1_Sel<=std_logic_vector(to_unsigned(unit_sec_aux,code1'length));
+   --         code2_Sel<=std_logic_vector(to_unsigned(dec_sec_aux,code1'length));
+   --         code3_Sel<=std_logic_vector(to_unsigned(unit_min_aux,code1'length));
+   --         code4_Sel<=std_logic_vector(to_unsigned(dec_min_aux,code1'length));
+   --     end if;
+   -- end process;
     
     
     

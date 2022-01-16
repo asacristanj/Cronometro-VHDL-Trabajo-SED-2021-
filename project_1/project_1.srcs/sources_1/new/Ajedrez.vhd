@@ -41,10 +41,10 @@ architecture Behavioral of Ajedrez is
         CLK : in std_logic;
         Enable_count : in std_logic;
         Reset : in std_logic;
-        code1_in : in integer;
-        code2_in : in integer;
-        code3_in : in integer;
-        code4_in : in integer;
+        code1_in : in std_logic_vector(3 downto 0);
+        code2_in : in std_logic_vector(3 downto 0);
+        code3_in : in std_logic_vector(3 downto 0);
+        code4_in : in std_logic_vector(3 downto 0);
         code1_out : out std_logic_vector(3 downto 0);--unidades de segundo
         code2_out : out std_logic_vector(3 downto 0);--decenas de segundo
         code3_out : out std_logic_vector(3 downto 0);--unidades de minuto
@@ -59,10 +59,10 @@ begin
         CLK => CLK,
         Enable_count => Enable_count_A,
         Reset => Reset_aux_A,
-        code1_in =>0,
-        code2_in =>0,
-        code3_in =>0,
-        code4_in =>10,
+        code1_in =>"0000",
+        code2_in =>"0000",
+        code3_in =>"0000",
+        code4_in =>"0001",
         code1_out => code1,--unidades de segundo
         code2_out => code2,--decenas de segundo
         code3_out => code3,--unidades de minuto
@@ -74,10 +74,10 @@ begin
         CLK => CLK,
         Enable_count => Enable_count_B,
         Reset => Reset_aux_B,
-        code1_in =>0,
-        code2_in =>0,
-        code3_in =>0,
-        code4_in =>10,
+        code1_in =>"0000",
+        code2_in =>"0000",
+        code3_in =>"0000",
+        code4_in =>"0001",
         code1_out => code5,--unidades de segundo
         code2_out => code6,--decenas de segundo
         code3_out => code7,--unidades de minuto

@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
 
 entity Sel_Cuenta is
     Port ( 
@@ -9,10 +10,10 @@ entity Sel_Cuenta is
         B3 : in std_logic;
         B4 : in std_logic;
         Enable : in std_logic;
-        unit_sec : out integer:=0;
-        dec_sec : out integer:=0;
-        unit_min : out integer:=0;
-        dec_min : out integer:=0
+        code1_Sel : out std_logic_vector(3 downto 0);
+        code2_Sel : out std_logic_vector(3 downto 0);
+        code3_Sel : out std_logic_vector(3 downto 0);
+        code4_Sel : out std_logic_vector(3 downto 0)
         
         
     );
@@ -20,6 +21,9 @@ end Sel_Cuenta;
 
 architecture Behavioral of Sel_Cuenta is
      signal clk_10khz : std_logic;
+     
+     signal code1_Sel_aux : std_logic_vector(3 downto 0);
+     
     
     COMPONENT clk10khz
        PORT (
@@ -27,12 +31,15 @@ architecture Behavioral of Sel_Cuenta is
               clk_1hz : out STD_LOGIC
             );
      END COMPONENT;
+     
 begin
+
 Inst_clk10khz: clk10khz 
     PORT MAP (
         CLK => CLK,
         CLK_1hz => clk_10khz
     );
+    
 process(B1,B2,B3,B4,Enable)
     subtype V is integer range 0 to 15;
     variable unit_sec_aux : V :=0;
@@ -75,10 +82,10 @@ begin
     
     end if;
     
-    unit_sec<=unit_sec_aux;
-    dec_sec<=dec_sec_aux;
-    unit_min<=unit_min_aux;
-    dec_min<=dec_min_aux;
+    code1_Sel<=std_logic_vector(to_unsigned(unit_sec_aux,code1_Sel'length));
+    code2_Sel <=std_logic_vector(to_unsigned(dec_sec_aux,code1_Sel'length));
+    code3_Sel<=std_logic_vector(to_unsigned(unit_min_aux,code1_Sel'length));
+    code4_Sel <=std_logic_vector(to_unsigned(dec_min_aux,code1_Sel'length));
     
 end process;
 
