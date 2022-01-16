@@ -1,6 +1,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all;
+use IEEE.std_logic_unsigned.all;
+use IEEE.std_logic_signed.all;
 
 entity Cuenta_atras is
     Port (
@@ -70,10 +72,10 @@ begin
     begin
         
         if Reset_s='1' then --Reset prioritario
-            unit_sec:=integer(code1_in);
-            dec_sec:=integer(code2_in);
-            unit_min:=integer(code3_in);
-            dec_min:=integer(code4_in);
+            unit_sec:=to_integer(unsigned(code1_in));
+            dec_sec:=to_integer(unsigned(code2_in));
+            unit_min:=to_integer(unsigned(code3_in));
+            dec_min:=to_integer(unsigned(code4_in));
             led<='0';
         elsif rising_edge(clk) and Start_s='1' then
             if unit_sec=0 and dec_sec=0 and unit_min=0 and dec_min=0 then
@@ -98,7 +100,11 @@ begin
             else 
                 unit_sec:=unit_sec-1;
             end if;
-            
+          --elsif rising_edge(clk) and Start_s='0' then
+           --unit_sec:=unit_sec;
+           --dec_sec:=dec_sec;
+           --unit_min:=unit_min;
+           --dec_min:=dec_min;
         end if;
         
         code1_out <= std_logic_vector(to_unsigned(unit_sec,code1_out'length));

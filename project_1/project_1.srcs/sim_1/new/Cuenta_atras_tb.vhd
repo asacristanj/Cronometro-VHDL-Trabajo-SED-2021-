@@ -10,33 +10,31 @@ architecture tb of Cuenta_atras_tb is
         port (CLK          : in std_logic;
               Enable_count : in std_logic;
               Reset        : in std_logic;
-              code1_in     : in integer;
-              code2_in     : in integer;
-              code3_in     : in integer;
-              code4_in     : in integer;
+              code1_in     : in std_logic_vector (3 downto 0);
+              code2_in     : in std_logic_vector (3 downto 0);
+              code3_in     : in std_logic_vector (3 downto 0);
+              code4_in     : in std_logic_vector (3 downto 0);
               code1_out    : out std_logic_vector (3 downto 0);
               code2_out    : out std_logic_vector (3 downto 0);
               code3_out    : out std_logic_vector (3 downto 0);
               code4_out    : out std_logic_vector (3 downto 0);
-              led          : out std_logic;
-              Start_ss     : out std_logic);
+              led          : out std_logic);
     end component;
 
     signal CLK          : std_logic;
     signal Enable_count : std_logic;
     signal Reset        : std_logic;
-    signal code1_in     : integer;
-    signal code2_in     : integer;
-    signal code3_in     : integer;
-    signal code4_in     : integer;
+    signal code1_in     : std_logic_vector (3 downto 0);
+    signal code2_in     : std_logic_vector (3 downto 0);
+    signal code3_in     : std_logic_vector (3 downto 0);
+    signal code4_in     : std_logic_vector (3 downto 0);
     signal code1_out    : std_logic_vector (3 downto 0);
     signal code2_out    : std_logic_vector (3 downto 0);
     signal code3_out    : std_logic_vector (3 downto 0);
     signal code4_out    : std_logic_vector (3 downto 0);
     signal led          : std_logic;
-    signal Start_ss     : std_logic;
 
-    constant TbPeriod : time := 100 ns; -- EDIT Put right period here
+    constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
@@ -54,8 +52,7 @@ begin
               code2_out    => code2_out,
               code3_out    => code3_out,
               code4_out    => code4_out,
-              led          => led,
-              Start_ss     => Start_ss);
+              led          => led);
 
     -- Clock generation
     TbClock <= not TbClock after TbPeriod/2 when TbSimEnded /= '1' else '0';
@@ -67,10 +64,10 @@ begin
     begin
         -- EDIT Adapt initialization as needed
         Enable_count <= '0';
-        code1_in <= 1;
-        code2_in <= 1;
-        code3_in <= 1;
-        code4_in <= 1;
+        code1_in <= "0001";
+        code2_in <= "0001";
+        code3_in <= "0001";
+        code4_in <= "0001";
 
         -- Reset generation
         -- EDIT: Check that Reset is really your reset signal
@@ -80,9 +77,7 @@ begin
         wait for 100 ns;
 
         -- EDIT Add stimuli here
-         Enable_count <= '1';
-         wait for 200 ns;
-        
+        Enable_count <= '1';
         wait for 100 * TbPeriod;
 
         -- Stop the clock and hence terminate the simulation

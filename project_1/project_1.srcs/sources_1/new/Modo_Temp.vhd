@@ -27,10 +27,10 @@ architecture Behavioral of Modo_Temp is
 
     signal Enable_sel : std_logic:='0';
     signal Enable_count : std_logic:='0';
-    signal unit_sec_aux : integer :=0;
-    signal dec_sec_aux : integer :=0;
-    signal unit_min_aux : integer :=0;
-    signal dec_min_aux : integer :=0;
+   -- signal unit_sec_aux : integer :=0;
+    --signal dec_sec_aux : integer :=0;
+    --signal unit_min_aux : integer :=0;
+    --signal dec_min_aux : integer :=0;
     signal Reset_aux : std_logic:='0';
     
     signal code1_Sel : std_logic_vector(3 downto 0);
@@ -77,6 +77,7 @@ architecture Behavioral of Modo_Temp is
     
     COMPONENT Mux_Temp
        PORT (
+        clk: in std_logic;
         Enable_Sel : in std_logic;
         code1_Sel : in std_logic_vector(3 downto 0);
         code2_Sel : in std_logic_vector(3 downto 0);
@@ -125,7 +126,7 @@ begin
     );
     
     Mux_Temp1 : Mux_Temp PORT MAP(
-        Enable_Sel=>Enable_B,
+        Enable_Sel=>Enable_Sel,
         code1_Sel=>code1_Sel,
         code2_Sel=>code2_Sel,
         code3_Sel=>code3_Sel,
@@ -137,7 +138,8 @@ begin
         code1=>code1,
         code2=>code2,
         code3=>code3,
-        code4=>code4
+        code4=>code4,
+        clk=>clk
     );
 
     modoTemp : process (Enable_B)

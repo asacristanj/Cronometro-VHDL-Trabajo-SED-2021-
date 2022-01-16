@@ -87,26 +87,39 @@ begin
         --YOURRESETSIGNAL <= '1';
         --wait for 100 ns;
         --YOURRESETSIGNAL <= '0';
-        --wait for 100 ns;
         wait for 100 ns;
+
+        -- EDIT Add stimuli here
         Enable_B<='1';
         wait for 100 ns;
-        B1 <= '1';
-        B2 <= '1';
-        B3 <= '1';
-        B4 <= '1';
+        B1<='1';
         wait for 100 ns;
-        B1 <= '0';
-        B2 <= '0';
-        B3 <= '0';
-        B4 <= '0';
+        B1<='0';
+        wait for 100 ns;
+        B2<='1';
+        wait for 100 ns;
+        B2<='0';
+        wait for 100 ns;
+        B3<='1';
+        wait for 100 ns;
+        B3<='0';
+        wait for 100 ns;
+        B4<='1';
+        wait for 100 ns;
+        B4<='0';        
         wait for 100 ns;
         B5<='1';
         wait for 100 ns;
         B5<='0';
-        -- EDIT Add stimuli here
-        wait for 100 * TbPeriod;
-
+        wait for 300 ns;
+        B2<='1';
+        wait for 100 ns;
+        B2<='0';
+        wait for 100 ns;
+        B5<='1';
+        wait for 100 ns;
+        B5<='0';
+        wait for 1000 ns;
         -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';
         wait;

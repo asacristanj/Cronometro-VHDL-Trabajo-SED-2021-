@@ -4,6 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Mux_Temp is
     Port (
+        clk: in std_logic;
         Enable_Sel : in std_logic;
         code1_Sel : in std_logic_vector(3 downto 0);
         code2_Sel : in std_logic_vector(3 downto 0);
@@ -23,7 +24,7 @@ end Mux_Temp;
 architecture Behavioral of Mux_Temp is
 
 begin
-    process(Enable_Sel)
+    process(Enable_Sel, clk)
     begin
         if Enable_Sel='1' then
             code1<=code1_Sel;

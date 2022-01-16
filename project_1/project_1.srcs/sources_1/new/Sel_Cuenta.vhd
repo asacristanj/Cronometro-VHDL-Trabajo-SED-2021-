@@ -54,7 +54,7 @@ begin
         unit_min_aux:=0;
         dec_sec_aux:=0;
         dec_min_aux:=0;
-    elsif rising_edge(clk_10khz) then
+    else --if rising_edge(clk_10khz) then
         if B1='1' then
             unit_sec_aux:=unit_sec_aux+1;
             if unit_sec_aux=10 then

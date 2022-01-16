@@ -1,8 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  \
-"../../../../project_1.srcs/sources_1/new/CLK1hz.vhd" \
-"../../../../project_1.srcs/sources_1/new/Cuenta_atras.vhd" \
-"../../../../project_1.srcs/sim_1/new/Cuenta_atras_tb.vhd" \
-
-# Do not sort compile order
-nosort
