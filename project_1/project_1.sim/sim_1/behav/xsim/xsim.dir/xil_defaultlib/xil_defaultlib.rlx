@@ -2,18 +2,20 @@
 2020.2
 Jun 10 2021
 20:04:57
+C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Ajedrez_tb.vhd,1642361642,vhdl,,,,ajedrez_tb,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Control_Anodo_tb.vhd,1642186753,vhdl,,,,control_anodo_tb,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Cuenta_atras_tb.vhd,1642347816,vhdl,,,,cuenta_atras_tb,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/GestorEntradas_tb.vhd,1642186216,vhdl,,,,gestorentradas_tb,,,,,,,,
+C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/MaquinaEstados_tb.vhd,1642360961,vhdl,,,,maquinaestados_tb,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Modo_Temp_tb.vhd,1642356079,vhdl,,,,modo_temp_tb,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sim_1/new/Sel_Cuenta_tb.vhd,1642350071,vhdl,,,,sel_cuenta_tb,,,,,,,,
-C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd,1640162624,vhdl,,,,ajedrez,,,,,,,,
+C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd,1642361742,vhdl,,,,ajedrez,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd,1639064223,vhdl,,,,clk1hz,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd,1642351856,vhdl,,,,cuenta_atras,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd,1639127104,vhdl,,,,edgedtctr,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd,1640162624,vhdl,,,,gestorentradas,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd,1639127104,vhdl,,,,control_anodo,,,,,,,,
-C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd,1640165321,vhdl,,,,maquinaestados,,,,,,,,
+C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd,1642367212,vhdl,,,,maquinaestados,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd,1640162624,vhdl,,,,modo_crono,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd,1642355722,vhdl,,,,modo_temp,,,,,,,,
 C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd,1642350723,vhdl,,,,mux_temp,,,,,,,,

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Sun Jan 16 19:10:33 2022
+| Date             : Sun Jan 16 22:18:03 2022
 | Host             : Supersacris running 64-bit major release  (build 9200)
 | Command          : report_power -file TOP_power_routed.rpt -pb TOP_power_summary_routed.pb -rpx TOP_power_routed.rpx
 | Design           : TOP
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.565        |
+| Total On-Chip Power (W)  | 1.374        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.476        |
-| Device Static (W)        | 0.089        |
+| Dynamic (W)              | 1.286        |
+| Device Static (W)        | 0.088        |
 | Effective TJA (C/W)      | 4.6          |
-| Max Ambient (C)          | 77.9         |
-| Junction Temperature (C) | 32.1         |
+| Max Ambient (C)          | 78.7         |
+| Junction Temperature (C) | 31.3         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     0.722 |      838 |       --- |             --- |
-|   LUT as Logic          |     0.573 |      367 |     63400 |            0.58 |
-|   CARRY4                |     0.092 |       29 |     15850 |            0.18 |
-|   Register              |     0.042 |      288 |    126800 |            0.23 |
+| Slice Logic             |     0.629 |      653 |       --- |             --- |
+|   LUT as Logic          |     0.548 |      260 |     63400 |            0.41 |
+|   Register              |     0.036 |      241 |    126800 |            0.19 |
+|   CARRY4                |     0.029 |       10 |     15850 |            0.06 |
 |   LUT as Shift Register |     0.010 |        5 |     19000 |            0.03 |
-|   BUFG                  |     0.006 |        5 |        32 |           15.63 |
-|   Others                |     0.000 |       57 |       --- |             --- |
-| Signals                 |     0.730 |      685 |       --- |             --- |
+|   BUFG                  |     0.007 |        2 |        32 |            6.25 |
+|   Others                |     0.000 |       50 |       --- |             --- |
+| Signals                 |     0.632 |      505 |       --- |             --- |
 | I/O                     |     0.024 |       23 |       210 |           10.95 |
-| Static Power            |     0.089 |          |           |                 |
-| Total                   |     1.565 |          |           |                 |
+| Static Power            |     0.088 |          |           |                 |
+| Total                   |     1.374 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,8 +72,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     1.496 |       1.476 |      0.019 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.019 |       0.000 |      0.019 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     1.305 |       1.286 |      0.019 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.018 |       0.000 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -136,32 +136,35 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+---------------------+-----------+
-| Name                | Power (W) |
-+---------------------+-----------+
-| TOP                 |     1.476 |
-|   Ajedrez1          |     0.011 |
-|     JugadorB        |     0.010 |
-|   Control_Anodo1    |     0.115 |
-|     Inst_clk10khz   |     0.115 |
-|   GestorEntradas1   |     0.140 |
-|     DetectorFlanco  |     0.022 |
-|     DetectorFlanco2 |     0.013 |
-|     DetectorFlanco3 |     0.026 |
-|     DetectorFlanco4 |     0.031 |
-|     DetectorFlanco5 |     0.031 |
-|     Sincronizador   |     0.004 |
-|     Sincronizador2  |     0.004 |
-|     Sincronizador3  |     0.004 |
-|     Sincronizador4  |     0.004 |
-|     Sincronizador5  |     0.004 |
-|   MaquinaEstados1   |     0.519 |
-|     Inst_clk10khz   |     0.120 |
-|   Modo_Crono1       |     0.136 |
-|     Inst_clk1hz     |     0.136 |
-|   Modo_Temp1        |     0.494 |
-|     Cuenta_atras1   |     0.302 |
-|     Sel_Cuenta1     |     0.189 |
-+---------------------+-----------+
++------------------------+-----------+
+| Name                   | Power (W) |
++------------------------+-----------+
+| TOP                    |     1.286 |
+|   Ajedrez1             |     0.054 |
+|     Enable_count_A_reg |     0.007 |
+|     JugadorA           |     0.018 |
+|     JugadorB           |     0.021 |
+|     Reset_aux_A_reg    |     0.009 |
+|   Control_Anodo1       |     0.142 |
+|     Inst_clk10khz      |     0.142 |
+|   GestorEntradas1      |     0.117 |
+|     DetectorFlanco     |     0.014 |
+|     DetectorFlanco2    |     0.013 |
+|     DetectorFlanco3    |     0.026 |
+|     DetectorFlanco4    |     0.018 |
+|     DetectorFlanco5    |     0.026 |
+|     Sincronizador      |     0.003 |
+|     Sincronizador2     |     0.004 |
+|     Sincronizador3     |     0.004 |
+|     Sincronizador4     |     0.004 |
+|     Sincronizador5     |     0.004 |
+|   MaquinaEstados1      |     0.180 |
+|   Modo_Crono1          |     0.161 |
+|     Inst_clk1hz        |     0.157 |
+|   Modo_Temp1           |     0.558 |
+|     Cuenta_atras1      |     0.347 |
+|     Sel_Cuenta1        |     0.199 |
+|   SuperMux1            |     0.014 |
++------------------------+-----------+
 
 

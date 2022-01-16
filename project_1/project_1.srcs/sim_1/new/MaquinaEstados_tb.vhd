@@ -48,7 +48,7 @@ architecture tb of MaquinaEstados_tb is
     signal Enable_C : std_logic;
     signal Enable_S : std_logic;
 
-    constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
+    constant TbPeriod : time := 100 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
@@ -98,8 +98,42 @@ begin
         wait for 100 ns;
 
         -- EDIT Add stimuli here
-        wait for 100 * TbPeriod;
-
+        B1 <= '1';
+        wait for 100 ns;
+        B1 <= '0';
+        wait for 100 ns;
+        B1 <= '1';
+        wait for 100 ns;
+        B1 <= '0';
+        wait for 100 ns;
+        B2 <= '1';
+        wait for 100 ns;
+        B2 <= '0';
+        wait for 100 ns;
+        B2 <= '1';
+        wait for 100 ns;
+        B2 <= '0';
+        wait for 100 ns;
+        B5 <= '1';
+        wait for 100 ns;
+        B5 <= '0';
+        wait for 100 ns;
+        Reset <= '1';
+        wait for 100 ns;
+        Reset <= '0';
+        wait for 100 ns;
+        B1 <= '1';
+        wait for 100 ns;
+        B1 <= '0';
+        wait for 100 ns;
+        B5<='1';
+        wait for 100 ns;
+        B5<='0';
+        wait for 100 ns;
+        Reset <= '1';
+        wait for 100 ns;
+        Reset <= '0';
+        wait for 1000 ns;
         -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';
         wait;

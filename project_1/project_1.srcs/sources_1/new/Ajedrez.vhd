@@ -18,8 +18,7 @@ entity Ajedrez is
         code6 : out std_logic_vector(3 downto 0);
         code7 : out std_logic_vector(3 downto 0);
         code8 : out std_logic_vector(3 downto 0);
-        Enable_C : in std_logic;
-        led : out std_logic
+        Enable_C : in std_logic
     );
 end Ajedrez;
 
@@ -96,9 +95,13 @@ begin
         elsif Enable_C='1' and B4='1' then
             Enable_count_A<='1';
             Enable_count_B<='0';
+            Reset_aux_A<='0';
+            Reset_aux_B<='0';
         elsif Enable_C='1' and B3='1' then
             Enable_count_A<='0';
             Enable_count_B<='1';
+            Reset_aux_A<='0';
+            Reset_aux_B<='0';
         end if;
         
     end process;

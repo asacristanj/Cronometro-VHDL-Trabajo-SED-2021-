@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sun Jan 16 19:10:31 2022
+| Date         : Sun Jan 16 22:18:01 2022
 | Host         : Supersacris running 64-bit major release  (build 9200)
 | Command      : report_drc -file TOP_drc_routed.rpt -pb TOP_drc_routed.pb -rpx TOP_drc_routed.rpx
 | Design       : TOP
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 33
+             Violations found: 31
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 32         |
+| PDRC-153 | Warning  | Gated clock check                                   | 30         |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -54,7 +54,7 @@ Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net GestorEntradas1/DetectorFlanco/B_L_aux is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco/Reset_s_reg_i_1/O, cell GestorEntradas1/DetectorFlanco/Reset_s_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Ajedrez1/Reset_aux_A_reg/G0 is a gated clock net sourced by a combinational pin Ajedrez1/Reset_aux_A_reg/L3_2/O, cell Ajedrez1/Reset_aux_A_reg/L3_2 (in Ajedrez1/Reset_aux_A_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
@@ -64,145 +64,135 @@ Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net GestorEntradas1/DetectorFlanco2/B_R_aux is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco2/Enable_count_A_reg_i_1/O, cell GestorEntradas1/DetectorFlanco2/Enable_count_A_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net GestorEntradas1/DetectorFlanco/sreg_reg[0]_0 is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco/Reset_s_reg_i_1/O, cell GestorEntradas1/DetectorFlanco/Reset_s_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net GestorEntradas1/DetectorFlanco2/FSM_onehot_estadoActual_reg[1][0] is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco2/unit_min_aux_reg[3]_i_2/O, cell GestorEntradas1/DetectorFlanco2/unit_min_aux_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net GestorEntradas1/DetectorFlanco2/B_R_aux is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco2/Enable_count_A_reg_i_1/O, cell GestorEntradas1/DetectorFlanco2/Enable_count_A_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net GestorEntradas1/DetectorFlanco3/FSM_onehot_estadoActual_reg[1][0] is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco3/unit_sec_aux_reg[3]_i_2/O, cell GestorEntradas1/DetectorFlanco3/unit_sec_aux_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net GestorEntradas1/DetectorFlanco2/FSM_onehot_estadoActual_reg[1][0] is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco2/unit_min_aux_reg[3]_i_2/O, cell GestorEntradas1/DetectorFlanco2/unit_min_aux_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net GestorEntradas1/DetectorFlanco3/sreg_reg[1]_0 is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco3/Enable_count_A_reg_i_2/O, cell GestorEntradas1/DetectorFlanco3/Enable_count_A_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net GestorEntradas1/DetectorFlanco3/FSM_onehot_estadoActual_reg[1][0] is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco3/unit_sec_aux_reg[3]_i_2/O, cell GestorEntradas1/DetectorFlanco3/unit_sec_aux_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net GestorEntradas1/DetectorFlanco4/B_D_aux is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco4/Start_s_reg_i_1/O, cell GestorEntradas1/DetectorFlanco4/Start_s_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net GestorEntradas1/DetectorFlanco4/E[0] is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco4/dec_sec_aux_reg[3]_i_2/O, cell GestorEntradas1/DetectorFlanco4/dec_sec_aux_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net GestorEntradas1/DetectorFlanco4/E[0] is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco4/dec_sec_aux_reg[3]_i_2/O, cell GestorEntradas1/DetectorFlanco4/dec_sec_aux_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net GestorEntradas1/DetectorFlanco4/sreg_reg[0]_0 is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco4/Start_s_reg_i_1/O, cell GestorEntradas1/DetectorFlanco4/Start_s_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#10 Warning
 Gated clock check  
-Net GestorEntradas1/DetectorFlanco5/Sel_modo06_out is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco5/Enable_B_reg_i_1/O, cell GestorEntradas1/DetectorFlanco5/Enable_B_reg_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net MaquinaEstados1/Enable_A is a gated clock net sourced by a combinational pin MaquinaEstados1/code6_reg[3]_i_1__0/O, cell MaquinaEstados1/code6_reg[3]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#11 Warning
 Gated clock check  
-Net GestorEntradas1/DetectorFlanco5/sreg_reg[0]_0 is a gated clock net sourced by a combinational pin GestorEntradas1/DetectorFlanco5/Enable_A_reg_i_2/O, cell GestorEntradas1/DetectorFlanco5/Enable_A_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net MaquinaEstados1/Enable_S is a gated clock net sourced by a combinational pin MaquinaEstados1/code7_reg[2]_i_2/O, cell MaquinaEstados1/code7_reg[2]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#12 Warning
 Gated clock check  
-Net MaquinaEstados1/Enable_B_reg/G0 is a gated clock net sourced by a combinational pin MaquinaEstados1/Enable_B_reg/L3_2/O, cell MaquinaEstados1/Enable_B_reg/L3_2 (in MaquinaEstados1/Enable_B_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net MaquinaEstados1/FSM_sequential_estadoActual_reg[2]_3 is a gated clock net sourced by a combinational pin MaquinaEstados1/code6_reg[3]_i_1__1/O, cell MaquinaEstados1/code6_reg[3]_i_1__1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#13 Warning
 Gated clock check  
-Net MaquinaEstados1/Sel_modo_reg/G0 is a gated clock net sourced by a combinational pin MaquinaEstados1/Sel_modo_reg/L3_2/O, cell MaquinaEstados1/Sel_modo_reg/L3_2 (in MaquinaEstados1/Sel_modo_reg macro). This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/Reset_aux is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/Reset_s_reg_i_1__0/O, cell Modo_Temp1/Cuenta_atras1/Reset_s_reg_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#14 Warning
 Gated clock check  
-Net MaquinaEstados1/code1_reg[3]_i_1__0_n_1 is a gated clock net sourced by a combinational pin MaquinaEstados1/code1_reg[3]_i_1__0/O, cell MaquinaEstados1/code1_reg[3]_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/Start_s_reg_i_1__0_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/Start_s_reg_i_1__0/O, cell Modo_Temp1/Cuenta_atras1/Start_s_reg_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#15 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/Reset_aux is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/Reset_s_reg_i_1__0/O, cell Modo_Temp1/Cuenta_atras1/Reset_s_reg_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#16 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/Start_s_reg_i_1__0_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/Start_s_reg_i_1__0/O, cell Modo_Temp1/Cuenta_atras1/Start_s_reg_i_1__0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#17 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_min_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#18 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_min_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#19 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_min_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#20 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_min_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#21 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_sec_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#22 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_sec_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#23 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_sec_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#24 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/dec_sec_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#25 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_min_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/unit_min_reg[2]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_min_reg[2]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_min_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#26 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_min_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#27 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/unit_min_reg[2]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_min_reg[2]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_min_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#28 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_min_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Modo_Temp1/Cuenta_atras1/unit_sec_reg[1]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_sec_reg[1]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_sec_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#29 Warning
 Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_sec_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#30 Warning
-Gated clock check  
-Net Modo_Temp1/Cuenta_atras1/unit_sec_reg[1]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_sec_reg[1]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_sec_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
-PDRC-153#31 Warning
-Gated clock check  
 Net Modo_Temp1/Cuenta_atras1/unit_sec_reg[2]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_sec_reg[2]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_sec_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
-PDRC-153#32 Warning
+PDRC-153#30 Warning
 Gated clock check  
 Net Modo_Temp1/Cuenta_atras1/unit_sec_reg[3]_LDC_i_1_n_1 is a gated clock net sourced by a combinational pin Modo_Temp1/Cuenta_atras1/unit_sec_reg[3]_LDC_i_1/O, cell Modo_Temp1/Cuenta_atras1/unit_sec_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>

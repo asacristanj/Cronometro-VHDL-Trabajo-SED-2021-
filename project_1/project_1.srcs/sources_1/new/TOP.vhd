@@ -180,8 +180,8 @@ architecture Behavioral of TOP is
             code6 : out std_logic_vector(3 downto 0);
             code7 : out std_logic_vector(3 downto 0);
             code8 : out std_logic_vector(3 downto 0);
-            Enable_C : in std_logic;
-            led : out std_logic
+            Enable_C : in std_logic
+            --led : out std_logic
        );
     END COMPONENT;
     
@@ -342,7 +342,7 @@ begin
         code7=>code7_C,
         code8=>code8_C,
         Enable_C=>Enable_C,
-        led=>led,
+        --led=>led,
         B1=>B_U_aux,
         B2=>B_D_aux,
         B3=>B_R_aux,

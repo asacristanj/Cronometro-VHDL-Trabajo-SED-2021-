@@ -42,7 +42,7 @@ architecture tb of Ajedrez_tb is
     signal Enable_C : std_logic;
     signal led      : std_logic;
 
-    constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
+    constant TbPeriod : time := 100 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
@@ -84,14 +84,22 @@ begin
 
         -- Reset generation
         --  EDIT: Replace YOURRESETSIGNAL below by the name of your reset as I haven't guessed it
---        YOURRESETSIGNAL <= '1';
         wait for 100 ns;
-  --      YOURRESETSIGNAL <= '0';
-        wait for 100 ns;
-
         -- EDIT Add stimuli here
-        wait for 100 * TbPeriod;
-
+        Enable_C <= '1';
+        wait for 100 ns;
+        B4 <= '1';
+        wait for 100 ns;
+        B4 <= '0';
+        wait for 400 ns;
+        B3 <= '1';
+        wait for 100 ns;
+        B3 <= '0';
+        wait for 400 ns;
+        B1 <= '1';
+        wait for 100 ns;
+        B1 <= '0';
+        wait for 300 ns;
         -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';
         wait;
