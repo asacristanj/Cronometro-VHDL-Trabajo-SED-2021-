@@ -1,6 +1,6 @@
 Vivado Simulator v2021.1
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 2dc3eae9aa8849d6b9bafb2639e9c63f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Modo_Crono_tb_behav xil_defaultlib.Modo_Crono_tb -log elaborate.log 
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto 2dc3eae9aa8849d6b9bafb2639e9c63f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TopDefinitivo_tb_behav xil_defaultlib.TopDefinitivo_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -11,7 +11,16 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.SYNCHRNZR [synchrnzr_default]
+Compiling architecture behavioral of entity xil_defaultlib.EDGEDTCTR [edgedtctr_default]
+Compiling architecture behavioral of entity xil_defaultlib.GestorEntradas [gestorentradas_default]
 Compiling architecture behavioral of entity xil_defaultlib.clk1Hz [clk1hz_default]
 Compiling architecture behavioral of entity xil_defaultlib.Modo_Crono [modo_crono_default]
-Compiling architecture tb of entity xil_defaultlib.modo_crono_tb
-Built simulation snapshot Modo_Crono_tb_behav
+Compiling architecture behavioral of entity xil_defaultlib.clk10kHz [clk10khz_default]
+Compiling architecture dataflow of entity xil_defaultlib.deco1 [deco1_default]
+Compiling architecture behavioral of entity xil_defaultlib.Control_Anodo [control_anodo_default]
+Compiling architecture behavioral of entity xil_defaultlib.TopDefinitivo [topdefinitivo_default]
+Compiling architecture tb of entity xil_defaultlib.topdefinitivo_tb
+Built simulation snapshot TopDefinitivo_tb_behav

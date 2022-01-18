@@ -3,16 +3,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 
 entity Control_Anodo is
+    generic(
+        width:positive:=3
+        );
     port(
         CLK : in std_logic;
-        code1 : in std_logic_vector(3 downto 0);
-        code2 : in std_logic_vector(3 downto 0);
-        code3 : in std_logic_vector(3 downto 0);
-        code4 : in std_logic_vector(3 downto 0);
-        code5 : in std_logic_vector(3 downto 0);
-        code6 : in std_logic_vector(3 downto 0);
-        code7 : in std_logic_vector(3 downto 0);
-        code8 : in std_logic_vector(3 downto 0);
+        code1 : in std_logic_vector(width downto 0);
+        code2 : in std_logic_vector(width downto 0);
+        code3 : in std_logic_vector(width downto 0);
+        code4 : in std_logic_vector(width downto 0);
+        code5 : in std_logic_vector(width downto 0);
+        code6 : in std_logic_vector(width downto 0);
+        code7 : in std_logic_vector(width downto 0);
+        code8 : in std_logic_vector(width downto 0);
         refrescar_anodo : out std_logic_vector(7 downto 0); --vector que pone a 1 el ánodo correspondiente para actualizar
         salida_disp : out std_logic_vector(6 downto 0) --salida de los displays
     );
@@ -90,9 +93,9 @@ Inst_deco8: deco1 PORT MAP (
 );
 
 
-    process (clk)
+    process (clk_10khz)
     begin
-        if rising_edge(clk) then
+        if rising_edge(clk_10khz) then
             if flag=1 then
                 refrescar_anodo(0) <=  '0';
                 refrescar_anodo(7 downto 1) <=  "1111111";

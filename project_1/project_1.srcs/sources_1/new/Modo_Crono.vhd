@@ -3,16 +3,19 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all;
 
 entity Modo_Crono is
+    generic(
+        width:positive:=3
+        );
     Port (
         CLK : in std_logic;
-        code1 : out std_logic_vector(3 downto 0);
-        code2 : out std_logic_vector(3 downto 0);
-        code3 : out std_logic_vector(3 downto 0);
-        code4 : out std_logic_vector(3 downto 0);
-        code5 : out std_logic_vector(3 downto 0);
-        code6 : out std_logic_vector(3 downto 0);
-        code7 : out std_logic_vector(3 downto 0);
-        code8 : out std_logic_vector(3 downto 0);
+        code1 : out std_logic_vector(width downto 0);
+        code2 : out std_logic_vector(width downto 0);
+        code3 : out std_logic_vector(width downto 0);
+        code4 : out std_logic_vector(width downto 0);
+        code5 : out std_logic_vector(width downto 0);
+        code6 : out std_logic_vector(width downto 0);
+        code7 : out std_logic_vector(width downto 0);
+        code8 : out std_logic_vector(width downto 0);
         Enable_A : in std_logic;
         Start : in std_logic;
         Pause : in std_logic;
@@ -56,7 +59,7 @@ begin
     
     
     
-    process (clk, Start_s, Reset_s)
+    process (clk_1hz, Start_s, Reset_s)
     subtype V is integer range 0 to 15;
     variable unit_sec : V :=0;
     variable unit_min : V :=0;
@@ -69,7 +72,7 @@ begin
                 dec_sec:=0;
                 unit_min:=0;
                 dec_min:=0;
-        elsif rising_edge(clk) and Start_s='1' then
+        elsif rising_edge(clk_1hz) and Start_s='1' then
             unit_sec:=unit_sec+1;
             if unit_sec=10 then
             unit_sec:=0;

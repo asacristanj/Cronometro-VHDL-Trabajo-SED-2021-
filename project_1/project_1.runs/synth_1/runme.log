@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log TOP.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TOP.tcl
+    with args -log TopDefinitivo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TopDefinitivo.tcl
 
 
 
@@ -9,20 +9,20 @@
   **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
-source TOP.tcl -notrace
-Command: synth_design -top TOP -part xc7a100tcsg324-1
+source TopDefinitivo.tcl -notrace
+Command: synth_design -top TopDefinitivo -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 18756
+INFO: [Synth 8-7075] Helper process launched with PID 28284
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1122.215 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1120.367 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'TOP' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:19]
-INFO: [Synth 8-3491] module 'GestorEntradas' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:4' bound to instance 'GestorEntradas1' of component 'GestorEntradas' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:261]
+INFO: [Synth 8-638] synthesizing module 'TopDefinitivo' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TopDefinitivo.vhd:19]
+INFO: [Synth 8-3491] module 'GestorEntradas' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:4' bound to instance 'GestorEntradas1' of component 'GestorEntradas' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TopDefinitivo.vhd:118]
 INFO: [Synth 8-638] synthesizing module 'GestorEntradas' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:22]
 INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador' of component 'SYNCHRNZR' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:49]
 INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:12]
@@ -41,196 +41,79 @@ INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/alejandro/Document
 INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SYNCHRNZR.vhd:4' bound to instance 'Sincronizador6' of component 'SYNCHRNZR' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:109]
 INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/EDGEDTCTR.vhd:4' bound to instance 'DetectorFlanco6' of component 'EDGEDTCTR' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:115]
 INFO: [Synth 8-256] done synthesizing module 'GestorEntradas' (3#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/GestorEntradas.vhd:22]
-INFO: [Synth 8-3491] module 'MaquinaEstados' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:5' bound to instance 'MaquinaEstados1' of component 'MaquinaEstados' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:277]
-INFO: [Synth 8-638] synthesizing module 'MaquinaEstados' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:29]
-INFO: [Synth 8-3491] module 'clk10kHz' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:4' bound to instance 'Inst_clk10khz' of component 'clk10khz' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'clk10kHz' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:11]
-INFO: [Synth 8-256] done synthesizing module 'clk10kHz' (4#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:11]
-INFO: [Synth 8-256] done synthesizing module 'MaquinaEstados' (5#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:29]
-INFO: [Synth 8-3491] module 'Modo_Crono' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:5' bound to instance 'Modo_Crono1' of component 'Modo_Crono' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:299]
-INFO: [Synth 8-638] synthesizing module 'Modo_Crono' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:23]
-INFO: [Synth 8-3491] module 'clk1Hz' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:4' bound to instance 'Inst_clk1hz' of component 'clk1hz' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:37]
+INFO: [Synth 8-3491] module 'Modo_Crono' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:5' bound to instance 'Modo_Crono1' of component 'Modo_Crono' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TopDefinitivo.vhd:135]
+INFO: [Synth 8-638] synthesizing module 'Modo_Crono' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:26]
+INFO: [Synth 8-3491] module 'clk1Hz' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:4' bound to instance 'Inst_clk1hz' of component 'clk1hz' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:40]
 INFO: [Synth 8-638] synthesizing module 'clk1Hz' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:11]
-INFO: [Synth 8-256] done synthesizing module 'clk1Hz' (6#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:11]
-INFO: [Synth 8-256] done synthesizing module 'Modo_Crono' (7#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:23]
-INFO: [Synth 8-3491] module 'Modo_Temp' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:5' bound to instance 'Modo_Temp1' of component 'Modo_Temp' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:315]
-INFO: [Synth 8-638] synthesizing module 'Modo_Temp' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:26]
-INFO: [Synth 8-3491] module 'Sel_Cuenta' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:5' bound to instance 'Sel_Cuenta1' of component 'Sel_Cuenta' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:100]
-INFO: [Synth 8-638] synthesizing module 'Sel_Cuenta' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:22]
-INFO: [Synth 8-3491] module 'clk10kHz' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:4' bound to instance 'Inst_clk10khz' of component 'clk10khz' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'Sel_Cuenta' (8#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:22]
-INFO: [Synth 8-3491] module 'Cuenta_atras' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:7' bound to instance 'Cuenta_atras1' of component 'Cuenta_atras' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:114]
-INFO: [Synth 8-638] synthesizing module 'Cuenta_atras' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:24]
-INFO: [Synth 8-3491] module 'clk1Hz' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:4' bound to instance 'Inst_clk1hz' of component 'clk1hz' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:41]
-WARNING: [Synth 8-614] signal 'code1_in' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:65]
-WARNING: [Synth 8-614] signal 'code2_in' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:65]
-WARNING: [Synth 8-614] signal 'code3_in' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:65]
-WARNING: [Synth 8-614] signal 'code4_in' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:65]
-INFO: [Synth 8-256] done synthesizing module 'Cuenta_atras' (9#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:24]
-INFO: [Synth 8-3491] module 'Mux_Temp' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:5' bound to instance 'Mux_Temp1' of component 'Mux_Temp' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'Mux_Temp' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:24]
-WARNING: [Synth 8-614] signal 'code1_Sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
-WARNING: [Synth 8-614] signal 'code2_Sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
-WARNING: [Synth 8-614] signal 'code3_Sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
-WARNING: [Synth 8-614] signal 'code4_Sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
-WARNING: [Synth 8-614] signal 'code1_Count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
-WARNING: [Synth 8-614] signal 'code2_Count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
-WARNING: [Synth 8-614] signal 'code3_Count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
-WARNING: [Synth 8-614] signal 'code4_Count' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:27]
-INFO: [Synth 8-256] done synthesizing module 'Mux_Temp' (10#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Mux_Temp.vhd:24]
-WARNING: [Synth 8-614] signal 'Enable_sel' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:174]
-INFO: [Synth 8-256] done synthesizing module 'Modo_Temp' (11#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:26]
-INFO: [Synth 8-3491] module 'Ajedrez' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:5' bound to instance 'Ajedrez1' of component 'Ajedrez' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:334]
-INFO: [Synth 8-638] synthesizing module 'Ajedrez' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:25]
-INFO: [Synth 8-3491] module 'Cuenta_atras' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:7' bound to instance 'JugadorA' of component 'Cuenta_atras' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:57]
-INFO: [Synth 8-3491] module 'Cuenta_atras' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:7' bound to instance 'JugadorB' of component 'Cuenta_atras' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'Ajedrez' (12#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:25]
-INFO: [Synth 8-3491] module 'SuperMux' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:4' bound to instance 'SuperMux1' of component 'SuperMux' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:353]
-INFO: [Synth 8-638] synthesizing module 'SuperMux' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:58]
-WARNING: [Synth 8-614] signal 'code1_A' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code2_A' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code3_A' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code4_A' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code5_A' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code6_A' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code7_A' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code8_A' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code1_B' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code2_B' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code3_B' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code4_B' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code5_B' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code6_B' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code7_B' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code8_B' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code1_C' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code2_C' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code3_C' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code4_C' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code5_C' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code6_C' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code7_C' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code8_C' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code1_ME' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code2_ME' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code3_ME' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code4_ME' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code5_ME' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code6_ME' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code7_ME' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-WARNING: [Synth 8-614] signal 'code8_ME' is read in the process but is not in the sensitivity list [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:61]
-INFO: [Synth 8-256] done synthesizing module 'SuperMux' (13#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:58]
-INFO: [Synth 8-3491] module 'Control_Anodo' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:5' bound to instance 'Control_Anodo1' of component 'Control_anodo' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:406]
-INFO: [Synth 8-638] synthesizing module 'Control_Anodo' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:21]
-INFO: [Synth 8-3491] module 'clk10kHz' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:4' bound to instance 'Inst_clk10khz' of component 'clk10khz' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:53]
-INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco1' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:59]
+INFO: [Synth 8-256] done synthesizing module 'clk1Hz' (4#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/CLK1hz.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'Modo_Crono' (5#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:26]
+INFO: [Synth 8-3491] module 'Control_Anodo' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:5' bound to instance 'Control_Anodo1' of component 'Control_anodo' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TopDefinitivo.vhd:152]
+INFO: [Synth 8-638] synthesizing module 'Control_Anodo' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:24]
+INFO: [Synth 8-3491] module 'clk10kHz' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:4' bound to instance 'Inst_clk10khz' of component 'clk10khz' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'clk10kHz' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'clk10kHz' (6#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/clk10khz.vhd:11]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco1' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:62]
 INFO: [Synth 8-638] synthesizing module 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'deco1' (14#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:13]
-INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco2' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:63]
-INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco3' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:67]
-INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco4' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:71]
-INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco5' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:75]
-INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco6' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:79]
-INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco7' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:83]
-INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco8' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:87]
-INFO: [Synth 8-256] done synthesizing module 'Control_Anodo' (15#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:21]
-INFO: [Synth 8-256] done synthesizing module 'TOP' (16#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TOP.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'deco1' (7#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:13]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco2' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:66]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco3' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:70]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco4' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:74]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco5' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:78]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco6' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:82]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco7' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:86]
+INFO: [Synth 8-3491] module 'deco1' declared at 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/deco.vhd:6' bound to instance 'Inst_deco8' of component 'deco1' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:90]
+INFO: [Synth 8-256] done synthesizing module 'Control_Anodo' (8#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Gestor_Display.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'TopDefinitivo' (9#1) [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/TopDefinitivo.vhd:19]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1122.215 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1120.367 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1122.215 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1120.367 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1122.215 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1120.367 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1122.215 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1120.367 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/Nexys-4-DDR-Master.xdc]
 Finished Parsing XDC File [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/Nexys-4-DDR-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TOP_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/TOP_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TopDefinitivo_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TopDefinitivo_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1138.355 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1131.270 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1138.355 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1131.270 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1138.355 ; gain = 16.141
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1131.270 ; gain = 10.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1138.355 ; gain = 16.141
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1131.270 ; gain = 10.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1138.355 ; gain = 16.141
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1131.270 ; gain = 10.902
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'estadoActual_reg' in module 'MaquinaEstados'
-INFO: [Synth 8-802] inferred FSM for state register 'estadoActual_reg' in module 'Modo_Temp'
 INFO: [Synth 8-802] inferred FSM for state register 'flag_reg' in module 'Control_Anodo'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                      as |                              000 |                              000
-                      cs |                              001 |                              010
-                      bs |                              010 |                              001
-                 iSTATE0 |                              011 |                              100
-                 iSTATE1 |                              100 |                              101
-                  iSTATE |                              101 |                              011
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'estadoActual_reg' using encoding 'sequential' in module 'MaquinaEstados'
-WARNING: [Synth 8-327] inferring latch for variable 'code1_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:147]
-WARNING: [Synth 8-327] inferring latch for variable 'code7_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:153]
-WARNING: [Synth 8-327] inferring latch for variable 'code8_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/MaquinaEstados.vhd:154]
-WARNING: [Synth 8-327] inferring latch for variable 'Start_s_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:46]
-WARNING: [Synth 8-327] inferring latch for variable 'Reset_s_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:47]
-WARNING: [Synth 8-327] inferring latch for variable 'code6_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:107]
-WARNING: [Synth 8-327] inferring latch for variable 'code7_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:106]
-WARNING: [Synth 8-327] inferring latch for variable 'code8_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:105]
-WARNING: [Synth 8-327] inferring latch for variable 'unit_sec_aux_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:59]
-WARNING: [Synth 8-327] inferring latch for variable 'dec_sec_aux_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:65]
-WARNING: [Synth 8-327] inferring latch for variable 'unit_min_aux_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:71]
-WARNING: [Synth 8-327] inferring latch for variable 'dec_min_aux_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Sel_Cuenta.vhd:77]
-WARNING: [Synth 8-327] inferring latch for variable 'Reset_s_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:54]
-WARNING: [Synth 8-327] inferring latch for variable 'Start_s_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Cuenta_atras.vhd:53]
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                      rp |                            00001 |                              100
-                     sel |                            00010 |                              000
-                       c |                            00100 |                              001
-                       p |                            01000 |                              010
-                       r |                            10000 |                              011
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'estadoActual_reg' using encoding 'one-hot' in module 'Modo_Temp'
-WARNING: [Synth 8-327] inferring latch for variable 'code6_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:151]
-WARNING: [Synth 8-327] inferring latch for variable 'code7_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:150]
-WARNING: [Synth 8-327] inferring latch for variable 'code8_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Temp.vhd:149]
-WARNING: [Synth 8-327] inferring latch for variable 'Enable_count_A_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:59]
-WARNING: [Synth 8-327] inferring latch for variable 'Reset_aux_A_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:60]
-WARNING: [Synth 8-327] inferring latch for variable 'Enable_count_B_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Ajedrez.vhd:74]
-WARNING: [Synth 8-327] inferring latch for variable 'code1_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:64]
-WARNING: [Synth 8-327] inferring latch for variable 'code2_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:65]
-WARNING: [Synth 8-327] inferring latch for variable 'code3_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:66]
-WARNING: [Synth 8-327] inferring latch for variable 'code4_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:67]
-WARNING: [Synth 8-327] inferring latch for variable 'code5_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:68]
-WARNING: [Synth 8-327] inferring latch for variable 'code6_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:69]
-WARNING: [Synth 8-327] inferring latch for variable 'code7_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:70]
-WARNING: [Synth 8-327] inferring latch for variable 'code8_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/SuperMux.vhd:71]
+WARNING: [Synth 8-327] inferring latch for variable 'Start_s_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:49]
+WARNING: [Synth 8-327] inferring latch for variable 'Reset_s_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:50]
+WARNING: [Synth 8-327] inferring latch for variable 'code6_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:110]
+WARNING: [Synth 8-327] inferring latch for variable 'code7_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:109]
+WARNING: [Synth 8-327] inferring latch for variable 'code8_reg' [C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.srcs/sources_1/new/Modo_Crono.vhd:108]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -246,41 +129,33 @@ WARNING: [Synth 8-327] inferring latch for variable 'code8_reg' [C:/Users/alejan
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'flag_reg' using encoding 'sequential' in module 'Control_Anodo'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1138.355 ; gain = 16.141
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1131.270 ; gain = 10.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   26 Bit       Adders := 4     
-	   2 Input   13 Bit       Adders := 3     
-	   2 Input    4 Bit       Adders := 24    
+	   2 Input   26 Bit       Adders := 1     
+	   2 Input   13 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 8     
 +---Registers : 
-	               26 Bit    Registers := 4     
-	               13 Bit    Registers := 3     
+	               26 Bit    Registers := 1     
+	               13 Bit    Registers := 1     
 	                8 Bit    Registers := 1     
 	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 16    
+	                4 Bit    Registers := 4     
 	                3 Bit    Registers := 6     
 	                2 Bit    Registers := 6     
-	                1 Bit    Registers := 16    
+	                1 Bit    Registers := 8     
 +---Muxes : 
-	   2 Input   26 Bit        Muxes := 4     
-	   2 Input   13 Bit        Muxes := 3     
+	   2 Input   26 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 1     
 	   8 Input    8 Bit        Muxes := 1     
 	   8 Input    7 Bit        Muxes := 1     
-	   5 Input    5 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 2     
-	   6 Input    4 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 72    
-	   3 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 6     
+	   2 Input    4 Bit        Muxes := 4     
 	   8 Input    3 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 33    
-	   6 Input    1 Bit        Muxes := 4     
-	   4 Input    1 Bit        Muxes := 1     
-	   5 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -297,25 +172,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1138.355 ; gain = 16.141
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1131.270 ; gain = 10.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1138.355 ; gain = 16.141
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1131.270 ; gain = 10.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1138.355 ; gain = 16.141
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1131.270 ; gain = 10.902
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1138.355 ; gain = 16.141
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1139.109 ; gain = 18.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -333,52 +208,50 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1142.727 ; gain = 20.512
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.109 ; gain = 18.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1142.727 ; gain = 20.512
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.109 ; gain = 18.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1142.727 ; gain = 20.512
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.109 ; gain = 18.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1142.727 ; gain = 20.512
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.109 ; gain = 18.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1142.727 ; gain = 20.512
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.109 ; gain = 18.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1142.727 ; gain = 20.512
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.109 ; gain = 18.742
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|TOP         | GestorEntradas1/DetectorFlanco/sreg_reg[0]  | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
-|TOP         | GestorEntradas1/DetectorFlanco2/sreg_reg[0] | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
-|TOP         | GestorEntradas1/DetectorFlanco3/sreg_reg[0] | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
-|TOP         | GestorEntradas1/DetectorFlanco4/sreg_reg[0] | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
-|TOP         | GestorEntradas1/DetectorFlanco5/sreg_reg[0] | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
-+------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++--------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name   | RTL Name                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++--------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|TopDefinitivo | GestorEntradas1/DetectorFlanco/sreg_reg[0]  | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
+|TopDefinitivo | GestorEntradas1/DetectorFlanco4/sreg_reg[0] | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
+|TopDefinitivo | GestorEntradas1/DetectorFlanco5/sreg_reg[0] | 4      | 1     | NO           | YES                | YES               | 1      | 0       | 
++--------------+---------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -397,51 +270,48 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     2|
-|2     |LUT1   |    16|
-|3     |LUT2   |    47|
-|4     |LUT3   |    40|
-|5     |LUT4   |    76|
-|6     |LUT5   |    60|
-|7     |LUT6   |    89|
-|8     |SRL16E |     5|
-|9     |FDCE   |    62|
-|10    |FDPE   |    19|
-|11    |FDRE   |    30|
-|12    |FDSE   |     8|
-|13    |LD     |    54|
-|14    |LDC    |    21|
-|15    |LDCP   |     2|
-|16    |LDP    |     4|
-|17    |IBUF   |     7|
-|18    |OBUF   |    16|
+|1     |BUFG   |     1|
+|2     |CARRY4 |    10|
+|3     |LUT1   |     8|
+|4     |LUT2   |    10|
+|5     |LUT3   |     6|
+|6     |LUT4   |    31|
+|7     |LUT5   |     6|
+|8     |LUT6   |    22|
+|9     |MUXF7  |     2|
+|10    |SRL16E |     3|
+|11    |FDCE   |    16|
+|12    |FDRE   |    61|
+|13    |FDSE   |    10|
+|14    |LDC    |     1|
+|15    |LDP    |     1|
+|16    |IBUF   |     4|
+|17    |OBUF   |    15|
+|18    |OBUFT  |     1|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1142.727 ; gain = 20.512
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.109 ; gain = 18.742
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 1142.727 ; gain = 4.371
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 1142.727 ; gain = 20.512
+Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1139.109 ; gain = 7.840
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1139.109 ; gain = 18.742
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1154.785 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 81 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1147.930 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 14 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 2 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1166.023 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1161.203 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 81 instances were transformed.
-  LD => LDCE: 54 instances
-  LDC => LDCE: 21 instances
-  LDCP => LDCP (GND, LDCE, LUT3(x2), VCC): 2 instances
-  LDP => LDPE: 2 instances
-  LDP => LDPE (inverted pins: G): 2 instances
+  A total of 2 instances were transformed.
+  LDC => LDCE: 1 instance 
+  LDP => LDPE: 1 instance 
 
-Synth Design complete, checksum: 16bcd40b
+Synth Design complete, checksum: 769b73c4
 INFO: [Common 17-83] Releasing license: Synthesis
-90 Infos, 73 Warnings, 0 Critical Warnings and 0 Errors encountered.
+60 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 1166.023 ; gain = 43.809
-INFO: [Common 17-1381] The checkpoint 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/synth_1/TOP.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file TOP_utilization_synth.rpt -pb TOP_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jan 16 23:20:47 2022...
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1161.203 ; gain = 40.836
+INFO: [Common 17-1381] The checkpoint 'C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.runs/synth_1/TopDefinitivo.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TopDefinitivo_utilization_synth.rpt -pb TopDefinitivo_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jan 18 11:48:42 2022...
