@@ -124,7 +124,6 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 2
-  set_param xicom.use_bs_reader 1
   open_checkpoint TopDefinitivo_routed.dcp
   set_property webtalk.parent_dir C:/Users/alejandro/Documents/GitHub/Cronometro-VHDL-Trabajo-SED-2021-/project_1/project_1.cache/wt [current_project]
 set_property TOP TopDefinitivo [current_fileset]
