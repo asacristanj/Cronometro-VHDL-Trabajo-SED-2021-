@@ -22,7 +22,7 @@ begin
             end if;
         end if;
     end process;
-     
+    
     CLK_1hz <= temporal;
     
 end Behavioral;

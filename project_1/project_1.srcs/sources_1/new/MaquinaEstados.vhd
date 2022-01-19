@@ -28,10 +28,7 @@ end MaquinaEstados;
 
 architecture Behavioral of MaquinaEstados is
  type estados is (as,bs,cs,af,bf,cf);
- signal estadoActual,estadoSiguiente:estados;   
-    --signal Modo : unsigned(1 downto 0); --0==Reposo//1==crono//2==temp//3==ajedrez
-    
-    --signal Sel_modo : std_logic :='1';
+ signal estadoActual,estadoSiguiente:estados;
     
 signal clk_10khz : std_logic;
     COMPONENT clk10khz
@@ -87,58 +84,6 @@ Inst_clk10khz: clk10khz
         when others => estadoSiguiente<=estadoActual;
         end case;
   end process;
-    --submaquina1 : process(B1,B2, Sel_modo)
-    --variable Modo_aux : integer:=0;
-    --begin
-      --  if Sel_modo='0' then
-        --    Modo_aux:=0;
-        --elsif rising_edge (clk_10khz) and Sel_Modo='1'  then 
-           -- if Modo_aux=0 then
-                --Modo_aux:=1;
-            --end if;
-            --if B1='1' then
-               -- Modo_aux:=Modo_aux+1;
-                --if Modo_aux=4 then
-                   -- Modo_aux:=1;
-                --end if;
-            --elsif B2='1' then
-               -- Modo_aux:=Modo_aux-1;
-                --if Modo_aux=0 then
-                  --  Modo_aux:=3;
-                --end if;
-            --end if;
-        --end if;
-        --Modo<=to_unsigned(Modo_aux,Modo'length);
-    --end process;
-    
-   -- submaquina2 : process(B5,reset,Modo)
-    --begin
-      --  if reset='1' then
-        --    Sel_modo<='1';
-          --  Enable_A<='0';
-            --Enable_B<='0';
-           -- Enable_C<='0';
-           -- Enable_S<='1';
-        --elsif Sel_modo='1' and B5='1' and Modo=1 then
-          --  Sel_modo<='0';
-          --  Enable_A<='1';
-          --  Enable_B<='0';
-          --  Enable_C<='0';
-          --  Enable_S<='0';
-        --elsif Sel_modo='1' and B5='1' and Modo=2 then
-          --  Sel_modo<='0';
-          --  Enable_A<='0';
-          --  Enable_B<='1';
-          --  Enable_C<='0';
-          --  Enable_S<='0';
-        --elsif Sel_modo='1' and B5='1' and Modo=3 then
-          --  Sel_modo<='0';
-          --  Enable_A<='0';
-          --  Enable_B<='0';
-          --  Enable_C<='1';
-          --  Enable_S<='0';
-      --  end if;
-    --end process;
     
     SalidasSelModo : process (estadoActual)
     begin

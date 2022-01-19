@@ -32,7 +32,7 @@ architecture tb of Control_Anodo_tb is
     signal refrescar_anodo : std_logic_vector (7 downto 0);
     signal salida_disp     : std_logic_vector (6 downto 0);
 
-    constant TbPeriod : time := 1000 ns; -- EDIT Put right period here
+    constant TbPeriod : time := 100 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
@@ -60,55 +60,23 @@ begin
     stimuli : process
     begin
         -- EDIT Adapt initialization as needed
-        code1 <= (others => '0');
-        code2 <= (others => '0');
-        code3 <= (others => '0');
-        code4 <= (others => '0');
-        code5 <= (others => '0');
-        code6 <= (others => '0');
-        code7 <= (others => '0');
-        code8 <= (others => '0');
+        code1 <= "0101";
+        code2 <= "0110";
+        code3 <= "0001";
+        code4 <= "0011";
+        code5 <= "1111";
+        code6 <= "1111";
+        code7 <= "1011";
+        code8 <= "1010";
 
         -- Reset generation
         --  EDIT: Replace YOURRESETSIGNAL below by the name of your reset as I haven't guessed it
         --YOURRESETSIGNAL <= '1';
-        wait for 100 ns;
+        --wait for 100 ns;
         --YOURRESETSIGNAL <= '0';
-        wait for 100 ns;
+        wait for 8000 ns;
 
-        -- EDIT Add stimuli here
-        code1 <= "1101";
-        wait for 100 * TbPeriod;
-        code2 <= "1011";
-        wait for 100 * TbPeriod;
-        code3 <= "0111";
-        wait for 100 * TbPeriod;
-        code4 <= "1101";
-        wait for 100 * TbPeriod;
-        code5 <= "1110";
-        wait for 100 * TbPeriod;
-        code6 <= "1111";
-        wait for 100 * TbPeriod;
-        code7 <= "1110";
-        wait for 100 * TbPeriod;
-        code8 <= "0011";
-        wait for 100 * TbPeriod;
-        code1 <= (others => '0');
-        wait for 100 * TbPeriod;
-        code2 <= (others => '0');
-        wait for 100 * TbPeriod;
-        code3 <= (others => '0');
-        wait for 100 * TbPeriod;
-        code4 <= (others => '0');
-        wait for 100 * TbPeriod;
-        code5 <= (others => '0');
-        wait for 100 * TbPeriod;
-        code6 <= (others => '0');
-        wait for 100 * TbPeriod;
-        code7 <= (others => '0');
-        wait for 100 * TbPeriod;
-        code8 <= (others => '0');
-        wait for 100 * TbPeriod;
+       
 
         -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';

@@ -83,8 +83,20 @@ begin
         start<='1';
         wait for 100 ns;
         start <= '0';
+        wait for 500 ns;
+        pause<='1';
+        wait for 100 ns;
+        pause <= '0';
+        wait for 200 ns;
+        reset<='1';
+        wait for 100 ns;
+        reset <= '0';
+        wait for 200 ns;
+        start<='1';
+        wait for 100 ns;
+        start <= '0';
         
-        wait for 1000 ns;
+        wait for 2000 ns;
 
         -- Stop the clock and hence terminate the simulation
         TbSimEnded <= '1';

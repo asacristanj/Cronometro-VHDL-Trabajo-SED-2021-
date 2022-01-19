@@ -36,7 +36,8 @@ architecture Behavioral of Modo_Crono is
               clk_1hz : out STD_LOGIC
             );
        END COMPONENT;
-begin
+       
+    begin
     Inst_clk1hz: clk1hz 
     PORT MAP (
         CLK => CLK,
